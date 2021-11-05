@@ -1,0 +1,682 @@
+\hypertarget{class_t_ship}{}\doxysection{TShip Class Reference}
+\label{class_t_ship}\index{TShip@{TShip}}
+
+
+{\ttfamily \#include $<$ships.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_ship_a494a045e247f3b425c14825cc093dbdf}{TShip}} (\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, \mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM, \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}} n\+Class, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Size, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_acc26a65ea571f7287083c2bdec3dcf61}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the ship to the default properties. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}} \mbox{\hyperlink{class_t_ship_a3a32614ca0b81c8aaeed6068f44934ab}{Get\+Class}} ()
+\begin{DoxyCompactList}\small\item\em Return the ship class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_ab8e2b9434bc6e8f5a8f402cd832047df}{Set\+Class}} (\mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}} n\+Class)
+\begin{DoxyCompactList}\small\item\em Set the ship class (small, medium, big) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_acb9484bd774789f463821b4df8735fdc}{Activate\+The\+Shield}} ()
+\begin{DoxyCompactList}\small\item\em Activate the shield to protect the ship against alien missiles. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_ship_a8fe6d899e2ec87153232d8f6c422cc66}{Is\+Shield\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Return the status of the shield. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_ship_ae701ccf28ef25964f16ba078bc7211fa}{Is\+Exploding}} ()
+\begin{DoxyCompactList}\small\item\em Return true if the ship is exploding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_a800eb2cb671359b37c2be49ede26d5ea}{Update}} (double Dt)
+\begin{DoxyCompactList}\small\item\em Updates by time the spaceship status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_a009aad8b243d5dbd4e4fe97ef792adbd}{Get\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Return the ship position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_a4cdf386878f3332874b97570f96be9e0}{Set\+Pos}} (\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos)
+\begin{DoxyCompactList}\small\item\em Set the ship position. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_t_ship_afb0a708a02cda1a45d20c86af45af9c2}{Get\+Rot}} ()
+\begin{DoxyCompactList}\small\item\em Return the ship rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_a2f06f16b53214b0fa7b8355f029c36cf}{Set\+Rot}} (double Rot)
+\begin{DoxyCompactList}\small\item\em Set the ship rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_a238bdecf4bbee772b0685d2c56832d54}{Get\+Vel}} ()
+\begin{DoxyCompactList}\small\item\em Return the ship velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_a9cbfe693b7fd8ad42bfd0721c8a0b4fc}{Set\+Vel}} (\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel)
+\begin{DoxyCompactList}\small\item\em Set the ship velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_aed15eeca760b6915080a91e5a3a82b2e}{Set\+Color}} (COLORREF Color)
+\begin{DoxyCompactList}\small\item\em Set the color for the ship. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_a5310908e01e0c7fd90bec56785b6dd71}{Get\+Size}} ()
+\item 
+void \mbox{\hyperlink{class_t_ship_a008bbdd2e97f106cfd04ae469a294d2a}{Rotate\+Left}} (double DAngle\+Deg)
+\begin{DoxyCompactList}\small\item\em Rotate the ship to the left. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_ae5a26a8fa51a36a1a6eb33025fd5a87d}{Rotate\+Right}} (double DAngle\+Deg)
+\begin{DoxyCompactList}\small\item\em Rotate the ship to the right. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_a21d61a219facc0c052c54c4504409377}{Set\+Visible}} (bool b\+Visible)
+\begin{DoxyCompactList}\small\item\em Set the ship visiblity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_aa9327adea04c9fabafbe880c9103335a}{Set\+Alive}} (bool b\+Alive)
+\begin{DoxyCompactList}\small\item\em Set the aliving status for the ship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_a66c1b144594533095a84407fc865fed2}{Impulse}} (double Impulse)
+\begin{DoxyCompactList}\small\item\em Give an impulse to the ship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_a256e6955aa3b7c034d7daa91101c32be}{Explode}} ()
+\begin{DoxyCompactList}\small\item\em Manages the explosion of the spaceship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_ad211854d8baf0f8be350c4e66f065f4e}{Do\+Explosion}} ()
+\begin{DoxyCompactList}\small\item\em Handles the explosion of the spaceship. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_ship_aa436f398d0e3fbcb2a1cd5e0db5f02b4}{Is\+Alive}} ()
+\begin{DoxyCompactList}\small\item\em Returns the ship status, alive or not. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_ship_a626027f7fd814b89e81b104dffd159d4}{Is\+Visible}} ()
+\begin{DoxyCompactList}\small\item\em Return the ship visibility. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_ship_ae6e794aa1af097eb129e99a6e101e5b5}{Is\+Colliding}} (\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos)
+\begin{DoxyCompactList}\small\item\em Collision detection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_ship_af8d093c109923288b6676e003caf7d89}{Build\+The\+Ship}} ()
+\begin{DoxyCompactList}\small\item\em Builds the ship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_ship_ac8a99ba9569b2681450bb33b830b31ba}{Split}} (\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} \&Pts, \mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} \&Splits)
+\begin{DoxyCompactList}\small\item\em Splits a vector of polylines in a vector of segments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}} \mbox{\hyperlink{class_t_ship_aec25b6c79f7c370d6bcd3e175dba2487}{m\+\_\+n\+Class}}
+\item 
+\mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$ \mbox{\hyperlink{class_t_ship_ae94be25ef460643ec94882abb8c1f30d}{m\+\_\+p\+Audio}}
+\item 
+\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$ \mbox{\hyperlink{class_t_ship_a2342af28b638135cf75689dd8c12a4fd}{m\+\_\+p\+Video}}
+\item 
+COLORREF \mbox{\hyperlink{class_t_ship_ac6e9ba0024befc7a43eba00d7be3fe84}{m\+\_\+\+Color}}
+\item 
+int \mbox{\hyperlink{class_t_ship_ad506eaeb6864ac8b8d4b55a60b63782e}{m\+\_\+n\+Impulse\+Ticks}}
+\item 
+double \mbox{\hyperlink{class_t_ship_a9d6972635655a5d4234e235b0cfd92bf}{m\+\_\+\+Rot}}
+\item 
+double \mbox{\hyperlink{class_t_ship_aec6843603d50b2d321ac3c91e41179fb}{m\+\_\+\+Impulse}}
+\item 
+bool \mbox{\hyperlink{class_t_ship_a389e7019e280bb2e432c1215a7c35926}{m\+\_\+b\+Alive}}
+\item 
+bool \mbox{\hyperlink{class_t_ship_aa0acd2deb4fe9c85d256b3e67b7f495f}{m\+\_\+b\+Visible}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_ada09a82f0dc02cb8fe985c1728fde117}{m\+\_\+\+Size}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_a1df618b57c4c0347131834691cd7154d}{m\+\_\+\+Pos}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_acf9eed99caba860f91a3276edb93520a}{m\+\_\+\+Vel}}
+\item 
+\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} \mbox{\hyperlink{class_t_ship_aa6a4b466b27105025b804f3b4a5abbd6}{m\+\_\+\+Shape}}
+\item 
+\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} \mbox{\hyperlink{class_t_ship_a0d78ae1a93b93c307ab408c1fccfd534}{m\+\_\+\+Engine}}
+\item 
+\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} \mbox{\hyperlink{class_t_ship_af579de6862aba1d3be6c854f41d37a8c}{m\+\_\+\+Shield}}
+\item 
+bool \mbox{\hyperlink{class_t_ship_a4e696c98c9166abbe87fd284e18188c1}{m\+\_\+b\+Shield}}
+\item 
+unsigned \mbox{\hyperlink{class_t_ship_a68365e152cc977a82add2c662e8bd53f}{m\+\_\+n\+Shield\+Tick}}
+\item 
+int \mbox{\hyperlink{class_t_ship_a6e4f6f801c1747cd3d960e2bc3da23c7}{m\+\_\+n\+Explosion\+Ticks}}
+\item 
+\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} \mbox{\hyperlink{class_t_ship_ab723b219574fe1697a04a1d35cce5853}{m\+\_\+\+Debris}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_aba75400ef21e4d634cc224aa20794d68}{m\+\_\+\+Debris\+Start\+Pos}}
+\item 
+\mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVec\+Points}} \mbox{\hyperlink{class_t_ship_af3e48bd1b8da589094eb0925eb0da198}{m\+\_\+\+Debris\+Translations}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_t_ship_ac78b51e2b8afb5ff85b3ac1abca8ea50}{m\+\_\+\+Debris\+Rotations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_ship_a494a045e247f3b425c14825cc093dbdf}\label{class_t_ship_a494a045e247f3b425c14825cc093dbdf}} 
+\index{TShip@{TShip}!TShip@{TShip}}
+\index{TShip@{TShip}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{TShip()}{TShip()}}
+{\footnotesize\ttfamily TShip\+::\+TShip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM,  }\item[{\mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM,  }\item[{\mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}}}]{n\+Class,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Size,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Vel }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+VM} & Pointer to the Video\+Manager \\
+\hline
+{\em p\+SM} & Pointer to the Sound\+Manager \\
+\hline
+{\em n\+Class} & Ship class (small, medium, big) \\
+\hline
+{\em Size} & Size of the ship \\
+\hline
+{\em Pos} & Initial position of the ship \\
+\hline
+{\em Vel} & Initial velocity of the ship \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_ship_acb9484bd774789f463821b4df8735fdc}\label{class_t_ship_acb9484bd774789f463821b4df8735fdc}} 
+\index{TShip@{TShip}!ActivateTheShield@{ActivateTheShield}}
+\index{ActivateTheShield@{ActivateTheShield}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{ActivateTheShield()}{ActivateTheShield()}}
+{\footnotesize\ttfamily void TShip\+::\+Activate\+The\+Shield (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activate the shield to protect the ship against alien missiles. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_af8d093c109923288b6676e003caf7d89}\label{class_t_ship_af8d093c109923288b6676e003caf7d89}} 
+\index{TShip@{TShip}!BuildTheShip@{BuildTheShip}}
+\index{BuildTheShip@{BuildTheShip}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{BuildTheShip()}{BuildTheShip()}}
+{\footnotesize\ttfamily void TShip\+::\+Build\+The\+Ship (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Builds the ship. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_ship_ad211854d8baf0f8be350c4e66f065f4e}\label{class_t_ship_ad211854d8baf0f8be350c4e66f065f4e}} 
+\index{TShip@{TShip}!DoExplosion@{DoExplosion}}
+\index{DoExplosion@{DoExplosion}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{DoExplosion()}{DoExplosion()}}
+{\footnotesize\ttfamily void TShip\+::\+Do\+Explosion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the explosion of the spaceship. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_ship_a256e6955aa3b7c034d7daa91101c32be}\label{class_t_ship_a256e6955aa3b7c034d7daa91101c32be}} 
+\index{TShip@{TShip}!Explode@{Explode}}
+\index{Explode@{Explode}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{Explode()}{Explode()}}
+{\footnotesize\ttfamily void TShip\+::\+Explode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Manages the explosion of the spaceship. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_ship_a3a32614ca0b81c8aaeed6068f44934ab}\label{class_t_ship_a3a32614ca0b81c8aaeed6068f44934ab}} 
+\index{TShip@{TShip}!GetClass@{GetClass}}
+\index{GetClass@{GetClass}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetClass()}{GetClass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}} TShip\+::\+Get\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the ship class. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+The ship class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_ship_a009aad8b243d5dbd4e4fe97ef792adbd}\label{class_t_ship_a009aad8b243d5dbd4e4fe97ef792adbd}} 
+\index{TShip@{TShip}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetPos()}{GetPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TShip\+::\+Get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the ship position. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+The ship position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_ship_afb0a708a02cda1a45d20c86af45af9c2}\label{class_t_ship_afb0a708a02cda1a45d20c86af45af9c2}} 
+\index{TShip@{TShip}!GetRot@{GetRot}}
+\index{GetRot@{GetRot}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetRot()}{GetRot()}}
+{\footnotesize\ttfamily double TShip\+::\+Get\+Rot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the ship rotation. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Return the rotation angle in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_ship_a5310908e01e0c7fd90bec56785b6dd71}\label{class_t_ship_a5310908e01e0c7fd90bec56785b6dd71}} 
+\index{TShip@{TShip}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TShip\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_t_ship_a238bdecf4bbee772b0685d2c56832d54}\label{class_t_ship_a238bdecf4bbee772b0685d2c56832d54}} 
+\index{TShip@{TShip}!GetVel@{GetVel}}
+\index{GetVel@{GetVel}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{GetVel()}{GetVel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TShip\+::\+Get\+Vel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the ship velocity. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+The velocity value of the ship 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_ship_a66c1b144594533095a84407fc865fed2}\label{class_t_ship_a66c1b144594533095a84407fc865fed2}} 
+\index{TShip@{TShip}!Impulse@{Impulse}}
+\index{Impulse@{Impulse}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{Impulse()}{Impulse()}}
+{\footnotesize\ttfamily void TShip\+::\+Impulse (\begin{DoxyParamCaption}\item[{double}]{Impulse }\end{DoxyParamCaption})}
+
+
+
+Give an impulse to the ship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Impulse} & The value of the impulse to be given to the spaceship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_aa436f398d0e3fbcb2a1cd5e0db5f02b4}\label{class_t_ship_aa436f398d0e3fbcb2a1cd5e0db5f02b4}} 
+\index{TShip@{TShip}!IsAlive@{IsAlive}}
+\index{IsAlive@{IsAlive}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{IsAlive()}{IsAlive()}}
+{\footnotesize\ttfamily bool TShip\+::\+Is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the ship status, alive or not. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+True if the ship is alive, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_ship_ae6e794aa1af097eb129e99a6e101e5b5}\label{class_t_ship_ae6e794aa1af097eb129e99a6e101e5b5}} 
+\index{TShip@{TShip}!IsColliding@{IsColliding}}
+\index{IsColliding@{IsColliding}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{IsColliding()}{IsColliding()}}
+{\footnotesize\ttfamily bool TShip\+::\+Is\+Colliding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos }\end{DoxyParamCaption})}
+
+
+
+Collision detection. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pos} & Position to check for collision \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_ae701ccf28ef25964f16ba078bc7211fa}\label{class_t_ship_ae701ccf28ef25964f16ba078bc7211fa}} 
+\index{TShip@{TShip}!IsExploding@{IsExploding}}
+\index{IsExploding@{IsExploding}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{IsExploding()}{IsExploding()}}
+{\footnotesize\ttfamily bool TShip\+::\+Is\+Exploding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return true if the ship is exploding. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+True if the ship is exploding, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_ship_a8fe6d899e2ec87153232d8f6c422cc66}\label{class_t_ship_a8fe6d899e2ec87153232d8f6c422cc66}} 
+\index{TShip@{TShip}!IsShieldActive@{IsShieldActive}}
+\index{IsShieldActive@{IsShieldActive}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{IsShieldActive()}{IsShieldActive()}}
+{\footnotesize\ttfamily bool TShip\+::\+Is\+Shield\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the status of the shield. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_a626027f7fd814b89e81b104dffd159d4}\label{class_t_ship_a626027f7fd814b89e81b104dffd159d4}} 
+\index{TShip@{TShip}!IsVisible@{IsVisible}}
+\index{IsVisible@{IsVisible}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{IsVisible()}{IsVisible()}}
+{\footnotesize\ttfamily bool TShip\+::\+Is\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the ship visibility. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+True if the ship is visible, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_ship_acc26a65ea571f7287083c2bdec3dcf61}\label{class_t_ship_acc26a65ea571f7287083c2bdec3dcf61}} 
+\index{TShip@{TShip}!Reset@{Reset}}
+\index{Reset@{Reset}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void TShip\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the ship to the default properties. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_ship_a008bbdd2e97f106cfd04ae469a294d2a}\label{class_t_ship_a008bbdd2e97f106cfd04ae469a294d2a}} 
+\index{TShip@{TShip}!RotateLeft@{RotateLeft}}
+\index{RotateLeft@{RotateLeft}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{RotateLeft()}{RotateLeft()}}
+{\footnotesize\ttfamily void TShip\+::\+Rotate\+Left (\begin{DoxyParamCaption}\item[{double}]{DAngle\+Deg }\end{DoxyParamCaption})}
+
+
+
+Rotate the ship to the left. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em DAngle\+Deg} & The rotation value in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_ae5a26a8fa51a36a1a6eb33025fd5a87d}\label{class_t_ship_ae5a26a8fa51a36a1a6eb33025fd5a87d}} 
+\index{TShip@{TShip}!RotateRight@{RotateRight}}
+\index{RotateRight@{RotateRight}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{RotateRight()}{RotateRight()}}
+{\footnotesize\ttfamily void TShip\+::\+Rotate\+Right (\begin{DoxyParamCaption}\item[{double}]{DAngle\+Deg }\end{DoxyParamCaption})}
+
+
+
+Rotate the ship to the right. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em DAngle\+Deg} & The rotation value in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_aa9327adea04c9fabafbe880c9103335a}\label{class_t_ship_aa9327adea04c9fabafbe880c9103335a}} 
+\index{TShip@{TShip}!SetAlive@{SetAlive}}
+\index{SetAlive@{SetAlive}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetAlive()}{SetAlive()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Alive (\begin{DoxyParamCaption}\item[{bool}]{b\+Alive }\end{DoxyParamCaption})}
+
+
+
+Set the aliving status for the ship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em b\+Alive} & True for ship alivenes, false otherwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_ab8e2b9434bc6e8f5a8f402cd832047df}\label{class_t_ship_ab8e2b9434bc6e8f5a8f402cd832047df}} 
+\index{TShip@{TShip}!SetClass@{SetClass}}
+\index{SetClass@{SetClass}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetClass()}{SetClass()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}}}]{n\+Class }\end{DoxyParamCaption})}
+
+
+
+Set the ship class (small, medium, big) 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em n\+Class} & The shiip class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_aed15eeca760b6915080a91e5a3a82b2e}\label{class_t_ship_aed15eeca760b6915080a91e5a3a82b2e}} 
+\index{TShip@{TShip}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Color (\begin{DoxyParamCaption}\item[{COLORREF}]{Color }\end{DoxyParamCaption})}
+
+
+
+Set the color for the ship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Color} & The color to be set for the ship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_a4cdf386878f3332874b97570f96be9e0}\label{class_t_ship_a4cdf386878f3332874b97570f96be9e0}} 
+\index{TShip@{TShip}!SetPos@{SetPos}}
+\index{SetPos@{SetPos}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetPos()}{SetPos()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos }\end{DoxyParamCaption})}
+
+
+
+Set the ship position. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em Pos} & The position to be set for the ship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_a2f06f16b53214b0fa7b8355f029c36cf}\label{class_t_ship_a2f06f16b53214b0fa7b8355f029c36cf}} 
+\index{TShip@{TShip}!SetRot@{SetRot}}
+\index{SetRot@{SetRot}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetRot()}{SetRot()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Rot (\begin{DoxyParamCaption}\item[{double}]{Rot }\end{DoxyParamCaption})}
+
+
+
+Set the ship rotation. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Rot} & Rotation angle in radians \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_a9cbfe693b7fd8ad42bfd0721c8a0b4fc}\label{class_t_ship_a9cbfe693b7fd8ad42bfd0721c8a0b4fc}} 
+\index{TShip@{TShip}!SetVel@{SetVel}}
+\index{SetVel@{SetVel}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetVel()}{SetVel()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Vel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Vel }\end{DoxyParamCaption})}
+
+
+
+Set the ship velocity. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em The} & velocity value to be set for the ship \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_a21d61a219facc0c052c54c4504409377}\label{class_t_ship_a21d61a219facc0c052c54c4504409377}} 
+\index{TShip@{TShip}!SetVisible@{SetVisible}}
+\index{SetVisible@{SetVisible}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{SetVisible()}{SetVisible()}}
+{\footnotesize\ttfamily void TShip\+::\+Set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{b\+Visible }\end{DoxyParamCaption})}
+
+
+
+Set the ship visiblity. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em b\+Visible} & True for ship visiblitiy, false otherwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_ac8a99ba9569b2681450bb33b830b31ba}\label{class_t_ship_ac8a99ba9569b2681450bb33b830b31ba}} 
+\index{TShip@{TShip}!Split@{Split}}
+\index{Split@{Split}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}}
+{\footnotesize\ttfamily void TShip\+::\+Split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} \&}]{Pts,  }\item[{\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} \&}]{Splits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Splits a vector of polylines in a vector of segments. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Pts} & Reference to a vector of polylines \\
+\hline
+\mbox{\texttt{ out}}  & {\em Splits} & Reference to a vector of segments \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_ship_a800eb2cb671359b37c2be49ede26d5ea}\label{class_t_ship_a800eb2cb671359b37c2be49ede26d5ea}} 
+\index{TShip@{TShip}!Update@{Update}}
+\index{Update@{Update}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void TShip\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{Dt }\end{DoxyParamCaption})}
+
+
+
+Updates by time the spaceship status. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship data structure \\
+\hline
+{\em Dt} & The value for the delta time \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_ship_a389e7019e280bb2e432c1215a7c35926}\label{class_t_ship_a389e7019e280bb2e432c1215a7c35926}} 
+\index{TShip@{TShip}!m\_bAlive@{m\_bAlive}}
+\index{m\_bAlive@{m\_bAlive}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_bAlive}{m\_bAlive}}
+{\footnotesize\ttfamily bool TShip\+::m\+\_\+b\+Alive\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_a4e696c98c9166abbe87fd284e18188c1}\label{class_t_ship_a4e696c98c9166abbe87fd284e18188c1}} 
+\index{TShip@{TShip}!m\_bShield@{m\_bShield}}
+\index{m\_bShield@{m\_bShield}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_bShield}{m\_bShield}}
+{\footnotesize\ttfamily bool TShip\+::m\+\_\+b\+Shield\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_aa0acd2deb4fe9c85d256b3e67b7f495f}\label{class_t_ship_aa0acd2deb4fe9c85d256b3e67b7f495f}} 
+\index{TShip@{TShip}!m\_bVisible@{m\_bVisible}}
+\index{m\_bVisible@{m\_bVisible}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_bVisible}{m\_bVisible}}
+{\footnotesize\ttfamily bool TShip\+::m\+\_\+b\+Visible\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_ac6e9ba0024befc7a43eba00d7be3fe84}\label{class_t_ship_ac6e9ba0024befc7a43eba00d7be3fe84}} 
+\index{TShip@{TShip}!m\_Color@{m\_Color}}
+\index{m\_Color@{m\_Color}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Color}{m\_Color}}
+{\footnotesize\ttfamily COLORREF TShip\+::m\+\_\+\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_ab723b219574fe1697a04a1d35cce5853}\label{class_t_ship_ab723b219574fe1697a04a1d35cce5853}} 
+\index{TShip@{TShip}!m\_Debris@{m\_Debris}}
+\index{m\_Debris@{m\_Debris}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Debris}{m\_Debris}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} TShip\+::m\+\_\+\+Debris\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_ac78b51e2b8afb5ff85b3ac1abca8ea50}\label{class_t_ship_ac78b51e2b8afb5ff85b3ac1abca8ea50}} 
+\index{TShip@{TShip}!m\_DebrisRotations@{m\_DebrisRotations}}
+\index{m\_DebrisRotations@{m\_DebrisRotations}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_DebrisRotations}{m\_DebrisRotations}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ TShip\+::m\+\_\+\+Debris\+Rotations\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_aba75400ef21e4d634cc224aa20794d68}\label{class_t_ship_aba75400ef21e4d634cc224aa20794d68}} 
+\index{TShip@{TShip}!m\_DebrisStartPos@{m\_DebrisStartPos}}
+\index{m\_DebrisStartPos@{m\_DebrisStartPos}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_DebrisStartPos}{m\_DebrisStartPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TShip\+::m\+\_\+\+Debris\+Start\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_af3e48bd1b8da589094eb0925eb0da198}\label{class_t_ship_af3e48bd1b8da589094eb0925eb0da198}} 
+\index{TShip@{TShip}!m\_DebrisTranslations@{m\_DebrisTranslations}}
+\index{m\_DebrisTranslations@{m\_DebrisTranslations}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_DebrisTranslations}{m\_DebrisTranslations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVec\+Points}} TShip\+::m\+\_\+\+Debris\+Translations\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_a0d78ae1a93b93c307ab408c1fccfd534}\label{class_t_ship_a0d78ae1a93b93c307ab408c1fccfd534}} 
+\index{TShip@{TShip}!m\_Engine@{m\_Engine}}
+\index{m\_Engine@{m\_Engine}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Engine}{m\_Engine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} TShip\+::m\+\_\+\+Engine\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_aec6843603d50b2d321ac3c91e41179fb}\label{class_t_ship_aec6843603d50b2d321ac3c91e41179fb}} 
+\index{TShip@{TShip}!m\_Impulse@{m\_Impulse}}
+\index{m\_Impulse@{m\_Impulse}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Impulse}{m\_Impulse}}
+{\footnotesize\ttfamily double TShip\+::m\+\_\+\+Impulse\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_aec25b6c79f7c370d6bcd3e175dba2487}\label{class_t_ship_aec25b6c79f7c370d6bcd3e175dba2487}} 
+\index{TShip@{TShip}!m\_nClass@{m\_nClass}}
+\index{m\_nClass@{m\_nClass}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_nClass}{m\_nClass}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}} TShip\+::m\+\_\+n\+Class\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_a6e4f6f801c1747cd3d960e2bc3da23c7}\label{class_t_ship_a6e4f6f801c1747cd3d960e2bc3da23c7}} 
+\index{TShip@{TShip}!m\_nExplosionTicks@{m\_nExplosionTicks}}
+\index{m\_nExplosionTicks@{m\_nExplosionTicks}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_nExplosionTicks}{m\_nExplosionTicks}}
+{\footnotesize\ttfamily int TShip\+::m\+\_\+n\+Explosion\+Ticks\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_ad506eaeb6864ac8b8d4b55a60b63782e}\label{class_t_ship_ad506eaeb6864ac8b8d4b55a60b63782e}} 
+\index{TShip@{TShip}!m\_nImpulseTicks@{m\_nImpulseTicks}}
+\index{m\_nImpulseTicks@{m\_nImpulseTicks}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_nImpulseTicks}{m\_nImpulseTicks}}
+{\footnotesize\ttfamily int TShip\+::m\+\_\+n\+Impulse\+Ticks\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_a68365e152cc977a82add2c662e8bd53f}\label{class_t_ship_a68365e152cc977a82add2c662e8bd53f}} 
+\index{TShip@{TShip}!m\_nShieldTick@{m\_nShieldTick}}
+\index{m\_nShieldTick@{m\_nShieldTick}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_nShieldTick}{m\_nShieldTick}}
+{\footnotesize\ttfamily unsigned TShip\+::m\+\_\+n\+Shield\+Tick\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_ae94be25ef460643ec94882abb8c1f30d}\label{class_t_ship_ae94be25ef460643ec94882abb8c1f30d}} 
+\index{TShip@{TShip}!m\_pAudio@{m\_pAudio}}
+\index{m\_pAudio@{m\_pAudio}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_pAudio}{m\_pAudio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}}$\ast$ TShip\+::m\+\_\+p\+Audio\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_a1df618b57c4c0347131834691cd7154d}\label{class_t_ship_a1df618b57c4c0347131834691cd7154d}} 
+\index{TShip@{TShip}!m\_Pos@{m\_Pos}}
+\index{m\_Pos@{m\_Pos}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Pos}{m\_Pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TShip\+::m\+\_\+\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_a2342af28b638135cf75689dd8c12a4fd}\label{class_t_ship_a2342af28b638135cf75689dd8c12a4fd}} 
+\index{TShip@{TShip}!m\_pVideo@{m\_pVideo}}
+\index{m\_pVideo@{m\_pVideo}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_pVideo}{m\_pVideo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}}$\ast$ TShip\+::m\+\_\+p\+Video\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_a9d6972635655a5d4234e235b0cfd92bf}\label{class_t_ship_a9d6972635655a5d4234e235b0cfd92bf}} 
+\index{TShip@{TShip}!m\_Rot@{m\_Rot}}
+\index{m\_Rot@{m\_Rot}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Rot}{m\_Rot}}
+{\footnotesize\ttfamily double TShip\+::m\+\_\+\+Rot\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_aa6a4b466b27105025b804f3b4a5abbd6}\label{class_t_ship_aa6a4b466b27105025b804f3b4a5abbd6}} 
+\index{TShip@{TShip}!m\_Shape@{m\_Shape}}
+\index{m\_Shape@{m\_Shape}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Shape}{m\_Shape}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} TShip\+::m\+\_\+\+Shape\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_af579de6862aba1d3be6c854f41d37a8c}\label{class_t_ship_af579de6862aba1d3be6c854f41d37a8c}} 
+\index{TShip@{TShip}!m\_Shield@{m\_Shield}}
+\index{m\_Shield@{m\_Shield}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Shield}{m\_Shield}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVec\+Vec\+Points}} TShip\+::m\+\_\+\+Shield\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_ada09a82f0dc02cb8fe985c1728fde117}\label{class_t_ship_ada09a82f0dc02cb8fe985c1728fde117}} 
+\index{TShip@{TShip}!m\_Size@{m\_Size}}
+\index{m\_Size@{m\_Size}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Size}{m\_Size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TShip\+::m\+\_\+\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_ship_acf9eed99caba860f91a3276edb93520a}\label{class_t_ship_acf9eed99caba860f91a3276edb93520a}} 
+\index{TShip@{TShip}!m\_Vel@{m\_Vel}}
+\index{m\_Vel@{m\_Vel}!TShip@{TShip}}
+\doxysubsubsection{\texorpdfstring{m\_Vel}{m\_Vel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TShip\+::m\+\_\+\+Vel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{ships_8h}{ships.\+h}}\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{ships_8cpp}{ships.\+cpp}}\end{DoxyCompactItemize}

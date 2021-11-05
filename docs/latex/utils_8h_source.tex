@@ -1,0 +1,45 @@
+\hypertarget{utils_8h_source}{}\doxysection{utils.\+h}
+\label{utils_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/utils.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/utils.h}}
+\mbox{\hyperlink{utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{    author: Francesco Settembrini}}
+\DoxyCodeLine{3 \textcolor{comment}{    last update: 23/6/2021}}
+\DoxyCodeLine{4 \textcolor{comment}{    e-\/mail: mailto:francesco.settembrini@poliba.it}}
+\DoxyCodeLine{5 \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_UTILS\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_UTILS\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceutils}{utils}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutils_a347107a3da8ebd21178130d97ac7a87e}{Debounce}}();}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} std::vector<int> \mbox{\hyperlink{namespaceutils_aa6fa5b4ba834d71589ed9f2a1f53503f}{TVecIntegers}};}
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} std::vector<std::string> \mbox{\hyperlink{namespaceutils_ad658a595c61726f7ecf24d334fdd1356}{TVecStrings}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 std::string \mbox{\hyperlink{namespaceutils_ab3aaf4a1245b632b9f2261e8c2864e60}{GetExePath}}();}
+\DoxyCodeLine{22 std::string \mbox{\hyperlink{namespaceutils_a7b37ef03307840916b704a5e5d53f5db}{GetDataPath}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{namespaceutils_acf518ac8cc2f3f9c72ef4d78e828295f}{GetFileSize}}(FILE *fp);}
+\DoxyCodeLine{25 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutils_ab3712f4685f5f56e119556628214398c}{IsWavFile}}(std::string strFileName);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 std::string \mbox{\hyperlink{namespaceutils_a5cc668e78610b423dd376733ab6b963b}{GetFileName}}(std::string strPath, \textcolor{keywordtype}{bool} bRemoveExt);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutils_aca056784f25463061f9cb4a30c9e2061}{Show}}(std::string strMsg);}
+\DoxyCodeLine{30 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutils_aca056784f25463061f9cb4a30c9e2061}{Show}}(\mbox{\hyperlink{namespaceutils_aa6fa5b4ba834d71589ed9f2a1f53503f}{TVecIntegers}} IntList);}
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutils_aca056784f25463061f9cb4a30c9e2061}{Show}}(\mbox{\hyperlink{namespaceutils_ad658a595c61726f7ecf24d334fdd1356}{TVecStrings}} strList);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutils_a2eaff427c03ee479888bc73e61aaec5e}{IsBigEndian}}();}
+\DoxyCodeLine{34 \textcolor{keywordtype}{int} \mbox{\hyperlink{namespaceutils_a395517c9b044cbeb233ed38294a2b4d2}{ConvertToInt}}(\textcolor{keywordtype}{char}* buffer, \textcolor{keywordtype}{int} len);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{39 }
+
+\end{DoxyCode}

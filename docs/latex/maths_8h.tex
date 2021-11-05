@@ -1,0 +1,71 @@
+\hypertarget{maths_8h}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.bcb.\+vcl/asteroids-\/2k/maths.h File Reference}
+\label{maths_8h}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/maths.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/maths.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemaths}{maths}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{maths_8h_aa5ca60aad2a2a7a4576c3dcaa20660eb}{RAD2\+DEG}}(X)~((X)$\ast$180.\+0/\mbox{\hyperlink{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}})
+\item 
+\#define \mbox{\hyperlink{maths_8h_acc24cd392f19e7515db8d6cc653b4147}{DEG2\+RAD}}(X)~((X)$\ast$\mbox{\hyperlink{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}/180.\+0)
+\item 
+\#define \mbox{\hyperlink{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ int $>$ \mbox{\hyperlink{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}{TVec\+Integers}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacemaths_a1bcd21db44ceafdf5f480ecf77f86f48}{maths\+::\+Rand\+Sign}} ()
+\begin{DoxyCompactList}\small\item\em Randomly generates a unitary value with sign. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacemaths_a74b0fa365d531a14c2e3b4a9e5ceb051}{maths\+::\+Sign}} (double Val)
+\begin{DoxyCompactList}\small\item\em Gets the sign of a specified value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemaths_a672d2a2d15681fa5d7904d9210087f7a}{maths\+::\+Rand}} (double Val)
+\begin{DoxyCompactList}\small\item\em Generates a random value in a specified range. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemaths_adfb882cf97561ff5a2a0778513042c43}{maths\+::\+Abs\+Rand}} (double Val)
+\begin{DoxyCompactList}\small\item\em Generates a random value in a specified range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacemaths_a6d83cc0cc3381d1eca88db138f79443b}{maths\+::\+Sort}} (\mbox{\hyperlink{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}{TVec\+Integers}} \&Vec\+Ints)
+\begin{DoxyCompactList}\small\item\em Reorders a vector of integer values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{maths_8h_acc24cd392f19e7515db8d6cc653b4147}\label{maths_8h_acc24cd392f19e7515db8d6cc653b4147}} 
+\index{maths.h@{maths.h}!DEG2RAD@{DEG2RAD}}
+\index{DEG2RAD@{DEG2RAD}!maths.h@{maths.h}}
+\doxysubsubsection{\texorpdfstring{DEG2RAD}{DEG2RAD}}
+{\footnotesize\ttfamily \#define DEG2\+RAD(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~((X)$\ast$\mbox{\hyperlink{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}/180.\+0)}
+
+\mbox{\Hypertarget{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\index{maths.h@{maths.h}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!maths.h@{maths.h}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846}
+
+\mbox{\Hypertarget{maths_8h_aa5ca60aad2a2a7a4576c3dcaa20660eb}\label{maths_8h_aa5ca60aad2a2a7a4576c3dcaa20660eb}} 
+\index{maths.h@{maths.h}!RAD2DEG@{RAD2DEG}}
+\index{RAD2DEG@{RAD2DEG}!maths.h@{maths.h}}
+\doxysubsubsection{\texorpdfstring{RAD2DEG}{RAD2DEG}}
+{\footnotesize\ttfamily \#define RAD2\+DEG(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~((X)$\ast$180.\+0/\mbox{\hyperlink{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}})}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}\label{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}} 
+\index{maths.h@{maths.h}!TVecIntegers@{TVecIntegers}}
+\index{TVecIntegers@{TVecIntegers}!maths.h@{maths.h}}
+\doxysubsubsection{\texorpdfstring{TVecIntegers}{TVecIntegers}}
+{\footnotesize\ttfamily typedef std\+::vector$<$int$>$ \mbox{\hyperlink{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}{TVec\+Integers}}}
+

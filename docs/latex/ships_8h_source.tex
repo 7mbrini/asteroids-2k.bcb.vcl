@@ -1,0 +1,115 @@
+\hypertarget{ships_8h_source}{}\doxysection{ships.\+h}
+\label{ships_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/ships.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/ships.h}}
+\mbox{\hyperlink{ships_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{    author: Francesco Settembrini}}
+\DoxyCodeLine{3 \textcolor{comment}{    last update: 23/6/2021}}
+\DoxyCodeLine{4 \textcolor{comment}{    e-\/mail: mailto:francesco.settembrini@poliba.it}}
+\DoxyCodeLine{5 \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_SHIPS\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_SHIPS\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#pragma hdrstop}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vectors_8h}{vectors.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{audio_8h}{audio.h}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{video_8h}{video.h}}"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define SHIP\_SIZE               16}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define SHIP\_ROTSTEP            10.0}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define SHIP\_IMPULSE            4.0}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define SHIP\_VELSTEP            0.5}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define SHIP\_MAXVEL             250.0}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define SHIP\_IMPULSETICKS       20}}
+\DoxyCodeLine{25 \textcolor{comment}{//\#define SHIP\_EXPLOSIONTICKS   64}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SHIP\_EXPLOSIONTICKS     32}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define SHIP\_NDEBRIS            16}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{enum} \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{enShipClass}} \{ \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857a2a1adb2cf47cb7b417101f95a77aa261}{scHuman}}, \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857ad96c03efcdd0f50535d85547a570a0f3}{scAlienSmall}}, \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857aa189b9a31f4b2430bedbe2717c596599}{scAlienBig}} \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{struct }\mbox{\hyperlink{class_t_ship}{TShip}};}
+\DoxyCodeLine{33 \textcolor{keyword}{typedef} std::vector<TShip*> \mbox{\hyperlink{ships_8h_a7a80ad7a1118c3c3fea3c0126ea055eb}{TVecPtrShips}};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_ship}{TShip}}}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38     \textcolor{keyword}{public}:}
+\DoxyCodeLine{39         \mbox{\hyperlink{class_t_ship_a494a045e247f3b425c14825cc093dbdf}{TShip}}(\mbox{\hyperlink{class_t_video_manager}{TVideoManager}} *pVM, \mbox{\hyperlink{class_t_sound_manager}{TSoundManager}}* pSM,}
+\DoxyCodeLine{40             \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{enShipClass}} nClass, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Size, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keyword}{public}:}
+\DoxyCodeLine{43         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_acc26a65ea571f7287083c2bdec3dcf61}{Reset}}();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{enShipClass}} \mbox{\hyperlink{class_t_ship_a3a32614ca0b81c8aaeed6068f44934ab}{GetClass}}();}
+\DoxyCodeLine{46         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_ab8e2b9434bc6e8f5a8f402cd832047df}{SetClass}}(\mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{enShipClass}} nClass);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_acb9484bd774789f463821b4df8735fdc}{ActivateTheShield}}();}
+\DoxyCodeLine{49         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_ship_a8fe6d899e2ec87153232d8f6c422cc66}{IsShieldActive}}();}
+\DoxyCodeLine{50         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_ship_ae701ccf28ef25964f16ba078bc7211fa}{IsExploding}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_a800eb2cb671359b37c2be49ede26d5ea}{Update}}(\textcolor{keywordtype}{double} Dt);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_a009aad8b243d5dbd4e4fe97ef792adbd}{GetPos}}();}
+\DoxyCodeLine{55         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_a4cdf386878f3332874b97570f96be9e0}{SetPos}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos);}
+\DoxyCodeLine{56         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_t_ship_afb0a708a02cda1a45d20c86af45af9c2}{GetRot}}();}
+\DoxyCodeLine{57         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_a2f06f16b53214b0fa7b8355f029c36cf}{SetRot}}(\textcolor{keywordtype}{double} Rot);}
+\DoxyCodeLine{58         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_a238bdecf4bbee772b0685d2c56832d54}{GetVel}}();}
+\DoxyCodeLine{59         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_a9cbfe693b7fd8ad42bfd0721c8a0b4fc}{SetVel}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_aed15eeca760b6915080a91e5a3a82b2e}{SetColor}}(COLORREF Color);}
+\DoxyCodeLine{62         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_a5310908e01e0c7fd90bec56785b6dd71}{GetSize}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_t_ship_ada09a82f0dc02cb8fe985c1728fde117}{m\_Size}}; \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_a008bbdd2e97f106cfd04ae469a294d2a}{RotateLeft}}(\textcolor{keywordtype}{double} DAngleDeg);}
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_ae5a26a8fa51a36a1a6eb33025fd5a87d}{RotateRight}}(\textcolor{keywordtype}{double} DAngleDeg);}
+\DoxyCodeLine{66         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_a21d61a219facc0c052c54c4504409377}{SetVisible}}(\textcolor{keywordtype}{bool} bVisible);}
+\DoxyCodeLine{67         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_aa9327adea04c9fabafbe880c9103335a}{SetAlive}}(\textcolor{keywordtype}{bool} bAlive);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_a66c1b144594533095a84407fc865fed2}{Impulse}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{class_t_ship_a66c1b144594533095a84407fc865fed2}{Impulse}});}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_a256e6955aa3b7c034d7daa91101c32be}{Explode}}();}
+\DoxyCodeLine{72         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_ad211854d8baf0f8be350c4e66f065f4e}{DoExplosion}}();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_ship_aa436f398d0e3fbcb2a1cd5e0db5f02b4}{IsAlive}}();}
+\DoxyCodeLine{75         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_ship_a626027f7fd814b89e81b104dffd159d4}{IsVisible}}();}
+\DoxyCodeLine{76         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_ship_ae6e794aa1af097eb129e99a6e101e5b5}{IsColliding}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{79         \mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{enShipClass}} \mbox{\hyperlink{class_t_ship_aec25b6c79f7c370d6bcd3e175dba2487}{m\_nClass}};}
+\DoxyCodeLine{80         \mbox{\hyperlink{class_t_sound_manager}{TSoundManager}} *\mbox{\hyperlink{class_t_ship_ae94be25ef460643ec94882abb8c1f30d}{m\_pAudio}};}
+\DoxyCodeLine{81         \mbox{\hyperlink{class_t_video_manager}{TVideoManager}} *\mbox{\hyperlink{class_t_ship_a2342af28b638135cf75689dd8c12a4fd}{m\_pVideo}};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83         COLORREF \mbox{\hyperlink{class_t_ship_ac6e9ba0024befc7a43eba00d7be3fe84}{m\_Color}};}
+\DoxyCodeLine{84         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_t_ship_ad506eaeb6864ac8b8d4b55a60b63782e}{m\_nImpulseTicks}};}
+\DoxyCodeLine{85         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_t_ship_a9d6972635655a5d4234e235b0cfd92bf}{m\_Rot}}, \mbox{\hyperlink{class_t_ship_aec6843603d50b2d321ac3c91e41179fb}{m\_Impulse}};}
+\DoxyCodeLine{86         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_ship_a389e7019e280bb2e432c1215a7c35926}{m\_bAlive}}, \mbox{\hyperlink{class_t_ship_aa0acd2deb4fe9c85d256b3e67b7f495f}{m\_bVisible}};}
+\DoxyCodeLine{87         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_ada09a82f0dc02cb8fe985c1728fde117}{m\_Size}}, \mbox{\hyperlink{class_t_ship_a1df618b57c4c0347131834691cd7154d}{m\_Pos}}, \mbox{\hyperlink{class_t_ship_acf9eed99caba860f91a3276edb93520a}{m\_Vel}};}
+\DoxyCodeLine{88         \mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVecVecPoints}} \mbox{\hyperlink{class_t_ship_aa6a4b466b27105025b804f3b4a5abbd6}{m\_Shape}}, \mbox{\hyperlink{class_t_ship_a0d78ae1a93b93c307ab408c1fccfd534}{m\_Engine}}, \mbox{\hyperlink{class_t_ship_af579de6862aba1d3be6c854f41d37a8c}{m\_Shield}};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_ship_a4e696c98c9166abbe87fd284e18188c1}{m\_bShield}};}
+\DoxyCodeLine{91         \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{class_t_ship_a68365e152cc977a82add2c662e8bd53f}{m\_nShieldTick}};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_t_ship_a6e4f6f801c1747cd3d960e2bc3da23c7}{m\_nExplosionTicks}};}
+\DoxyCodeLine{94                                             \textcolor{comment}{// debris}}
+\DoxyCodeLine{95         \mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVecVecPoints}} \mbox{\hyperlink{class_t_ship_ab723b219574fe1697a04a1d35cce5853}{m\_Debris}};}
+\DoxyCodeLine{96         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_ship_aba75400ef21e4d634cc224aa20794d68}{m\_DebrisStartPos}};}
+\DoxyCodeLine{97         \mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVecPoints}} \mbox{\hyperlink{class_t_ship_af3e48bd1b8da589094eb0925eb0da198}{m\_DebrisTranslations}};}
+\DoxyCodeLine{98         std::vector<double> \mbox{\hyperlink{class_t_ship_ac78b51e2b8afb5ff85b3ac1abca8ea50}{m\_DebrisRotations}};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{101         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_af8d093c109923288b6676e003caf7d89}{BuildTheShip}}();}
+\DoxyCodeLine{102         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_ship_ac8a99ba9569b2681450bb33b830b31ba}{Split}}(\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVecVecPoints}}\& Pts, \mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVecVecPoints}}\& Splits);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 }
+
+\end{DoxyCode}

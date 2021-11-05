@@ -1,0 +1,236 @@
+\hypertarget{class_t_form_main}{}\doxysection{TForm\+Main Class Reference}
+\label{class_t_form_main}\index{TFormMain@{TFormMain}}
+
+
+{\ttfamily \#include $<$TForm\+Main.\+h$>$}
+
+Inheritance diagram for TForm\+Main\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_t_form_main}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \+\_\+\+\_\+fastcall \mbox{\hyperlink{class_t_form_main_af27d7ef8f92214e6209341e437fba66b}{Form\+Create}} (TObject $\ast$Sender)
+\begin{DoxyCompactList}\small\item\em Form\+Create. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \mbox{\hyperlink{class_t_form_main_a2178c00872e40a88af7adb0de2b81b60}{Form\+Paint}} (TObject $\ast$Sender)
+\begin{DoxyCompactList}\small\item\em Paint Event Handler. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \mbox{\hyperlink{class_t_form_main_a8ceeb9aa1ab20040d358f22e3b3e3eef}{Timer\+Timer}} (TObject $\ast$Sender)
+\begin{DoxyCompactList}\small\item\em Timer Event Handler. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \mbox{\hyperlink{class_t_form_main_ad35e7996bb41cca2d027a3c88260210d}{Form\+Close}} (TObject $\ast$Sender, TClose\+Action \&Action)
+\begin{DoxyCompactList}\small\item\em Form Close Event Handler. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+fastcall \mbox{\hyperlink{class_t_form_main_a64172ce125adcaeec4546e50ed37fae1}{TForm\+Main}} (TComponent $\ast$Owner)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TTimer $\ast$ \mbox{\hyperlink{class_t_form_main_a689b6df81b4ada48d0cfb1373f54e4de}{Timer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_form_main_a0ac0ef9367ee054458f9d95326cfbaa1}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Setting-\/up the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_form_main_af29e2fed54bec559ee7404fa47c77450}{Cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleaning-\/up the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_form_main_a2a1aaefe858c0dbe3d39a4ea8bd755ec}{Main\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Main application loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_form_main_a792d955946594b73004dbfcce6bf3af1}{Keyboard\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_form_main_a45642b6307d23211634dc43700b3e7c9}{Force\+To\+FPS}} (unsigned n\+FPS)
+\begin{DoxyCompactList}\small\item\em Force the execution speed to a specified framerate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_game}{TGame}} $\ast$ \mbox{\hyperlink{class_t_form_main_a12ce8319b725b689ffade7cf38450d58}{m\+\_\+p\+Game}}
+\item 
+\mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$ \mbox{\hyperlink{class_t_form_main_af9f721b9652743ba4d52fe8f626ae86b}{m\+\_\+p\+Audio}}
+\item 
+\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$ \mbox{\hyperlink{class_t_form_main_adb2f305367032f8e063c15d79609c260}{m\+\_\+p\+Video}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_form_main_a64172ce125adcaeec4546e50ed37fae1}\label{class_t_form_main_a64172ce125adcaeec4546e50ed37fae1}} 
+\index{TFormMain@{TFormMain}!TFormMain@{TFormMain}}
+\index{TFormMain@{TFormMain}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{TFormMain()}{TFormMain()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+fastcall TForm\+Main\+::\+TForm\+Main (\begin{DoxyParamCaption}\item[{TComponent $\ast$}]{Owner }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Owner} & Pointer to the owner object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_form_main_af29e2fed54bec559ee7404fa47c77450}\label{class_t_form_main_af29e2fed54bec559ee7404fa47c77450}} 
+\index{TFormMain@{TFormMain}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily void TForm\+Main\+::\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Cleaning-\/up the application. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_form_main_a45642b6307d23211634dc43700b3e7c9}\label{class_t_form_main_a45642b6307d23211634dc43700b3e7c9}} 
+\index{TFormMain@{TFormMain}!ForceToFPS@{ForceToFPS}}
+\index{ForceToFPS@{ForceToFPS}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{ForceToFPS()}{ForceToFPS()}}
+{\footnotesize\ttfamily void TForm\+Main\+::\+Force\+To\+FPS (\begin{DoxyParamCaption}\item[{unsigned}]{n\+FPS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Force the execution speed to a specified framerate. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em n\+FPS} & The value of Frames per Second to be forced to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_form_main_ad35e7996bb41cca2d027a3c88260210d}\label{class_t_form_main_ad35e7996bb41cca2d027a3c88260210d}} 
+\index{TFormMain@{TFormMain}!FormClose@{FormClose}}
+\index{FormClose@{FormClose}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{FormClose()}{FormClose()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall TForm\+Main\+::\+Form\+Close (\begin{DoxyParamCaption}\item[{TObject $\ast$}]{Sender,  }\item[{TClose\+Action \&}]{Action }\end{DoxyParamCaption})}
+
+
+
+Form Close Event Handler. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Sender} & Pointer to the event source object \\
+\hline
+{\em Action} & Reference to action type specifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_form_main_af27d7ef8f92214e6209341e437fba66b}\label{class_t_form_main_af27d7ef8f92214e6209341e437fba66b}} 
+\index{TFormMain@{TFormMain}!FormCreate@{FormCreate}}
+\index{FormCreate@{FormCreate}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{FormCreate()}{FormCreate()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall TForm\+Main\+::\+Form\+Create (\begin{DoxyParamCaption}\item[{TObject $\ast$}]{Sender }\end{DoxyParamCaption})}
+
+
+
+Form\+Create. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Sender} & Pointer to the event source object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_form_main_a2178c00872e40a88af7adb0de2b81b60}\label{class_t_form_main_a2178c00872e40a88af7adb0de2b81b60}} 
+\index{TFormMain@{TFormMain}!FormPaint@{FormPaint}}
+\index{FormPaint@{FormPaint}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{FormPaint()}{FormPaint()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall TForm\+Main\+::\+Form\+Paint (\begin{DoxyParamCaption}\item[{TObject $\ast$}]{Sender }\end{DoxyParamCaption})}
+
+
+
+Paint Event Handler. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Sender} & Pointer to the event source object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_form_main_a792d955946594b73004dbfcce6bf3af1}\label{class_t_form_main_a792d955946594b73004dbfcce6bf3af1}} 
+\index{TFormMain@{TFormMain}!KeyboardHandler@{KeyboardHandler}}
+\index{KeyboardHandler@{KeyboardHandler}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{KeyboardHandler()}{KeyboardHandler()}}
+{\footnotesize\ttfamily void TForm\+Main\+::\+Keyboard\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Keyboard handler. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyNote}{Note}
+Uses Get\+Asynk\+Key\+State() function instead of WM\+\_\+\+KEYDOWN event handler so that can handle multiple keys pressed simultaneously 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_t_form_main_a2a1aaefe858c0dbe3d39a4ea8bd755ec}\label{class_t_form_main_a2a1aaefe858c0dbe3d39a4ea8bd755ec}} 
+\index{TFormMain@{TFormMain}!MainLoop@{MainLoop}}
+\index{MainLoop@{MainLoop}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{MainLoop()}{MainLoop()}}
+{\footnotesize\ttfamily void TForm\+Main\+::\+Main\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Main application loop. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_form_main_a0ac0ef9367ee054458f9d95326cfbaa1}\label{class_t_form_main_a0ac0ef9367ee054458f9d95326cfbaa1}} 
+\index{TFormMain@{TFormMain}!Setup@{Setup}}
+\index{Setup@{Setup}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void TForm\+Main\+::\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Setting-\/up the application. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_form_main_a8ceeb9aa1ab20040d358f22e3b3e3eef}\label{class_t_form_main_a8ceeb9aa1ab20040d358f22e3b3e3eef}} 
+\index{TFormMain@{TFormMain}!TimerTimer@{TimerTimer}}
+\index{TimerTimer@{TimerTimer}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{TimerTimer()}{TimerTimer()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall TForm\+Main\+::\+Timer\+Timer (\begin{DoxyParamCaption}\item[{TObject $\ast$}]{Sender }\end{DoxyParamCaption})}
+
+
+
+Timer Event Handler. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Sender} & Pointer to the event source object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_form_main_af9f721b9652743ba4d52fe8f626ae86b}\label{class_t_form_main_af9f721b9652743ba4d52fe8f626ae86b}} 
+\index{TFormMain@{TFormMain}!m\_pAudio@{m\_pAudio}}
+\index{m\_pAudio@{m\_pAudio}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{m\_pAudio}{m\_pAudio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}}$\ast$ TForm\+Main\+::m\+\_\+p\+Audio\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_form_main_a12ce8319b725b689ffade7cf38450d58}\label{class_t_form_main_a12ce8319b725b689ffade7cf38450d58}} 
+\index{TFormMain@{TFormMain}!m\_pGame@{m\_pGame}}
+\index{m\_pGame@{m\_pGame}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{m\_pGame}{m\_pGame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_game}{TGame}}$\ast$ TForm\+Main\+::m\+\_\+p\+Game\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_form_main_adb2f305367032f8e063c15d79609c260}\label{class_t_form_main_adb2f305367032f8e063c15d79609c260}} 
+\index{TFormMain@{TFormMain}!m\_pVideo@{m\_pVideo}}
+\index{m\_pVideo@{m\_pVideo}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{m\_pVideo}{m\_pVideo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}}$\ast$ TForm\+Main\+::m\+\_\+p\+Video\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_form_main_a689b6df81b4ada48d0cfb1373f54e4de}\label{class_t_form_main_a689b6df81b4ada48d0cfb1373f54e4de}} 
+\index{TFormMain@{TFormMain}!Timer@{Timer}}
+\index{Timer@{Timer}!TFormMain@{TFormMain}}
+\doxysubsubsection{\texorpdfstring{Timer}{Timer}}
+{\footnotesize\ttfamily TTimer$\ast$ TForm\+Main\+::\+Timer}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{_t_form_main_8h}{TForm\+Main.\+h}}\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{_t_form_main_8cpp}{TForm\+Main.\+cpp}}\end{DoxyCompactItemize}

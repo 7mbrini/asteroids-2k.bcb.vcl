@@ -1,0 +1,235 @@
+\hypertarget{game_8cpp}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.bcb.\+vcl/asteroids-\/2k/game.cpp File Reference}
+\label{game_8cpp}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/game.cpp@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/game.cpp}}
+
+
+Game logic implementation.  
+
+
+{\ttfamily \#include $<$vcl.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$winuser.\+h$>$}\newline
+{\ttfamily \#include $<$mmsystem.\+h$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$al/al.\+h$>$}\newline
+{\ttfamily \#include $<$al/alc.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vectors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commdefs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TForm\+Main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TDlg\+Best\+Scores.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a60443198a583b50517a41aeef1240a75}{MAXLIVES}}~3
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a6650fe087ba4ca094c337d5784cd9aaa}{STARTLEVEL}}~1
+\item 
+\#define \mbox{\hyperlink{game_8cpp_ac8af44310b531d493cbc488f0b48407a}{STARTSCORE}}~0
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a1098ed1fe42c4de7a7b21c49025b7825}{BONUSCOUNTER}}~1
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a451818d15a49a6db55f9a121fdad900c}{BONUSPOINTS}}~1000
+\item 
+\#define \mbox{\hyperlink{game_8cpp_aed65468f624beea85348d5f3dc9f9ef2}{SHOTDELAY}}~150
+\item 
+\#define \mbox{\hyperlink{game_8cpp_afe2403aeceba7fd072cf23b936efedc5}{MAXASTEROIDS}}~5
+\item 
+\#define \mbox{\hyperlink{game_8cpp_ab2f5214d638c8b94934157f162dd139c}{ASTEROIDVEL}}~10
+\item 
+\#define \mbox{\hyperlink{game_8cpp_aafd8e4e20a822bd7b504112c862acaad}{ASTEROIDVELRATIO}}~2
+\item 
+\#define \mbox{\hyperlink{game_8cpp_ac10b6b7214277b44113096dcd3979ab9}{ASTEROIDBIGSIZE}}~30
+\item 
+\#define \mbox{\hyperlink{game_8cpp_aea9bad580e676f3569374e2dc8b27352}{ASTEROIDMIDSIZE}}~20
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a8e9f3a9e215fd2f493bb56e0c4882d48}{ASTEROIDSMALLSIZE}}~10
+\item 
+\#define \mbox{\hyperlink{game_8cpp_aa349705d5077f63d193017a79a8ee716}{BIGASTEROIDSCORE}}~5
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a981d8f098f49980b90be0025e5b15fd4}{MIDASTEROIDSCORE}}~10
+\item 
+\#define \mbox{\hyperlink{game_8cpp_ad7bdb2d4f8392290e34b730530e087a8}{SMALLASTEROIDSCORE}}~20
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a3adf29d839be941020069a586d5f9e1c}{BIGALIENSHIPSCORE}}~100
+\item 
+\#define \mbox{\hyperlink{game_8cpp_ac95cb398f0ddef1a23fb76711a78de97}{SMALLALIENSHIPSCORE}}~500
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a9ed1cdb2312a8490676af616f8fc7c16}{SAFETYDISTANCE}}~(2.\+0$\ast$\mbox{\hyperlink{game_8cpp_ac10b6b7214277b44113096dcd3979ab9}{ASTEROIDBIGSIZE}})
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a781b2c17dcce63e671f5ed8d0dedc545}{SPLASHDELAY}}~5000
+\item 
+\#define \mbox{\hyperlink{game_8cpp_affb1247652b1388ff44822b12b1fb00a}{ALIENSHOTDELAY}}~20
+\item 
+\#define \mbox{\hyperlink{game_8cpp_acb043d5d3890fac4caf9a792ae16a411}{HUMANSHOTDELAY}}~100
+\item 
+\#define \mbox{\hyperlink{game_8cpp_af8c899d6b83750cd64c597d6567f7380}{MISSILESPEED}}~100.\+0
+\item 
+\#define \mbox{\hyperlink{game_8cpp_ab949308d7bed86c2b042ecde7aded504}{ALIENSHIPTICK}}~500
+\item 
+\#define \mbox{\hyperlink{game_8cpp_ae17f6b12b68d68583f9cd9404d6a43fb}{ALIENBIGINACCURACY}}~(\mbox{\hyperlink{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}/16.\+0)
+\item 
+\#define \mbox{\hyperlink{game_8cpp_acbbe2313c86bd1d9a4e7abcbaeb0e04d}{ALIENSMALLINACCURACY}}~(\mbox{\hyperlink{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}/64.\+0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Game logic implementation. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{game_8cpp_ae17f6b12b68d68583f9cd9404d6a43fb}\label{game_8cpp_ae17f6b12b68d68583f9cd9404d6a43fb}} 
+\index{game.cpp@{game.cpp}!ALIENBIGINACCURACY@{ALIENBIGINACCURACY}}
+\index{ALIENBIGINACCURACY@{ALIENBIGINACCURACY}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ALIENBIGINACCURACY}{ALIENBIGINACCURACY}}
+{\footnotesize\ttfamily \#define ALIENBIGINACCURACY~(\mbox{\hyperlink{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}/16.\+0)}
+
+\mbox{\Hypertarget{game_8cpp_ab949308d7bed86c2b042ecde7aded504}\label{game_8cpp_ab949308d7bed86c2b042ecde7aded504}} 
+\index{game.cpp@{game.cpp}!ALIENSHIPTICK@{ALIENSHIPTICK}}
+\index{ALIENSHIPTICK@{ALIENSHIPTICK}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ALIENSHIPTICK}{ALIENSHIPTICK}}
+{\footnotesize\ttfamily \#define ALIENSHIPTICK~500}
+
+\mbox{\Hypertarget{game_8cpp_affb1247652b1388ff44822b12b1fb00a}\label{game_8cpp_affb1247652b1388ff44822b12b1fb00a}} 
+\index{game.cpp@{game.cpp}!ALIENSHOTDELAY@{ALIENSHOTDELAY}}
+\index{ALIENSHOTDELAY@{ALIENSHOTDELAY}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ALIENSHOTDELAY}{ALIENSHOTDELAY}}
+{\footnotesize\ttfamily \#define ALIENSHOTDELAY~20}
+
+\mbox{\Hypertarget{game_8cpp_acbbe2313c86bd1d9a4e7abcbaeb0e04d}\label{game_8cpp_acbbe2313c86bd1d9a4e7abcbaeb0e04d}} 
+\index{game.cpp@{game.cpp}!ALIENSMALLINACCURACY@{ALIENSMALLINACCURACY}}
+\index{ALIENSMALLINACCURACY@{ALIENSMALLINACCURACY}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ALIENSMALLINACCURACY}{ALIENSMALLINACCURACY}}
+{\footnotesize\ttfamily \#define ALIENSMALLINACCURACY~(\mbox{\hyperlink{maths_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}/64.\+0)}
+
+\mbox{\Hypertarget{game_8cpp_ac10b6b7214277b44113096dcd3979ab9}\label{game_8cpp_ac10b6b7214277b44113096dcd3979ab9}} 
+\index{game.cpp@{game.cpp}!ASTEROIDBIGSIZE@{ASTEROIDBIGSIZE}}
+\index{ASTEROIDBIGSIZE@{ASTEROIDBIGSIZE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ASTEROIDBIGSIZE}{ASTEROIDBIGSIZE}}
+{\footnotesize\ttfamily \#define ASTEROIDBIGSIZE~30}
+
+\mbox{\Hypertarget{game_8cpp_aea9bad580e676f3569374e2dc8b27352}\label{game_8cpp_aea9bad580e676f3569374e2dc8b27352}} 
+\index{game.cpp@{game.cpp}!ASTEROIDMIDSIZE@{ASTEROIDMIDSIZE}}
+\index{ASTEROIDMIDSIZE@{ASTEROIDMIDSIZE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ASTEROIDMIDSIZE}{ASTEROIDMIDSIZE}}
+{\footnotesize\ttfamily \#define ASTEROIDMIDSIZE~20}
+
+\mbox{\Hypertarget{game_8cpp_a8e9f3a9e215fd2f493bb56e0c4882d48}\label{game_8cpp_a8e9f3a9e215fd2f493bb56e0c4882d48}} 
+\index{game.cpp@{game.cpp}!ASTEROIDSMALLSIZE@{ASTEROIDSMALLSIZE}}
+\index{ASTEROIDSMALLSIZE@{ASTEROIDSMALLSIZE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ASTEROIDSMALLSIZE}{ASTEROIDSMALLSIZE}}
+{\footnotesize\ttfamily \#define ASTEROIDSMALLSIZE~10}
+
+\mbox{\Hypertarget{game_8cpp_ab2f5214d638c8b94934157f162dd139c}\label{game_8cpp_ab2f5214d638c8b94934157f162dd139c}} 
+\index{game.cpp@{game.cpp}!ASTEROIDVEL@{ASTEROIDVEL}}
+\index{ASTEROIDVEL@{ASTEROIDVEL}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ASTEROIDVEL}{ASTEROIDVEL}}
+{\footnotesize\ttfamily \#define ASTEROIDVEL~10}
+
+\mbox{\Hypertarget{game_8cpp_aafd8e4e20a822bd7b504112c862acaad}\label{game_8cpp_aafd8e4e20a822bd7b504112c862acaad}} 
+\index{game.cpp@{game.cpp}!ASTEROIDVELRATIO@{ASTEROIDVELRATIO}}
+\index{ASTEROIDVELRATIO@{ASTEROIDVELRATIO}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ASTEROIDVELRATIO}{ASTEROIDVELRATIO}}
+{\footnotesize\ttfamily \#define ASTEROIDVELRATIO~2}
+
+\mbox{\Hypertarget{game_8cpp_a3adf29d839be941020069a586d5f9e1c}\label{game_8cpp_a3adf29d839be941020069a586d5f9e1c}} 
+\index{game.cpp@{game.cpp}!BIGALIENSHIPSCORE@{BIGALIENSHIPSCORE}}
+\index{BIGALIENSHIPSCORE@{BIGALIENSHIPSCORE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{BIGALIENSHIPSCORE}{BIGALIENSHIPSCORE}}
+{\footnotesize\ttfamily \#define BIGALIENSHIPSCORE~100}
+
+\mbox{\Hypertarget{game_8cpp_aa349705d5077f63d193017a79a8ee716}\label{game_8cpp_aa349705d5077f63d193017a79a8ee716}} 
+\index{game.cpp@{game.cpp}!BIGASTEROIDSCORE@{BIGASTEROIDSCORE}}
+\index{BIGASTEROIDSCORE@{BIGASTEROIDSCORE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{BIGASTEROIDSCORE}{BIGASTEROIDSCORE}}
+{\footnotesize\ttfamily \#define BIGASTEROIDSCORE~5}
+
+\mbox{\Hypertarget{game_8cpp_a1098ed1fe42c4de7a7b21c49025b7825}\label{game_8cpp_a1098ed1fe42c4de7a7b21c49025b7825}} 
+\index{game.cpp@{game.cpp}!BONUSCOUNTER@{BONUSCOUNTER}}
+\index{BONUSCOUNTER@{BONUSCOUNTER}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{BONUSCOUNTER}{BONUSCOUNTER}}
+{\footnotesize\ttfamily \#define BONUSCOUNTER~1}
+
+\mbox{\Hypertarget{game_8cpp_a451818d15a49a6db55f9a121fdad900c}\label{game_8cpp_a451818d15a49a6db55f9a121fdad900c}} 
+\index{game.cpp@{game.cpp}!BONUSPOINTS@{BONUSPOINTS}}
+\index{BONUSPOINTS@{BONUSPOINTS}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{BONUSPOINTS}{BONUSPOINTS}}
+{\footnotesize\ttfamily \#define BONUSPOINTS~1000}
+
+\mbox{\Hypertarget{game_8cpp_acb043d5d3890fac4caf9a792ae16a411}\label{game_8cpp_acb043d5d3890fac4caf9a792ae16a411}} 
+\index{game.cpp@{game.cpp}!HUMANSHOTDELAY@{HUMANSHOTDELAY}}
+\index{HUMANSHOTDELAY@{HUMANSHOTDELAY}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{HUMANSHOTDELAY}{HUMANSHOTDELAY}}
+{\footnotesize\ttfamily \#define HUMANSHOTDELAY~100}
+
+\mbox{\Hypertarget{game_8cpp_afe2403aeceba7fd072cf23b936efedc5}\label{game_8cpp_afe2403aeceba7fd072cf23b936efedc5}} 
+\index{game.cpp@{game.cpp}!MAXASTEROIDS@{MAXASTEROIDS}}
+\index{MAXASTEROIDS@{MAXASTEROIDS}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{MAXASTEROIDS}{MAXASTEROIDS}}
+{\footnotesize\ttfamily \#define MAXASTEROIDS~5}
+
+\mbox{\Hypertarget{game_8cpp_a60443198a583b50517a41aeef1240a75}\label{game_8cpp_a60443198a583b50517a41aeef1240a75}} 
+\index{game.cpp@{game.cpp}!MAXLIVES@{MAXLIVES}}
+\index{MAXLIVES@{MAXLIVES}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{MAXLIVES}{MAXLIVES}}
+{\footnotesize\ttfamily \#define MAXLIVES~3}
+
+\mbox{\Hypertarget{game_8cpp_a981d8f098f49980b90be0025e5b15fd4}\label{game_8cpp_a981d8f098f49980b90be0025e5b15fd4}} 
+\index{game.cpp@{game.cpp}!MIDASTEROIDSCORE@{MIDASTEROIDSCORE}}
+\index{MIDASTEROIDSCORE@{MIDASTEROIDSCORE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{MIDASTEROIDSCORE}{MIDASTEROIDSCORE}}
+{\footnotesize\ttfamily \#define MIDASTEROIDSCORE~10}
+
+\mbox{\Hypertarget{game_8cpp_af8c899d6b83750cd64c597d6567f7380}\label{game_8cpp_af8c899d6b83750cd64c597d6567f7380}} 
+\index{game.cpp@{game.cpp}!MISSILESPEED@{MISSILESPEED}}
+\index{MISSILESPEED@{MISSILESPEED}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{MISSILESPEED}{MISSILESPEED}}
+{\footnotesize\ttfamily \#define MISSILESPEED~100.\+0}
+
+\mbox{\Hypertarget{game_8cpp_a9ed1cdb2312a8490676af616f8fc7c16}\label{game_8cpp_a9ed1cdb2312a8490676af616f8fc7c16}} 
+\index{game.cpp@{game.cpp}!SAFETYDISTANCE@{SAFETYDISTANCE}}
+\index{SAFETYDISTANCE@{SAFETYDISTANCE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{SAFETYDISTANCE}{SAFETYDISTANCE}}
+{\footnotesize\ttfamily \#define SAFETYDISTANCE~(2.\+0$\ast$\mbox{\hyperlink{game_8cpp_ac10b6b7214277b44113096dcd3979ab9}{ASTEROIDBIGSIZE}})}
+
+\mbox{\Hypertarget{game_8cpp_aed65468f624beea85348d5f3dc9f9ef2}\label{game_8cpp_aed65468f624beea85348d5f3dc9f9ef2}} 
+\index{game.cpp@{game.cpp}!SHOTDELAY@{SHOTDELAY}}
+\index{SHOTDELAY@{SHOTDELAY}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{SHOTDELAY}{SHOTDELAY}}
+{\footnotesize\ttfamily \#define SHOTDELAY~150}
+
+\mbox{\Hypertarget{game_8cpp_ac95cb398f0ddef1a23fb76711a78de97}\label{game_8cpp_ac95cb398f0ddef1a23fb76711a78de97}} 
+\index{game.cpp@{game.cpp}!SMALLALIENSHIPSCORE@{SMALLALIENSHIPSCORE}}
+\index{SMALLALIENSHIPSCORE@{SMALLALIENSHIPSCORE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{SMALLALIENSHIPSCORE}{SMALLALIENSHIPSCORE}}
+{\footnotesize\ttfamily \#define SMALLALIENSHIPSCORE~500}
+
+\mbox{\Hypertarget{game_8cpp_ad7bdb2d4f8392290e34b730530e087a8}\label{game_8cpp_ad7bdb2d4f8392290e34b730530e087a8}} 
+\index{game.cpp@{game.cpp}!SMALLASTEROIDSCORE@{SMALLASTEROIDSCORE}}
+\index{SMALLASTEROIDSCORE@{SMALLASTEROIDSCORE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{SMALLASTEROIDSCORE}{SMALLASTEROIDSCORE}}
+{\footnotesize\ttfamily \#define SMALLASTEROIDSCORE~20}
+
+\mbox{\Hypertarget{game_8cpp_a781b2c17dcce63e671f5ed8d0dedc545}\label{game_8cpp_a781b2c17dcce63e671f5ed8d0dedc545}} 
+\index{game.cpp@{game.cpp}!SPLASHDELAY@{SPLASHDELAY}}
+\index{SPLASHDELAY@{SPLASHDELAY}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{SPLASHDELAY}{SPLASHDELAY}}
+{\footnotesize\ttfamily \#define SPLASHDELAY~5000}
+
+\mbox{\Hypertarget{game_8cpp_a6650fe087ba4ca094c337d5784cd9aaa}\label{game_8cpp_a6650fe087ba4ca094c337d5784cd9aaa}} 
+\index{game.cpp@{game.cpp}!STARTLEVEL@{STARTLEVEL}}
+\index{STARTLEVEL@{STARTLEVEL}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{STARTLEVEL}{STARTLEVEL}}
+{\footnotesize\ttfamily \#define STARTLEVEL~1}
+
+\mbox{\Hypertarget{game_8cpp_ac8af44310b531d493cbc488f0b48407a}\label{game_8cpp_ac8af44310b531d493cbc488f0b48407a}} 
+\index{game.cpp@{game.cpp}!STARTSCORE@{STARTSCORE}}
+\index{STARTSCORE@{STARTSCORE}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{STARTSCORE}{STARTSCORE}}
+{\footnotesize\ttfamily \#define STARTSCORE~0}
+

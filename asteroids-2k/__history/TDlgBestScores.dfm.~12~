@@ -1,0 +1,52 @@
+object DlgBestScores: TDlgBestScores
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Best Scores'
+  ClientHeight = 180
+  ClientWidth = 240
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 34
+    Top = 44
+    Width = 163
+    Height = 13
+    Caption = 'Label1'
+  end
+  object ButtonOk: TButton
+    Left = 34
+    Top = 140
+    Width = 75
+    Height = 25
+    Caption = 'Ok'
+    TabOrder = 0
+    OnClick = ButtonOkClick
+  end
+  object ButtonCancel: TButton
+    Left = 122
+    Top = 140
+    Width = 75
+    Height = 25
+    Caption = 'Cancel'
+    TabOrder = 1
+    OnClick = ButtonCancelClick
+  end
+  object EditName: TEdit
+    Left = 34
+    Top = 80
+    Width = 163
+    Height = 21
+    TabOrder = 2
+    Text = 'EditName'
+  end
+end

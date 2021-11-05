@@ -1,0 +1,64 @@
+\hypertarget{weapons_8h_source}{}\doxysection{weapons.\+h}
+\label{weapons_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/weapons.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/weapons.h}}
+\mbox{\hyperlink{weapons_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{    author: Francesco Settembrini}}
+\DoxyCodeLine{3 \textcolor{comment}{    last update: 23/6/2021}}
+\DoxyCodeLine{4 \textcolor{comment}{    e-\/mail: mailto:francesco.settembrini@poliba.it}}
+\DoxyCodeLine{5 \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_WEAPONS\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_WEAPONS\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{maths_8h}{maths.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{video_8h}{video.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vectors_8h}{vectors.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_ship}{TShip}};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_weapon}{TWeapon}};}
+\DoxyCodeLine{21 \textcolor{keyword}{typedef} std::vector<TWeapon*> \mbox{\hyperlink{weapons_8h_a70aa12c116f5b57237daf8dcddae6abd}{TVecPtrWeapons}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_weapon}{TWeapon}}}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_t_weapon_a51d48a7acad47415ee3db2cc450724c9}{TWeapon}}(\mbox{\hyperlink{class_t_video_manager}{TVideoManager}}* pVM);}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_t_weapon_a51d48a7acad47415ee3db2cc450724c9}{TWeapon}}(\mbox{\hyperlink{class_t_video_manager}{TVideoManager}}* pVM, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_weapon_a8138a8c857d6b448585de6ff2c35fa4d}{GetPos}}();}
+\DoxyCodeLine{30         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_weapon_af49d86585ca860881d806834ef0995e4}{Update}}(\textcolor{keywordtype}{double} Dt) = 0;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_weapon_a6e52e4ed1adc9208fdcb7042c0233eb1}{IsArmed}}();}
+\DoxyCodeLine{33         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_weapon_ab3cac09f8561eaa3daff155eedc2c461}{Arm}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{36         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_weapon_a640bb3def266a46fb61a1a9aa1e275aa}{m\_bArmed}};}
+\DoxyCodeLine{37         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_weapon_a2653d5a8977dd3df905fab1769c3f6d6}{m\_Pos}}, \mbox{\hyperlink{class_t_weapon_ab0fbd37c08552c69f7fc8f6e046ac226}{m\_Vel}};}
+\DoxyCodeLine{38         COLORREF \mbox{\hyperlink{class_t_weapon_a4351dce5629d221ac960d31e356ede39}{m\_Color}};}
+\DoxyCodeLine{39         \mbox{\hyperlink{class_t_video_manager}{TVideoManager}} *\mbox{\hyperlink{class_t_weapon_a424baeeaf3e06c504e631c135e190869}{m\_pVM}};}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_missile}{TMissile}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_t_weapon}{TWeapon}}}
+\DoxyCodeLine{43 \{}
+\DoxyCodeLine{44     \textcolor{keyword}{public}:}
+\DoxyCodeLine{45         \mbox{\hyperlink{class_t_missile_a42b747e94851478902492b8091d87d46}{TMissile}}(\mbox{\hyperlink{class_t_video_manager}{TVideoManager}}* pVM);}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_t_missile_a42b747e94851478902492b8091d87d46}{TMissile}}(\mbox{\hyperlink{class_t_video_manager}{TVideoManager}}* pVM, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         \mbox{\hyperlink{class_t_ship}{TShip}}* \mbox{\hyperlink{class_t_missile_a59427cec15cd2c7e6a7fb101b9a4e5f0}{GetShip}}();}
+\DoxyCodeLine{49         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_missile_abd69cae7be223432ec91da95590ca98a}{SetShip}}(\mbox{\hyperlink{class_t_ship}{TShip}}* pShip);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_missile_a427e750ac56ba36265e25fcb3f0f173b}{Update}}(\textcolor{keywordtype}{double} Dt);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{54         \mbox{\hyperlink{class_t_ship}{TShip}}* \mbox{\hyperlink{class_t_missile_a2cb62c582585f421113fb8c1a90db21c}{m\_pShip}};}
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{58 }
+
+\end{DoxyCode}

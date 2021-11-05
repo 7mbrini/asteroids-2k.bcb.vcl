@@ -1,0 +1,83 @@
+\hypertarget{audio_8h_source}{}\doxysection{audio.\+h}
+\label{audio_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/audio.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/audio.h}}
+\mbox{\hyperlink{audio_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{    author: Francesco Settembrini}}
+\DoxyCodeLine{3 \textcolor{comment}{    last update: 23/6/2021}}
+\DoxyCodeLine{4 \textcolor{comment}{    e-\/mail: mailto:francesco.settembrini@poliba.it}}
+\DoxyCodeLine{5 \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_SOUNDMANAGER\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_SOUNDMANAGER\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <al/al.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <al/alc.h>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_a_l_system}{TALSystem}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     ALCcontext *\mbox{\hyperlink{struct_t_a_l_system_ad07a0336e985a9ec0c05c49265f1d7e9}{pAlcContext}};}
+\DoxyCodeLine{21     ALCdevice *\mbox{\hyperlink{struct_t_a_l_system_add844e0817d78c4be96910f9a62871b3}{pAlcDevice}};}
+\DoxyCodeLine{22 \};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_sound_track}{TSoundTrack}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     \textcolor{keyword}{public}:}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_t_sound_track_a8e3b44f6f407d3979be7ad5de7f88531}{TSoundTrack}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_t_sound_track}{TSoundTrack}}\& Other)}
+\DoxyCodeLine{28         \{}
+\DoxyCodeLine{29             this-\/>\mbox{\hyperlink{class_t_sound_track_ac3975c92b2539d39844889edb120a8c8}{strName}} = Other.\mbox{\hyperlink{class_t_sound_track_ac3975c92b2539d39844889edb120a8c8}{strName}};}
+\DoxyCodeLine{30             this-\/>\mbox{\hyperlink{class_t_sound_track_a17a640a82201bec59b06b03a74a5e091}{nBufferId}} = Other.\mbox{\hyperlink{class_t_sound_track_a17a640a82201bec59b06b03a74a5e091}{nBufferId}};}
+\DoxyCodeLine{31             this-\/>\mbox{\hyperlink{class_t_sound_track_ab676259a685b0dacdd7bf2d3f1b84598}{nSourceId}} = Other.\mbox{\hyperlink{class_t_sound_track_ab676259a685b0dacdd7bf2d3f1b84598}{nSourceId}};}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         \mbox{\hyperlink{class_t_sound_track_a0c071e4756fba15ae9d5c3df5840c238}{TSoundTrack}}(std::string \mbox{\hyperlink{class_t_sound_track_ac3975c92b2539d39844889edb120a8c8}{strName}}, ALuint \mbox{\hyperlink{class_t_sound_track_a17a640a82201bec59b06b03a74a5e091}{nBufferId}}, ALuint \mbox{\hyperlink{class_t_sound_track_ab676259a685b0dacdd7bf2d3f1b84598}{nSourceId}})}
+\DoxyCodeLine{35         \{}
+\DoxyCodeLine{36             this-\/>strName = \mbox{\hyperlink{class_t_sound_track_ac3975c92b2539d39844889edb120a8c8}{strName}};}
+\DoxyCodeLine{37             this-\/>nBufferId = \mbox{\hyperlink{class_t_sound_track_a17a640a82201bec59b06b03a74a5e091}{nBufferId}};}
+\DoxyCodeLine{38             this-\/>nSourceId = \mbox{\hyperlink{class_t_sound_track_ab676259a685b0dacdd7bf2d3f1b84598}{nSourceId}};}
+\DoxyCodeLine{39         \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{public}:}
+\DoxyCodeLine{42         std::string \mbox{\hyperlink{class_t_sound_track_ac3975c92b2539d39844889edb120a8c8}{strName}};}
+\DoxyCodeLine{43         ALuint \mbox{\hyperlink{class_t_sound_track_a17a640a82201bec59b06b03a74a5e091}{nBufferId}}, \mbox{\hyperlink{class_t_sound_track_ab676259a685b0dacdd7bf2d3f1b84598}{nSourceId}};}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{typedef} std::vector<TSoundTrack> \mbox{\hyperlink{audio_8h_ae4d3d266fb35a394c52318cf4ce2f411}{TSoundTracks}};}
+\DoxyCodeLine{47 \textcolor{keyword}{typedef} std::map< std::string, TSoundTrack > \mbox{\hyperlink{audio_8h_aed1da64de2d5b3f472d1fd21482bd3f1}{TMapSoundTracks}};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_sound_manager}{TSoundManager}}}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51     \textcolor{keyword}{public}:}
+\DoxyCodeLine{52         \mbox{\hyperlink{class_t_sound_manager_af1cc818ea82cbf39d5ad3c9bce095097}{TSoundManager}}();}
+\DoxyCodeLine{53         \mbox{\hyperlink{class_t_sound_manager_a04a49efdb717439a3e82afb67198f4cf}{\string~TSoundManager}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_t_sound_manager_a8f70fb839fdf8d8ca88591870666a63d}{GetMasterVolume}}();}
+\DoxyCodeLine{56         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_sound_manager_a0481fd9a7aed3b3c70000630ee304df7}{SetMasterVolume}}(\textcolor{keywordtype}{double} Volume);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_sound_manager_ab5a3d23b941b90ef0aaf34f20b1a0608}{IncreaseMasterVolume}}();}
+\DoxyCodeLine{59         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_sound_manager_a470297ef04be1343ddafb0f02fa46722}{DecreaseMasterVolume}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_sound_manager_ae66280fb89aab451c464337530e1e798}{LoadTheSounds}}(std::vector<std::string> strSounds);}
+\DoxyCodeLine{62         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_sound_manager_a6a70dd9a84bd041b4f4237fe81f18570}{FreeTheSounds}}();}
+\DoxyCodeLine{63         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_sound_manager_aa49c4ee527d5ad7ea4657066c33a24bd}{LoadTheSound}}(std::string strFileName);}
+\DoxyCodeLine{64         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_sound_manager_a4789c602d08d43144b412eb46dcfeb96}{PlayTheSound}}(std::string strSound, \textcolor{keywordtype}{bool} bLoop = \textcolor{keyword}{false});}
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_sound_manager_adb5d8c3e250f70d29d0f58376bc4c2db}{StopTheSound}}(std::string strSound);}
+\DoxyCodeLine{66         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_sound_manager_ae8bc5f311defc368aa58aba11b0791a6}{StopAllSounds}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{69         \mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} *\mbox{\hyperlink{class_t_sound_manager_a51d10c2fe07491c540a52e6cb5bcbb1e}{m\_pALSystem}};}
+\DoxyCodeLine{70         \mbox{\hyperlink{audio_8h_aed1da64de2d5b3f472d1fd21482bd3f1}{TMapSoundTracks}} \mbox{\hyperlink{class_t_sound_manager_a673b8abad9150923f0dfc2d8f14a4ce8}{m\_SoundTracks}};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_t_sound_manager_a5f7e760dbd256f32fb6fef3aa6cff2a3}{LoadWAV}}(std::string strFileName, \textcolor{keywordtype}{int}\& nChannels, \textcolor{keywordtype}{int}\& nSampleRate, \textcolor{keywordtype}{int}\& nBps, \textcolor{keywordtype}{int}\& nSize);}
+\DoxyCodeLine{73 \};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 }
+
+\end{DoxyCode}

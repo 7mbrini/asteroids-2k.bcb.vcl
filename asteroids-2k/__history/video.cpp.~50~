@@ -1,0 +1,205 @@
+/*!****************************************************************************
+
+	@file	video.h
+	@file	video.cpp
+
+	@brief	Video manager
+
+	@noop	author:	Francesco Settembrini
+	@noop	last update: 23/6/2021
+	@noop	e-mail:	mailto:francesco.settembrini@poliba.it
+
+******************************************************************************/
+
+#include <vcl.h>
+#include <assert.h>
+#include <system.hpp>
+#include <string>
+#pragma hdrstop
+
+#include "video.h"
+
+
+/*!****************************************************************************
+* @brief	Initialize the video system
+* @param	pVideoManager Pointer to TVideoManager data structure
+* @return	Returns true for success, false otherwise
+******************************************************************************/
+TVideoManager::TVideoManager(HWND hWnd, RECT Rect)
+{
+	assert(hWnd);
+	assert(Rect.right > 0);
+	assert(Rect.bottom > 0);
+
+	m_hWnd = hWnd;
+	m_ClientArea = Rect;
+
+	HDC hDC = ::GetDC(hWnd);
+	assert(hDC);
+
+	m_hDC = ::CreateCompatibleDC(hDC);
+	assert(hDC);
+
+	m_hBmp = ::CreateCompatibleBitmap(hDC,
+		m_ClientArea.right, m_ClientArea.bottom);
+	assert(m_hBmp);
+
+	::SelectObject(m_hDC, m_hBmp);
+	::SetBkMode(m_hDC, TRANSPARENT);
+
+	::ReleaseDC(hWnd, hDC);
+}
+
+
+//-----------------------------------------------------------------------------
+//	SCOPO:	Clean up and quit SDL
+//-----------------------------------------------------------------------------
+TVideoManager::~TVideoManager()
+{
+	assert(m_hDC);
+	assert(m_hBmp);
+
+	::DeleteDC(m_hDC);
+	::DeleteObject(m_hBmp);
+}
+
+//-----------------------------------------------------------------------------
+//	SCOPO:
+//-----------------------------------------------------------------------------
+TVector2 TVideoManager::GetScreenCenter()
+{
+	TVector2 RetVal(m_ClientArea.right/2.0, m_ClientArea.bottom/2.0);
+
+    return RetVal;
+}
+
+//-----------------------------------------------------------------------------
+//	SCOPO:
+//-----------------------------------------------------------------------------
+void TVideoManager::DrawLines(TVecPoints& Pts, int nLineWidth,
+	COLORREF Color, bool bClosed)
+{
+	assert(m_hDC);
+
+	HDC hDC = m_hDC;
+	assert(hDC);
+
+	HPEN hPen = ::CreatePen(PS_SOLID, nLineWidth, Color);
+	assert(hPen);
+
+	HPEN hOldPen = (HPEN) ::SelectObject(hDC, hPen);
+	assert(hOldPen);
+
+	for(int i=1; i<Pts.size(); i++)
+	{
+		::MoveToEx(hDC, Pts[i-1].X, Pts[i-1].Y, (LPPOINT) NULL);
+		::LineTo(hDC, Pts[i].X, Pts[i].Y);
+	}
+
+	if( bClosed && (Pts.size() > 2) )
+	{
+		::MoveToEx(hDC, Pts[Pts.size()-1].X, Pts[Pts.size()-1].Y, (LPPOINT) NULL);
+		::LineTo(hDC, Pts[0].X, Pts[0].Y);
+	}
+
+	::SelectObject(hDC, hOldPen);
+	::DeleteObject(hPen);
+}
+
+//-----------------------------------------------------------------------------
+//	SCOPO:
+//-----------------------------------------------------------------------------
+void TVideoManager::DrawLines(TVecVecPoints& Pts, int nLineWidth,
+	COLORREF Color, bool bClosed)
+{
+	for (int i = 0; i < Pts.size(); ++i)
+	{
+		DrawLines(Pts[i], nLineWidth, Color, bClosed);
+	}
+}
+
+void TVideoManager::DrawPoint(TVector2& Pt, COLORREF Color)
+{
+	assert(m_hDC);
+
+	::SetPixel(m_hDC, Pt.X, Pt.Y, Color);
+}
+
+void TVideoManager::ClearScreen(COLORREF Color)
+{
+	assert(m_hDC);
+
+	HBRUSH hBrush = ::CreateSolidBrush(Color);
+	assert(hBrush);
+
+	HBRUSH hOldBrush = (HBRUSH) ::SelectObject(m_hDC, hBrush);
+
+	::FillRect(m_hDC, &m_ClientArea, hBrush);
+
+	::SelectObject(m_hDC, hOldBrush);
+	::DeleteObject(hBrush);
+}
+
+bool TVideoManager::LoadFont(std::string strFontPath, std::wstring strName, int nSize)
+{
+	assert(m_hDC);
+
+	bool bResult = false;
+    WideString wstrFontPath(strFontPath.c_str());
+	int nResults = AddFontResourceEx( (wchar_t*) wstrFontPath.c_bstr(), FR_PRIVATE, NULL);
+
+	if( nResults )
+	{
+		LOGFONT LF;
+		memset(&LF, 0, sizeof(LF));
+
+		LF.lfHeight = nSize;
+		LF.lfWeight = FW_NORMAL;
+		LF.lfOutPrecision = OUT_TT_ONLY_PRECIS;
+		wcscpy(LF.lfFaceName, strName.c_str());
+
+		HFONT hFont = ::CreateFontIndirect(&LF);
+
+		::SelectObject(m_hDC, hFont);
+
+		bResult = true;
+	}
+
+	return bResult;
+}
+
+void TVideoManager::DrawText(char* pText, int nX, int nY, COLORREF nColor, UINT nAlign)
+{
+	assert(pText);
+	assert(m_hDC);
+
+	::SetTextAlign(m_hDC, nAlign);
+	::SetTextColor(m_hDC, nColor);
+
+	::TextOutA(m_hDC, nX, nY, (LPCSTR) pText, strlen(pText));
+}
+
+//-----------------------------------------------------------------------------
+//	SCOPO:
+//-----------------------------------------------------------------------------
+void TVideoManager::DrawText(std::vector<std::string> StringList,
+	int nX, int nY, int nLineHeight, COLORREF nColor, UINT nAlign)
+{
+	for(int i=0; i<StringList.size(); i++)
+	{
+		DrawText((char*) StringList[i].c_str(), nX, nY, nColor, nAlign);
+
+		nY += 1.25 * nLineHeight;
+	}
+}
+
+HDC TVideoManager::GetDC()
+{
+	return m_hDC;
+}
+
+RECT TVideoManager::GetClientArea()
+{
+	return m_ClientArea;
+}
+

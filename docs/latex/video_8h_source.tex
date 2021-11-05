@@ -1,0 +1,57 @@
+\hypertarget{video_8h_source}{}\doxysection{video.\+h}
+\label{video_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/video.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/video.h}}
+\mbox{\hyperlink{video_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{    author: Francesco Settembrini}}
+\DoxyCodeLine{3 \textcolor{comment}{    last update: 23/6/2021}}
+\DoxyCodeLine{4 \textcolor{comment}{    e-\/mail: mailto:francesco.settembrini@poliba.it}}
+\DoxyCodeLine{5 \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_SDLSYSTEM\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_SDLSYSTEM\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vectors_8h}{vectors.h}}"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacemaths}{maths}};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_video_manager}{TVideoManager}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     \textcolor{keyword}{public}:}
+\DoxyCodeLine{20         \mbox{\hyperlink{class_t_video_manager_a3cc7412dae21ef5997e93d008b1d2e99}{TVideoManager}}(HWND hWnd, RECT Rect);}
+\DoxyCodeLine{21         \mbox{\hyperlink{class_t_video_manager_ab8a49af73d36894d811aeb22a3cd15d3}{\string~TVideoManager}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         HDC \mbox{\hyperlink{class_t_video_manager_a19b6ce20aa8e0f9454787a3106effe3e}{GetDC}}();}
+\DoxyCodeLine{24         HWND \mbox{\hyperlink{class_t_video_manager_a6584a4ef60175bd843bbcf3955963a7d}{GetHWnd}}();}
+\DoxyCodeLine{25         RECT \mbox{\hyperlink{class_t_video_manager_acfab0f05c6890b4b85e7758ea1007769}{GetClientArea}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_video_manager_a6c2e0639743b4213c74cf9e637a93c5b}{GetScreenCenter}}();}
+\DoxyCodeLine{28         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_video_manager_a8ae2d53a3ec4e5f655d3b2f356bb2e6c}{DrawPoint}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}\& Pt, COLORREF Color);}
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_video_manager_a621d95fadd25ef0eba340985c9df6b89}{ClearScreen}}(COLORREF Color);}
+\DoxyCodeLine{30         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_video_manager_a811cb63adf7cf371462ab6942f8f263a}{LoadFont}}(std::string strFontPath, std::wstring strName, \textcolor{keywordtype}{int} nSize);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_video_manager_a6a4ea74735fa4e195a4af9c529720530}{DrawLines}}(\mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVecPoints}}\& Pts, \textcolor{keywordtype}{int} nLineWidth,}
+\DoxyCodeLine{33             COLORREF Color, \textcolor{keywordtype}{bool} bClosed=\textcolor{keyword}{false});}
+\DoxyCodeLine{34         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_video_manager_a6a4ea74735fa4e195a4af9c529720530}{DrawLines}}(\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVecVecPoints}}\& Pts, \textcolor{keywordtype}{int} nLineWidth,}
+\DoxyCodeLine{35             COLORREF Color, \textcolor{keywordtype}{bool} bClosed=\textcolor{keyword}{false});}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_video_manager_a8a905820148dda925b247e7ed37efc2d}{DrawText}}(\textcolor{keywordtype}{char}* pText, \textcolor{keywordtype}{int} nX, \textcolor{keywordtype}{int} nY,}
+\DoxyCodeLine{38             COLORREF nColor = RGB(255,255,255), UINT nAlign = TA\_CENTER);}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_video_manager_a8a905820148dda925b247e7ed37efc2d}{DrawText}}(std::vector<std::string> StringList, \textcolor{keywordtype}{int} nX, \textcolor{keywordtype}{int} nY,}
+\DoxyCodeLine{40             \textcolor{keywordtype}{int} nTextH, COLORREF nColor = RGB(255,255,255), UINT nAlign = TA\_CENTER);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{43         HWND \mbox{\hyperlink{class_t_video_manager_af0f9a0e85a24138233b4c25fca1f43f9}{m\_hWnd}};}
+\DoxyCodeLine{44         RECT \mbox{\hyperlink{class_t_video_manager_a04b7c1e6dd411ad65206e95a0c22fd15}{m\_ClientArea}};}
+\DoxyCodeLine{45         HDC \mbox{\hyperlink{class_t_video_manager_ae62d982a8eb887d18346d1830a6570ca}{m\_hDC}};}
+\DoxyCodeLine{46         HBITMAP \mbox{\hyperlink{class_t_video_manager_a6d659aacad4070bee3297de5c79f84e2}{m\_hBmp}};}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+
+\end{DoxyCode}

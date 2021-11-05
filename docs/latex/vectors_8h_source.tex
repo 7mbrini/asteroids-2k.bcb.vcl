@@ -1,0 +1,69 @@
+\hypertarget{vectors_8h_source}{}\doxysection{vectors.\+h}
+\label{vectors_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/vectors.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/vectors.h}}
+\mbox{\hyperlink{vectors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{    author: Francesco Settembrini}}
+\DoxyCodeLine{3 \textcolor{comment}{    last update: 23/6/2021}}
+\DoxyCodeLine{4 \textcolor{comment}{    e-\/mail: mailto:francesco.settembrini@poliba.it}}
+\DoxyCodeLine{5 \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_VECTORS\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_VECTORS\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <assert.h>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{maths_8h}{maths.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemaths}{maths}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }TVector2;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{typedef} std::vector<TVector2> \mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVecPoints}};}
+\DoxyCodeLine{23 \textcolor{keyword}{typedef} std::vector<TVector2*> \mbox{\hyperlink{namespacemaths_ab54f8fdd9d46e61e3b5902476facb3e9}{TVecPtrPoints}};}
+\DoxyCodeLine{24 \textcolor{keyword}{typedef} std::vector<TVecPoints> \mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVecVecPoints}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \textcolor{keyword}{public}:}
+\DoxyCodeLine{29         \mbox{\hyperlink{classmaths_1_1_t_vector2_ae275da4bef897a60629f86fc6b05abcb}{TVector2}}();}
+\DoxyCodeLine{30         \mbox{\hyperlink{classmaths_1_1_t_vector2_ae275da4bef897a60629f86fc6b05abcb}{TVector2}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}\& Pt);}
+\DoxyCodeLine{31         \mbox{\hyperlink{classmaths_1_1_t_vector2_ae275da4bef897a60629f86fc6b05abcb}{TVector2}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classmaths_1_1_t_vector2_aa7db3ab1851ba4b58d62a4dcb85d6c73}{X}}, \textcolor{keywordtype}{double} \mbox{\hyperlink{classmaths_1_1_t_vector2_a2c6ccab3aff552064680429c99032057}{Y}});}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{keywordtype}{double} \mbox{\hyperlink{classmaths_1_1_t_vector2_abca051329380a2fac8b8236a98ac0fef}{Length}}();}
+\DoxyCodeLine{34         \textcolor{keywordtype}{void} \mbox{\hyperlink{classmaths_1_1_t_vector2_aacefbc6dfb94edc303d9849746a6d647}{Normalize}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{classmaths_1_1_t_vector2_a0067b97437a91de438bcdb54e761cb90}{Rotate}}(\textcolor{keywordtype}{double} ThetaDeg);}
+\DoxyCodeLine{37         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{classmaths_1_1_t_vector2_a4d65c459baf3c9de08a5c63039470d90}{Translate}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Translation);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{classmaths_1_1_t_vector2_a3f60121c0797d188a45972322d92cc02}{operator + }}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}\& V);}
+\DoxyCodeLine{40         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{classmaths_1_1_t_vector2_aa4ec5705f572f3a30b098d4f458226a5}{operator += }}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}\& V);}
+\DoxyCodeLine{41         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{classmaths_1_1_t_vector2_a7f794ff56eb1a75e630c55c1eb0dfa1e}{operator * }}(\textcolor{keywordtype}{double} V);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{classmaths_1_1_t_vector2_a12d81bfeac237774566ae5fcab502f21}{operator -\/ }}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}\& V);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keyword}{public}:}
+\DoxyCodeLine{46         \textcolor{keywordtype}{double} \mbox{\hyperlink{classmaths_1_1_t_vector2_aa7db3ab1851ba4b58d62a4dcb85d6c73}{X}}, \mbox{\hyperlink{classmaths_1_1_t_vector2_a2c6ccab3aff552064680429c99032057}{Y}};}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{namespacemaths_abb9d9b6cccab0975eeda83179a9f2cc8}{Add}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}\& A, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}\& B);}
+\DoxyCodeLine{50 \textcolor{keywordtype}{double} \mbox{\hyperlink{namespacemaths_ad1872d7e844297d0cb550f64d20d6ccd}{Distance}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pt1, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pt2);}
+\DoxyCodeLine{51 \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{namespacemaths_a4dcac7d930aa28028ad2fa9b875973fc}{MidPoint}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pt1, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pt2);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacemaths_aa7bb0948c9eae7fab9b1693da775e26c}{Rotate}}(\mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVecPoints}}\& VecPts, \textcolor{keywordtype}{double} ThetaDeg);}
+\DoxyCodeLine{54 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacemaths_ab7bc8483475f8177bf3e69ad6cee18dd}{Translate}}(\mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVecPoints}}\& Src, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Translation);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacemaths_aa7bb0948c9eae7fab9b1693da775e26c}{Rotate}}(\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVecVecPoints}}\& VecPts, \textcolor{keywordtype}{double} ThetaDeg);}
+\DoxyCodeLine{57 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacemaths_ab7bc8483475f8177bf3e69ad6cee18dd}{Translate}}(\mbox{\hyperlink{namespacemaths_abf8e66d327a59c12ab587ac5889cf1f3}{TVecVecPoints}}\& VecPts, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Translation);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \}   \textcolor{comment}{// namespace maths}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+
+\end{DoxyCode}

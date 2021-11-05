@@ -1,0 +1,94 @@
+\hypertarget{asteroids_8h}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.bcb.\+vcl/asteroids-\/2k/asteroids.h File Reference}
+\label{asteroids_8h}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/asteroids.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/asteroids.h}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vectors.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_t_asteroid}{TAsteroid}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{asteroids_8h_a8611353d4b0940365ace70fd76b8f13d}{ASTEROID\+\_\+\+EXPLOSIONTICKS}}~64
+\item 
+\#define \mbox{\hyperlink{asteroids_8h_a4c69306b65900a7454ef0cfcd3ea4508}{ASTEROID\+\_\+\+NDEBRIS}}~16
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{class_t_asteroid}{TAsteroid}} $>$ \mbox{\hyperlink{asteroids_8h_a5cfc0313c3717a89fe3b55f5ec63d294}{TVec\+Asteroids}}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{class_t_asteroid}{TAsteroid}} $\ast$ $>$ \mbox{\hyperlink{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}{TVec\+Ptr\+Asteroids}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{en\+Asteroid\+Class}} \{ \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351a4b79cb05e129af29aed9a71bf08e491e}{ac\+Big}}
+, \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351a0012cb0b985517706fd90834bc378b8a}{ac\+Medium}}
+, \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351ab9b4b044e1ea7b4c907b7718a636ad8a}{ac\+Small}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{asteroids_8h_a8611353d4b0940365ace70fd76b8f13d}\label{asteroids_8h_a8611353d4b0940365ace70fd76b8f13d}} 
+\index{asteroids.h@{asteroids.h}!ASTEROID\_EXPLOSIONTICKS@{ASTEROID\_EXPLOSIONTICKS}}
+\index{ASTEROID\_EXPLOSIONTICKS@{ASTEROID\_EXPLOSIONTICKS}!asteroids.h@{asteroids.h}}
+\doxysubsubsection{\texorpdfstring{ASTEROID\_EXPLOSIONTICKS}{ASTEROID\_EXPLOSIONTICKS}}
+{\footnotesize\ttfamily \#define ASTEROID\+\_\+\+EXPLOSIONTICKS~64}
+
+\mbox{\Hypertarget{asteroids_8h_a4c69306b65900a7454ef0cfcd3ea4508}\label{asteroids_8h_a4c69306b65900a7454ef0cfcd3ea4508}} 
+\index{asteroids.h@{asteroids.h}!ASTEROID\_NDEBRIS@{ASTEROID\_NDEBRIS}}
+\index{ASTEROID\_NDEBRIS@{ASTEROID\_NDEBRIS}!asteroids.h@{asteroids.h}}
+\doxysubsubsection{\texorpdfstring{ASTEROID\_NDEBRIS}{ASTEROID\_NDEBRIS}}
+{\footnotesize\ttfamily \#define ASTEROID\+\_\+\+NDEBRIS~16}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{asteroids_8h_a5cfc0313c3717a89fe3b55f5ec63d294}\label{asteroids_8h_a5cfc0313c3717a89fe3b55f5ec63d294}} 
+\index{asteroids.h@{asteroids.h}!TVecAsteroids@{TVecAsteroids}}
+\index{TVecAsteroids@{TVecAsteroids}!asteroids.h@{asteroids.h}}
+\doxysubsubsection{\texorpdfstring{TVecAsteroids}{TVecAsteroids}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{class_t_asteroid}{TAsteroid}}$>$ \mbox{\hyperlink{asteroids_8h_a5cfc0313c3717a89fe3b55f5ec63d294}{TVec\+Asteroids}}}
+
+\mbox{\Hypertarget{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}\label{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}} 
+\index{asteroids.h@{asteroids.h}!TVecPtrAsteroids@{TVecPtrAsteroids}}
+\index{TVecPtrAsteroids@{TVecPtrAsteroids}!asteroids.h@{asteroids.h}}
+\doxysubsubsection{\texorpdfstring{TVecPtrAsteroids}{TVecPtrAsteroids}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{class_t_asteroid}{TAsteroid}}$\ast$$>$ \mbox{\hyperlink{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}{TVec\+Ptr\+Asteroids}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}\label{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}} 
+\index{asteroids.h@{asteroids.h}!enAsteroidClass@{enAsteroidClass}}
+\index{enAsteroidClass@{enAsteroidClass}!asteroids.h@{asteroids.h}}
+\doxysubsubsection{\texorpdfstring{enAsteroidClass}{enAsteroidClass}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{en\+Asteroid\+Class}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{acBig@{acBig}!asteroids.h@{asteroids.h}}\index{asteroids.h@{asteroids.h}!acBig@{acBig}}}\mbox{\Hypertarget{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351a4b79cb05e129af29aed9a71bf08e491e}\label{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351a4b79cb05e129af29aed9a71bf08e491e}} 
+ac\+Big&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{acMedium@{acMedium}!asteroids.h@{asteroids.h}}\index{asteroids.h@{asteroids.h}!acMedium@{acMedium}}}\mbox{\Hypertarget{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351a0012cb0b985517706fd90834bc378b8a}\label{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351a0012cb0b985517706fd90834bc378b8a}} 
+ac\+Medium&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{acSmall@{acSmall}!asteroids.h@{asteroids.h}}\index{asteroids.h@{asteroids.h}!acSmall@{acSmall}}}\mbox{\Hypertarget{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351ab9b4b044e1ea7b4c907b7718a636ad8a}\label{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351ab9b4b044e1ea7b4c907b7718a636ad8a}} 
+ac\+Small&\\
+\hline
+
+\end{DoxyEnumFields}

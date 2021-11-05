@@ -1,0 +1,48 @@
+\hypertarget{utils_8h}{}\doxysection{Z\+:/\+F/dev/jobs/asteroids-\/2k.bcb.\+vcl/asteroids-\/2k/utils.h File Reference}
+\label{utils_8h}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/utils.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/utils.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceutils}{utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceutils_aa6fa5b4ba834d71589ed9f2a1f53503f}{utils\+::\+TVec\+Integers}}
+\item 
+typedef std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespaceutils_ad658a595c61726f7ecf24d334fdd1356}{utils\+::\+TVec\+Strings}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceutils_a347107a3da8ebd21178130d97ac7a87e}{utils\+::\+Debounce}} ()
+\begin{DoxyCompactList}\small\item\em Insert a delay to prevent \char`\"{}bouncing\char`\"{} effect when repeatedly pressing keys on keyboard ~\newline
+ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceutils_ab3aaf4a1245b632b9f2261e8c2864e60}{utils\+::\+Get\+Exe\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Gets the full path for the executable file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceutils_a7b37ef03307840916b704a5e5d53f5db}{utils\+::\+Get\+Data\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Gets the application data folder. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{namespaceutils_acf518ac8cc2f3f9c72ef4d78e828295f}{utils\+::\+Get\+File\+Size}} (FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Gets the file size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceutils_ab3712f4685f5f56e119556628214398c}{utils\+::\+Is\+Wav\+File}} (std\+::string str\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Checks for WAV audo file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceutils_a5cc668e78610b423dd376733ab6b963b}{utils\+::\+Get\+File\+Name}} (std\+::string str\+Path, bool b\+Remove\+Ext)
+\begin{DoxyCompactList}\small\item\em Extracts the \char`\"{}name\char`\"{} from a file, without path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceutils_aca056784f25463061f9cb4a30c9e2061}{utils\+::\+Show}} (std\+::string str\+Msg)
+\begin{DoxyCompactList}\small\item\em Shows a Message\+Box containing a specified string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceutils_a91f861d931895e47597dcdebba67b855}{utils\+::\+Show}} (\mbox{\hyperlink{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}{TVec\+Integers}} Int\+List)
+\begin{DoxyCompactList}\small\item\em Shows a Message\+Box containing a list of integer values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceutils_aa78e3a09bc624ef2cca1d8fae17ad75b}{utils\+::\+Show}} (\mbox{\hyperlink{game_8h_a6a541cc02e8079aa7cfd07fd0587f9f6}{TVec\+Strings}} str\+List)
+\begin{DoxyCompactList}\small\item\em Shows a Message\+Box containing a list of strings. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceutils_a2eaff427c03ee479888bc73e61aaec5e}{utils\+::\+Is\+Big\+Endian}} ()
+\begin{DoxyCompactList}\small\item\em Checks for platform endianness. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceutils_a395517c9b044cbeb233ed38294a2b4d2}{utils\+::\+Convert\+To\+Int}} (char $\ast$p\+Buffer, int n\+Len)
+\begin{DoxyCompactList}\small\item\em Converts a sequence of bytes in integer, basing on endianness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ 

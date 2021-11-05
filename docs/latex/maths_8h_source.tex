@@ -1,0 +1,42 @@
+\hypertarget{maths_8h_source}{}\doxysection{maths.\+h}
+\label{maths_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/maths.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/maths.h}}
+\mbox{\hyperlink{maths_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{    author: Francesco Settembrini}}
+\DoxyCodeLine{3 \textcolor{comment}{    last update: 23/6/2021}}
+\DoxyCodeLine{4 \textcolor{comment}{    e-\/mail: mailto:francesco.settembrini@poliba.it}}
+\DoxyCodeLine{5 \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_MATHS\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_MATHS\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <assert.h>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define RAD2DEG(X) ((X)*180.0/M\_PI)}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define DEG2RAD(X) ((X)*M\_PI/180.0)}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef M\_PI}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{    \#define M\_PI 3.14159265358979323846}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{typedef} std::vector<int> \mbox{\hyperlink{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}{TVecIntegers}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemaths}{maths}}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacemaths_a1bcd21db44ceafdf5f480ecf77f86f48}{RandSign}}();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacemaths_a74b0fa365d531a14c2e3b4a9e5ceb051}{Sign}}(\textcolor{keywordtype}{double} Val);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{double} \mbox{\hyperlink{namespacemaths_a672d2a2d15681fa5d7904d9210087f7a}{Rand}}(\textcolor{keywordtype}{double} Val);}
+\DoxyCodeLine{30     \textcolor{keywordtype}{double} \mbox{\hyperlink{namespacemaths_adfb882cf97561ff5a2a0778513042c43}{AbsRand}}(\textcolor{keywordtype}{double} Val);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacemaths_a6d83cc0cc3381d1eca88db138f79443b}{Sort}}(\mbox{\hyperlink{maths_8h_a094008ada9e3070d36d6dc5a8c7d3fec}{TVecIntegers}}\& VecInts);}
+\DoxyCodeLine{33 \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{36 }
+
+\end{DoxyCode}

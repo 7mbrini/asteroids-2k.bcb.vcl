@@ -1,0 +1,50 @@
+/******************************************************************************
+	author:	Francesco Settembrini
+	last update: 23/6/2021
+	e-mail:	mailto:francesco.settembrini@poliba.it
+******************************************************************************/
+
+#ifndef _WEAPONS_H_
+#define _WEAPONS_H_
+
+#include <math.h>
+#include <vector>
+
+#include "maths.h"
+#include "video.h"
+#include "vectors.h"
+
+class TShip;
+
+class TMissile;
+typedef std::vector<TMissile*> TVecPtrMissiles;
+
+
+class TMissile
+{
+	public:
+        TMissile(TVideoManager* pVM);
+        TMissileBuild(TVideoManager* pVM, TVector2 Pos, TVector2 Vel);
+
+		void SetShip(TShip* pShip);
+
+	protected:
+		bool m_bArmed;
+        TVector2 m_Pos, m_Vel;
+        COLORREF m_Color;
+        TVideoManager *m_pVM;
+
+        TShip* m_pShip;
+};
+
+
+
+TVector2 GetPos(TMissile* pMissile);
+bool IsArmed(TMissile* pMissile);
+void Arm(TMissile* pMissile, TVector2 Pos, TVector2 Vel);
+void Update(TMissile* pMissile, double Dt);
+
+void Clear(TVecPtrMissiles& Missiles);
+
+#endif
+

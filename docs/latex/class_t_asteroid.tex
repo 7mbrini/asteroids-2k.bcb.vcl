@@ -1,0 +1,457 @@
+\hypertarget{class_t_asteroid}{}\doxysection{TAsteroid Class Reference}
+\label{class_t_asteroid}\index{TAsteroid@{TAsteroid}}
+
+
+{\ttfamily \#include $<$asteroids.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_asteroid_a7b152f28980ae497aba7b51afcd4d884}{TAsteroid}} (\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, \mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM, \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{en\+Asteroid\+Class}} n\+Class, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel, double Radius)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_asteroid_a1955b352123437436cbc1457e92b4d4b}{$\sim$\+TAsteroid}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_asteroid_ae13dfae2e02321ce4e4ab0c16c5cdf35}{Update}} (double DT)
+\begin{DoxyCompactList}\small\item\em Updates the asteroid status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{en\+Asteroid\+Class}} \mbox{\hyperlink{class_t_asteroid_a88faad2cb207ea589209bdafafc75929}{Get\+Class}} ()
+\begin{DoxyCompactList}\small\item\em Gets the class of the asteroid. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_t_asteroid_afe6b66e4d914c96fa27a8776899a37cd}{Get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of the asteroid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_a85fe0f23e340b57429fd35cef8e98853}{Get\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Gets the position of the asteroid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_a8d3a8b1ab456e129de473acbfc82b64f}{Get\+Vel}} ()
+\begin{DoxyCompactList}\small\item\em Gets the veclocity of the asteroid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_asteroid_a2f16cee2b9f8d711374bab715b4f7026}{Explode}} ()
+\begin{DoxyCompactList}\small\item\em Starts the asteroid explosion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_asteroid_a02516c58771a1cd3cec3cc39c22b1c3d}{Do\+Explosion}} ()
+\begin{DoxyCompactList}\small\item\em Handles the asteroid explosion. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_asteroid_a7d3b89845362c48b78989fde1190ea9c}{Is\+Exploding}} ()
+\begin{DoxyCompactList}\small\item\em Check if the asteroid is exploding. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_asteroid_af5fe3983d4095f1cb2c63c16a66352ef}{Collide}} (\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pt)
+\begin{DoxyCompactList}\small\item\em Checks if the asteroid is colliding in a specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_asteroid_aa3d8d226bc375e081ac7856e0aeda959}{Set\+Pos}} (\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos)
+\begin{DoxyCompactList}\small\item\em Sets the position of the asteroid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_asteroid_acb8742bd5e8748733f1eaea7fd6ff708}{Is\+Alive}} ()
+\begin{DoxyCompactList}\small\item\em Checks for the asteroid \char`\"{}aliveness\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_asteroid_a514cd582d863839186869bbf104dcaa4}{Set\+Alive}} (bool b\+Alive)
+\begin{DoxyCompactList}\small\item\em Sets the asteroid \char`\"{}aliveness\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_asteroid_acc83cc9e110a94187753176e63ae141f}{Set\+Visible}} (bool b\+Visible)
+\begin{DoxyCompactList}\small\item\em Sets the asteroid visibility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_asteroid_a4a83860899b78857529e8ab904fd914f}{Crash}} ()
+\begin{DoxyCompactList}\small\item\em Handles the asteroid crashing. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_t_asteroid_ad8e184cc6e9649e13b01500c21502345}{Get\+Roughness}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}roughness\char`\"{} of asteroid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVec\+Points}} \mbox{\hyperlink{class_t_asteroid_afcfd7bb872a5c2320553735e2a58d9a9}{Rand\+Shape}} (double Size)
+\begin{DoxyCompactList}\small\item\em Generates randomly an asteroid shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_t_asteroid_a5b01baf32006b4cddacc5bd240011ac3}{m\+\_\+b\+Alive}}
+\item 
+bool \mbox{\hyperlink{class_t_asteroid_aff0e12ee3a8fbe15c40a7866c06db8f8}{m\+\_\+b\+Visible}}
+\item 
+COLORREF \mbox{\hyperlink{class_t_asteroid_a7d94ea6883ce727ee7a56ede122d50bc}{m\+\_\+\+Color}}
+\item 
+double \mbox{\hyperlink{class_t_asteroid_a58653e28111d79cf44d23f63e1ed0efa}{m\+\_\+\+Radius}}
+\item 
+double \mbox{\hyperlink{class_t_asteroid_a8c06da1b7b7eccf325ecd93b8e29b3f0}{m\+\_\+\+Rot}}
+\item 
+double \mbox{\hyperlink{class_t_asteroid_a1d4bb8264d64b28fa64edc92e6518e38}{m\+\_\+\+DRot}}
+\item 
+\mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVec\+Points}} \mbox{\hyperlink{class_t_asteroid_a4948f36f1c4547e2eb50113dc4a858af}{m\+\_\+\+Shape}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_a8af1ab87ae02269bda1605309f6e5164}{m\+\_\+\+Pos}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_ac1b9e194d684a45d2fd81e3a5adf96dd}{m\+\_\+\+Vel}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_a56f37f650489ed980a7e13724953f7c8}{m\+\_\+\+Acc}}
+\item 
+\mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$ \mbox{\hyperlink{class_t_asteroid_a6ca797755784a5a34c0382f0ebdd4837}{m\+\_\+p\+Audio}}
+\item 
+\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$ \mbox{\hyperlink{class_t_asteroid_a7ee2b96b50539c1a489419f4218de737}{m\+\_\+p\+Video}}
+\item 
+\mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{en\+Asteroid\+Class}} \mbox{\hyperlink{class_t_asteroid_aa8c9d4de15ad104fbceaf235912c16ee}{m\+\_\+n\+Class}}
+\item 
+int \mbox{\hyperlink{class_t_asteroid_a1fa8fb3c9b918a8256c383926b19f717}{m\+\_\+n\+Debris}}
+\item 
+int \mbox{\hyperlink{class_t_asteroid_a8d29d1dbbb31f6a34cc1b34a99eb660b}{m\+\_\+n\+Explosion\+Ticks}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_a9114bb0645d3752348da8f64359b0341}{m\+\_\+\+Debris}} \mbox{[}\mbox{\hyperlink{asteroids_8h_a4c69306b65900a7454ef0cfcd3ea4508}{ASTEROID\+\_\+\+NDEBRIS}}\mbox{]}
+\item 
+double \mbox{\hyperlink{class_t_asteroid_accbf4614c1bb74a620d76e5b5d420eb3}{m\+\_\+\+Debris\+Scales}} \mbox{[}\mbox{\hyperlink{asteroids_8h_a4c69306b65900a7454ef0cfcd3ea4508}{ASTEROID\+\_\+\+NDEBRIS}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_asteroid_a7b152f28980ae497aba7b51afcd4d884}\label{class_t_asteroid_a7b152f28980ae497aba7b51afcd4d884}} 
+\index{TAsteroid@{TAsteroid}!TAsteroid@{TAsteroid}}
+\index{TAsteroid@{TAsteroid}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{TAsteroid()}{TAsteroid()}}
+{\footnotesize\ttfamily TAsteroid\+::\+TAsteroid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM,  }\item[{\mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM,  }\item[{\mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{en\+Asteroid\+Class}}}]{n\+Class,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Vel,  }\item[{double}]{Radius }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+VM} & Pointer to the video manager object \\
+\hline
+{\em p\+SM} & Pointer to the sound manager object \\
+\hline
+{\em n\+Class} & Class of the asteroid (e.\+g.\+: big, medium, small) \\
+\hline
+{\em Pos} & The initial position for the asteroid \\
+\hline
+{\em Vel} & The initial velocity for the asteroid \\
+\hline
+{\em Radius} & The size (e.\+g. radius) of the asteroid \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_asteroid_a1955b352123437436cbc1457e92b4d4b}\label{class_t_asteroid_a1955b352123437436cbc1457e92b4d4b}} 
+\index{TAsteroid@{TAsteroid}!````~TAsteroid@{$\sim$TAsteroid}}
+\index{````~TAsteroid@{$\sim$TAsteroid}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{$\sim$TAsteroid()}{~TAsteroid()}}
+{\footnotesize\ttfamily TAsteroid\+::$\sim$\+TAsteroid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_asteroid_af5fe3983d4095f1cb2c63c16a66352ef}\label{class_t_asteroid_af5fe3983d4095f1cb2c63c16a66352ef}} 
+\index{TAsteroid@{TAsteroid}!Collide@{Collide}}
+\index{Collide@{Collide}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{Collide()}{Collide()}}
+{\footnotesize\ttfamily bool TAsteroid\+::\+Collide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos }\end{DoxyParamCaption})}
+
+
+
+Checks if the asteroid is colliding in a specified position. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+True if the asteroid is colliding in Pos, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_asteroid_a4a83860899b78857529e8ab904fd914f}\label{class_t_asteroid_a4a83860899b78857529e8ab904fd914f}} 
+\index{TAsteroid@{TAsteroid}!Crash@{Crash}}
+\index{Crash@{Crash}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{Crash()}{Crash()}}
+{\footnotesize\ttfamily void TAsteroid\+::\+Crash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles the asteroid crashing. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_asteroid_a02516c58771a1cd3cec3cc39c22b1c3d}\label{class_t_asteroid_a02516c58771a1cd3cec3cc39c22b1c3d}} 
+\index{TAsteroid@{TAsteroid}!DoExplosion@{DoExplosion}}
+\index{DoExplosion@{DoExplosion}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{DoExplosion()}{DoExplosion()}}
+{\footnotesize\ttfamily void TAsteroid\+::\+Do\+Explosion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the asteroid explosion. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_asteroid_a2f16cee2b9f8d711374bab715b4f7026}\label{class_t_asteroid_a2f16cee2b9f8d711374bab715b4f7026}} 
+\index{TAsteroid@{TAsteroid}!Explode@{Explode}}
+\index{Explode@{Explode}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{Explode()}{Explode()}}
+{\footnotesize\ttfamily void TAsteroid\+::\+Explode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the asteroid explosion. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_asteroid_a88faad2cb207ea589209bdafafc75929}\label{class_t_asteroid_a88faad2cb207ea589209bdafafc75929}} 
+\index{TAsteroid@{TAsteroid}!GetClass@{GetClass}}
+\index{GetClass@{GetClass}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{GetClass()}{GetClass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{en\+Asteroid\+Class}} TAsteroid\+::\+Get\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the class of the asteroid. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+The class of the asteroid (e.\+g. small, medium or big) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_asteroid_a85fe0f23e340b57429fd35cef8e98853}\label{class_t_asteroid_a85fe0f23e340b57429fd35cef8e98853}} 
+\index{TAsteroid@{TAsteroid}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{GetPos()}{GetPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TAsteroid\+::\+Get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the position of the asteroid. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+The position of the asteroid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_asteroid_ad8e184cc6e9649e13b01500c21502345}\label{class_t_asteroid_ad8e184cc6e9649e13b01500c21502345}} 
+\index{TAsteroid@{TAsteroid}!GetRoughness@{GetRoughness}}
+\index{GetRoughness@{GetRoughness}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{GetRoughness()}{GetRoughness()}}
+{\footnotesize\ttfamily double TAsteroid\+::\+Get\+Roughness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Gets the \char`\"{}roughness\char`\"{} of asteroid. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Return the roughness by mean of the \char`\"{}class\char`\"{} (size) of asteroid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_asteroid_afe6b66e4d914c96fa27a8776899a37cd}\label{class_t_asteroid_afe6b66e4d914c96fa27a8776899a37cd}} 
+\index{TAsteroid@{TAsteroid}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily double TAsteroid\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the size of the asteroid. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+The Size (radius) of the asteroid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_asteroid_a8d3a8b1ab456e129de473acbfc82b64f}\label{class_t_asteroid_a8d3a8b1ab456e129de473acbfc82b64f}} 
+\index{TAsteroid@{TAsteroid}!GetVel@{GetVel}}
+\index{GetVel@{GetVel}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{GetVel()}{GetVel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TAsteroid\+::\+Get\+Vel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the veclocity of the asteroid. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+The velocity of the asteroid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_asteroid_acb8742bd5e8748733f1eaea7fd6ff708}\label{class_t_asteroid_acb8742bd5e8748733f1eaea7fd6ff708}} 
+\index{TAsteroid@{TAsteroid}!IsAlive@{IsAlive}}
+\index{IsAlive@{IsAlive}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{IsAlive()}{IsAlive()}}
+{\footnotesize\ttfamily bool TAsteroid\+::\+Is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks for the asteroid \char`\"{}aliveness\char`\"{}. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+True if the asteroid is \char`\"{}alive\char`\"{}, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_asteroid_a7d3b89845362c48b78989fde1190ea9c}\label{class_t_asteroid_a7d3b89845362c48b78989fde1190ea9c}} 
+\index{TAsteroid@{TAsteroid}!IsExploding@{IsExploding}}
+\index{IsExploding@{IsExploding}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{IsExploding()}{IsExploding()}}
+{\footnotesize\ttfamily bool TAsteroid\+::\+Is\+Exploding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the asteroid is exploding. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+True if the asteroid is exploding, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_asteroid_afcfd7bb872a5c2320553735e2a58d9a9}\label{class_t_asteroid_afcfd7bb872a5c2320553735e2a58d9a9}} 
+\index{TAsteroid@{TAsteroid}!RandShape@{RandShape}}
+\index{RandShape@{RandShape}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{RandShape()}{RandShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVec\+Points}} TAsteroid\+::\+Rand\+Shape (\begin{DoxyParamCaption}\item[{double}]{Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Generates randomly an asteroid shape. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Size} & The size of the asteroid to be generated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_asteroid_a514cd582d863839186869bbf104dcaa4}\label{class_t_asteroid_a514cd582d863839186869bbf104dcaa4}} 
+\index{TAsteroid@{TAsteroid}!SetAlive@{SetAlive}}
+\index{SetAlive@{SetAlive}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{SetAlive()}{SetAlive()}}
+{\footnotesize\ttfamily void TAsteroid\+::\+Set\+Alive (\begin{DoxyParamCaption}\item[{bool}]{b\+Alive }\end{DoxyParamCaption})}
+
+
+
+Sets the asteroid \char`\"{}aliveness\char`\"{}. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+True for alive, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_asteroid_aa3d8d226bc375e081ac7856e0aeda959}\label{class_t_asteroid_aa3d8d226bc375e081ac7856e0aeda959}} 
+\index{TAsteroid@{TAsteroid}!SetPos@{SetPos}}
+\index{SetPos@{SetPos}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{SetPos()}{SetPos()}}
+{\footnotesize\ttfamily void TAsteroid\+::\+Set\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos }\end{DoxyParamCaption})}
+
+
+
+Sets the position of the asteroid. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pos} & The position to be set for the asteroid \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_asteroid_acc83cc9e110a94187753176e63ae141f}\label{class_t_asteroid_acc83cc9e110a94187753176e63ae141f}} 
+\index{TAsteroid@{TAsteroid}!SetVisible@{SetVisible}}
+\index{SetVisible@{SetVisible}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{SetVisible()}{SetVisible()}}
+{\footnotesize\ttfamily void TAsteroid\+::\+Set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{b\+Visible }\end{DoxyParamCaption})}
+
+
+
+Sets the asteroid visibility. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_asteroid_ae13dfae2e02321ce4e4ab0c16c5cdf35}\label{class_t_asteroid_ae13dfae2e02321ce4e4ab0c16c5cdf35}} 
+\index{TAsteroid@{TAsteroid}!Update@{Update}}
+\index{Update@{Update}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void TAsteroid\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{Dt }\end{DoxyParamCaption})}
+
+
+
+Updates the asteroid status. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Dt} & The value for the delta time \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_asteroid_a56f37f650489ed980a7e13724953f7c8}\label{class_t_asteroid_a56f37f650489ed980a7e13724953f7c8}} 
+\index{TAsteroid@{TAsteroid}!m\_Acc@{m\_Acc}}
+\index{m\_Acc@{m\_Acc}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_Acc}{m\_Acc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TAsteroid\+::m\+\_\+\+Acc\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a5b01baf32006b4cddacc5bd240011ac3}\label{class_t_asteroid_a5b01baf32006b4cddacc5bd240011ac3}} 
+\index{TAsteroid@{TAsteroid}!m\_bAlive@{m\_bAlive}}
+\index{m\_bAlive@{m\_bAlive}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_bAlive}{m\_bAlive}}
+{\footnotesize\ttfamily bool TAsteroid\+::m\+\_\+b\+Alive\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_aff0e12ee3a8fbe15c40a7866c06db8f8}\label{class_t_asteroid_aff0e12ee3a8fbe15c40a7866c06db8f8}} 
+\index{TAsteroid@{TAsteroid}!m\_bVisible@{m\_bVisible}}
+\index{m\_bVisible@{m\_bVisible}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_bVisible}{m\_bVisible}}
+{\footnotesize\ttfamily bool TAsteroid\+::m\+\_\+b\+Visible\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a7d94ea6883ce727ee7a56ede122d50bc}\label{class_t_asteroid_a7d94ea6883ce727ee7a56ede122d50bc}} 
+\index{TAsteroid@{TAsteroid}!m\_Color@{m\_Color}}
+\index{m\_Color@{m\_Color}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_Color}{m\_Color}}
+{\footnotesize\ttfamily COLORREF TAsteroid\+::m\+\_\+\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a9114bb0645d3752348da8f64359b0341}\label{class_t_asteroid_a9114bb0645d3752348da8f64359b0341}} 
+\index{TAsteroid@{TAsteroid}!m\_Debris@{m\_Debris}}
+\index{m\_Debris@{m\_Debris}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_Debris}{m\_Debris}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TAsteroid\+::m\+\_\+\+Debris\mbox{[}\mbox{\hyperlink{asteroids_8h_a4c69306b65900a7454ef0cfcd3ea4508}{ASTEROID\+\_\+\+NDEBRIS}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_accbf4614c1bb74a620d76e5b5d420eb3}\label{class_t_asteroid_accbf4614c1bb74a620d76e5b5d420eb3}} 
+\index{TAsteroid@{TAsteroid}!m\_DebrisScales@{m\_DebrisScales}}
+\index{m\_DebrisScales@{m\_DebrisScales}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_DebrisScales}{m\_DebrisScales}}
+{\footnotesize\ttfamily double TAsteroid\+::m\+\_\+\+Debris\+Scales\mbox{[}\mbox{\hyperlink{asteroids_8h_a4c69306b65900a7454ef0cfcd3ea4508}{ASTEROID\+\_\+\+NDEBRIS}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a1d4bb8264d64b28fa64edc92e6518e38}\label{class_t_asteroid_a1d4bb8264d64b28fa64edc92e6518e38}} 
+\index{TAsteroid@{TAsteroid}!m\_DRot@{m\_DRot}}
+\index{m\_DRot@{m\_DRot}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_DRot}{m\_DRot}}
+{\footnotesize\ttfamily double TAsteroid\+::m\+\_\+\+DRot\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_aa8c9d4de15ad104fbceaf235912c16ee}\label{class_t_asteroid_aa8c9d4de15ad104fbceaf235912c16ee}} 
+\index{TAsteroid@{TAsteroid}!m\_nClass@{m\_nClass}}
+\index{m\_nClass@{m\_nClass}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_nClass}{m\_nClass}}
+{\footnotesize\ttfamily \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{en\+Asteroid\+Class}} TAsteroid\+::m\+\_\+n\+Class\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a1fa8fb3c9b918a8256c383926b19f717}\label{class_t_asteroid_a1fa8fb3c9b918a8256c383926b19f717}} 
+\index{TAsteroid@{TAsteroid}!m\_nDebris@{m\_nDebris}}
+\index{m\_nDebris@{m\_nDebris}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_nDebris}{m\_nDebris}}
+{\footnotesize\ttfamily int TAsteroid\+::m\+\_\+n\+Debris\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a8d29d1dbbb31f6a34cc1b34a99eb660b}\label{class_t_asteroid_a8d29d1dbbb31f6a34cc1b34a99eb660b}} 
+\index{TAsteroid@{TAsteroid}!m\_nExplosionTicks@{m\_nExplosionTicks}}
+\index{m\_nExplosionTicks@{m\_nExplosionTicks}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_nExplosionTicks}{m\_nExplosionTicks}}
+{\footnotesize\ttfamily int TAsteroid\+::m\+\_\+n\+Explosion\+Ticks\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a6ca797755784a5a34c0382f0ebdd4837}\label{class_t_asteroid_a6ca797755784a5a34c0382f0ebdd4837}} 
+\index{TAsteroid@{TAsteroid}!m\_pAudio@{m\_pAudio}}
+\index{m\_pAudio@{m\_pAudio}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_pAudio}{m\_pAudio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}}$\ast$ TAsteroid\+::m\+\_\+p\+Audio\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a8af1ab87ae02269bda1605309f6e5164}\label{class_t_asteroid_a8af1ab87ae02269bda1605309f6e5164}} 
+\index{TAsteroid@{TAsteroid}!m\_Pos@{m\_Pos}}
+\index{m\_Pos@{m\_Pos}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_Pos}{m\_Pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TAsteroid\+::m\+\_\+\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a7ee2b96b50539c1a489419f4218de737}\label{class_t_asteroid_a7ee2b96b50539c1a489419f4218de737}} 
+\index{TAsteroid@{TAsteroid}!m\_pVideo@{m\_pVideo}}
+\index{m\_pVideo@{m\_pVideo}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_pVideo}{m\_pVideo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}}$\ast$ TAsteroid\+::m\+\_\+p\+Video\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a58653e28111d79cf44d23f63e1ed0efa}\label{class_t_asteroid_a58653e28111d79cf44d23f63e1ed0efa}} 
+\index{TAsteroid@{TAsteroid}!m\_Radius@{m\_Radius}}
+\index{m\_Radius@{m\_Radius}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_Radius}{m\_Radius}}
+{\footnotesize\ttfamily double TAsteroid\+::m\+\_\+\+Radius\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a8c06da1b7b7eccf325ecd93b8e29b3f0}\label{class_t_asteroid_a8c06da1b7b7eccf325ecd93b8e29b3f0}} 
+\index{TAsteroid@{TAsteroid}!m\_Rot@{m\_Rot}}
+\index{m\_Rot@{m\_Rot}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_Rot}{m\_Rot}}
+{\footnotesize\ttfamily double TAsteroid\+::m\+\_\+\+Rot\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_a4948f36f1c4547e2eb50113dc4a858af}\label{class_t_asteroid_a4948f36f1c4547e2eb50113dc4a858af}} 
+\index{TAsteroid@{TAsteroid}!m\_Shape@{m\_Shape}}
+\index{m\_Shape@{m\_Shape}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_Shape}{m\_Shape}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVec\+Points}} TAsteroid\+::m\+\_\+\+Shape\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_asteroid_ac1b9e194d684a45d2fd81e3a5adf96dd}\label{class_t_asteroid_ac1b9e194d684a45d2fd81e3a5adf96dd}} 
+\index{TAsteroid@{TAsteroid}!m\_Vel@{m\_Vel}}
+\index{m\_Vel@{m\_Vel}!TAsteroid@{TAsteroid}}
+\doxysubsubsection{\texorpdfstring{m\_Vel}{m\_Vel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TAsteroid\+::m\+\_\+\+Vel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{asteroids_8h}{asteroids.\+h}}\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{asteroids_8cpp}{asteroids.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,177 @@
+\hypertarget{class_t_weapon}{}\doxysection{TWeapon Class Reference}
+\label{class_t_weapon}\index{TWeapon@{TWeapon}}
+
+
+{\ttfamily \#include $<$weapons.\+h$>$}
+
+Inheritance diagram for TWeapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_t_weapon}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_weapon_a51d48a7acad47415ee3db2cc450724c9}{TWeapon}} (\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM)
+\begin{DoxyCompactList}\small\item\em Builds the missile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_weapon_a11bd61609e9283cd9fcb8455328ecaf4}{TWeapon}} (\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel)
+\begin{DoxyCompactList}\small\item\em Builds the missile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_weapon_a8138a8c857d6b448585de6ff2c35fa4d}{Get\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Gets the missile position. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_weapon_af49d86585ca860881d806834ef0995e4}{Update}} (double Dt)=0
+\item 
+bool \mbox{\hyperlink{class_t_weapon_a6e52e4ed1adc9208fdcb7042c0233eb1}{Is\+Armed}} ()
+\begin{DoxyCompactList}\small\item\em Gets the status of missile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_weapon_ab3cac09f8561eaa3daff155eedc2c461}{Arm}} (\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel)
+\begin{DoxyCompactList}\small\item\em Arms the missile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_t_weapon_a640bb3def266a46fb61a1a9aa1e275aa}{m\+\_\+b\+Armed}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_weapon_a2653d5a8977dd3df905fab1769c3f6d6}{m\+\_\+\+Pos}}
+\item 
+\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_weapon_ab0fbd37c08552c69f7fc8f6e046ac226}{m\+\_\+\+Vel}}
+\item 
+COLORREF \mbox{\hyperlink{class_t_weapon_a4351dce5629d221ac960d31e356ede39}{m\+\_\+\+Color}}
+\item 
+\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$ \mbox{\hyperlink{class_t_weapon_a424baeeaf3e06c504e631c135e190869}{m\+\_\+p\+VM}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_weapon_a51d48a7acad47415ee3db2cc450724c9}\label{class_t_weapon_a51d48a7acad47415ee3db2cc450724c9}} 
+\index{TWeapon@{TWeapon}!TWeapon@{TWeapon}}
+\index{TWeapon@{TWeapon}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{TWeapon()}{TWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TWeapon\+::\+TWeapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM }\end{DoxyParamCaption})}
+
+
+
+Builds the missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+VM} & Pointer to the video manager data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_weapon_a11bd61609e9283cd9fcb8455328ecaf4}\label{class_t_weapon_a11bd61609e9283cd9fcb8455328ecaf4}} 
+\index{TWeapon@{TWeapon}!TWeapon@{TWeapon}}
+\index{TWeapon@{TWeapon}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{TWeapon()}{TWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TWeapon\+::\+TWeapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Vel }\end{DoxyParamCaption})}
+
+
+
+Builds the missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+VM} & Pointer to the video manager data structure \\
+\hline
+{\em Pos} & Initial position of the missile \\
+\hline
+{\em Vel} & Initial velocity of the missile \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_weapon_ab3cac09f8561eaa3daff155eedc2c461}\label{class_t_weapon_ab3cac09f8561eaa3daff155eedc2c461}} 
+\index{TWeapon@{TWeapon}!Arm@{Arm}}
+\index{Arm@{Arm}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{Arm()}{Arm()}}
+{\footnotesize\ttfamily void TWeapon\+::\+Arm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Vel }\end{DoxyParamCaption})}
+
+
+
+Arms the missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pos} & The position of the missile \\
+\hline
+{\em Vel} & The velocity of the missile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_weapon_a8138a8c857d6b448585de6ff2c35fa4d}\label{class_t_weapon_a8138a8c857d6b448585de6ff2c35fa4d}} 
+\index{TWeapon@{TWeapon}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{GetPos()}{GetPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TWeapon\+::\+Get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the missile position. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+The position of the missile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_weapon_a6e52e4ed1adc9208fdcb7042c0233eb1}\label{class_t_weapon_a6e52e4ed1adc9208fdcb7042c0233eb1}} 
+\index{TWeapon@{TWeapon}!IsArmed@{IsArmed}}
+\index{IsArmed@{IsArmed}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{IsArmed()}{IsArmed()}}
+{\footnotesize\ttfamily bool TWeapon\+::\+Is\+Armed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the status of missile. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns true if the missile is armed, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_weapon_af49d86585ca860881d806834ef0995e4}\label{class_t_weapon_af49d86585ca860881d806834ef0995e4}} 
+\index{TWeapon@{TWeapon}!Update@{Update}}
+\index{Update@{Update}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void TWeapon\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{Dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_t_missile_a427e750ac56ba36265e25fcb3f0f173b}{TMissile}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_weapon_a640bb3def266a46fb61a1a9aa1e275aa}\label{class_t_weapon_a640bb3def266a46fb61a1a9aa1e275aa}} 
+\index{TWeapon@{TWeapon}!m\_bArmed@{m\_bArmed}}
+\index{m\_bArmed@{m\_bArmed}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{m\_bArmed}{m\_bArmed}}
+{\footnotesize\ttfamily bool TWeapon\+::m\+\_\+b\+Armed\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_weapon_a4351dce5629d221ac960d31e356ede39}\label{class_t_weapon_a4351dce5629d221ac960d31e356ede39}} 
+\index{TWeapon@{TWeapon}!m\_Color@{m\_Color}}
+\index{m\_Color@{m\_Color}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{m\_Color}{m\_Color}}
+{\footnotesize\ttfamily COLORREF TWeapon\+::m\+\_\+\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_weapon_a2653d5a8977dd3df905fab1769c3f6d6}\label{class_t_weapon_a2653d5a8977dd3df905fab1769c3f6d6}} 
+\index{TWeapon@{TWeapon}!m\_Pos@{m\_Pos}}
+\index{m\_Pos@{m\_Pos}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{m\_Pos}{m\_Pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TWeapon\+::m\+\_\+\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_weapon_a424baeeaf3e06c504e631c135e190869}\label{class_t_weapon_a424baeeaf3e06c504e631c135e190869}} 
+\index{TWeapon@{TWeapon}!m\_pVM@{m\_pVM}}
+\index{m\_pVM@{m\_pVM}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{m\_pVM}{m\_pVM}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}}$\ast$ TWeapon\+::m\+\_\+p\+VM\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_weapon_ab0fbd37c08552c69f7fc8f6e046ac226}\label{class_t_weapon_ab0fbd37c08552c69f7fc8f6e046ac226}} 
+\index{TWeapon@{TWeapon}!m\_Vel@{m\_Vel}}
+\index{m\_Vel@{m\_Vel}!TWeapon@{TWeapon}}
+\doxysubsubsection{\texorpdfstring{m\_Vel}{m\_Vel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} TWeapon\+::m\+\_\+\+Vel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{weapons_8h}{weapons.\+h}}\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{weapons_8cpp}{weapons.\+cpp}}\end{DoxyCompactItemize}

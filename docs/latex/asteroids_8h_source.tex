@@ -1,0 +1,87 @@
+\hypertarget{asteroids_8h_source}{}\doxysection{asteroids.\+h}
+\label{asteroids_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/asteroids.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/asteroids.h}}
+\mbox{\hyperlink{asteroids_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{    author: Francesco Settembrini}}
+\DoxyCodeLine{3 \textcolor{comment}{    last update: 23/6/2021}}
+\DoxyCodeLine{4 \textcolor{comment}{    e-\/mail: mailto:francesco.settembrini@poliba.it}}
+\DoxyCodeLine{5 \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_ASTEROIDS\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_ASTEROIDS\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{audio_8h}{audio.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{video_8h}{video.h}}"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vectors_8h}{vectors.h}}"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define ASTEROID\_EXPLOSIONTICKS     64}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define ASTEROID\_NDEBRIS            16}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{enum} \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{enAsteroidClass}} \{ \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351a4b79cb05e129af29aed9a71bf08e491e}{acBig}}, \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351a0012cb0b985517706fd90834bc378b8a}{acMedium}}, \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351ab9b4b044e1ea7b4c907b7718a636ad8a}{acSmall}} \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_asteroid}{TAsteroid}};}
+\DoxyCodeLine{27 \textcolor{keyword}{typedef} std::vector<TAsteroid> \mbox{\hyperlink{asteroids_8h_a5cfc0313c3717a89fe3b55f5ec63d294}{TVecAsteroids}};}
+\DoxyCodeLine{28 \textcolor{keyword}{typedef} std::vector<TAsteroid*> \mbox{\hyperlink{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}{TVecPtrAsteroids}};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_asteroid}{TAsteroid}}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     \textcolor{keyword}{public}:}
+\DoxyCodeLine{33         \mbox{\hyperlink{class_t_asteroid_a7b152f28980ae497aba7b51afcd4d884}{TAsteroid}}( \mbox{\hyperlink{class_t_video_manager}{TVideoManager}}* pVM,}
+\DoxyCodeLine{34             \mbox{\hyperlink{class_t_sound_manager}{TSoundManager}}* pSM,}
+\DoxyCodeLine{35             \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{enAsteroidClass}} nClass, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos,}
+\DoxyCodeLine{36             \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel, \textcolor{keywordtype}{double} Radius );}
+\DoxyCodeLine{37         \mbox{\hyperlink{class_t_asteroid_a1955b352123437436cbc1457e92b4d4b}{\string~TAsteroid}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keyword}{public}:}
+\DoxyCodeLine{40         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_asteroid_ae13dfae2e02321ce4e4ab0c16c5cdf35}{Update}}(\textcolor{keywordtype}{double} DT);}
+\DoxyCodeLine{41         \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{enAsteroidClass}} \mbox{\hyperlink{class_t_asteroid_a88faad2cb207ea589209bdafafc75929}{GetClass}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_t_asteroid_afe6b66e4d914c96fa27a8776899a37cd}{GetSize}}();}
+\DoxyCodeLine{44         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_a85fe0f23e340b57429fd35cef8e98853}{GetPos}}();}
+\DoxyCodeLine{45         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_a8d3a8b1ab456e129de473acbfc82b64f}{GetVel}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_asteroid_a2f16cee2b9f8d711374bab715b4f7026}{Explode}}();}
+\DoxyCodeLine{48         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_asteroid_a02516c58771a1cd3cec3cc39c22b1c3d}{DoExplosion}}();}
+\DoxyCodeLine{49         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_asteroid_a7d3b89845362c48b78989fde1190ea9c}{IsExploding}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_asteroid_af5fe3983d4095f1cb2c63c16a66352ef}{Collide}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pt);}
+\DoxyCodeLine{52         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_asteroid_aa3d8d226bc375e081ac7856e0aeda959}{SetPos}}(\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_asteroid_acb8742bd5e8748733f1eaea7fd6ff708}{IsAlive}}();}
+\DoxyCodeLine{55         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_asteroid_a514cd582d863839186869bbf104dcaa4}{SetAlive}}(\textcolor{keywordtype}{bool} bAlive);}
+\DoxyCodeLine{56         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_asteroid_acc83cc9e110a94187753176e63ae141f}{SetVisible}}(\textcolor{keywordtype}{bool} bVisible);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{59         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_t_asteroid_a5b01baf32006b4cddacc5bd240011ac3}{m\_bAlive}}, \mbox{\hyperlink{class_t_asteroid_aff0e12ee3a8fbe15c40a7866c06db8f8}{m\_bVisible}};}
+\DoxyCodeLine{60         COLORREF \mbox{\hyperlink{class_t_asteroid_a7d94ea6883ce727ee7a56ede122d50bc}{m\_Color}};}
+\DoxyCodeLine{61         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_t_asteroid_a58653e28111d79cf44d23f63e1ed0efa}{m\_Radius}}, \mbox{\hyperlink{class_t_asteroid_a8c06da1b7b7eccf325ecd93b8e29b3f0}{m\_Rot}}, \mbox{\hyperlink{class_t_asteroid_a1d4bb8264d64b28fa64edc92e6518e38}{m\_DRot}};}
+\DoxyCodeLine{62         \mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVecPoints}} \mbox{\hyperlink{class_t_asteroid_a4948f36f1c4547e2eb50113dc4a858af}{m\_Shape}};}
+\DoxyCodeLine{63         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_a8af1ab87ae02269bda1605309f6e5164}{m\_Pos}}, \mbox{\hyperlink{class_t_asteroid_ac1b9e194d684a45d2fd81e3a5adf96dd}{m\_Vel}}, \mbox{\hyperlink{class_t_asteroid_a56f37f650489ed980a7e13724953f7c8}{m\_Acc}};}
+\DoxyCodeLine{64         \mbox{\hyperlink{class_t_sound_manager}{TSoundManager}}* \mbox{\hyperlink{class_t_asteroid_a6ca797755784a5a34c0382f0ebdd4837}{m\_pAudio}};}
+\DoxyCodeLine{65         \mbox{\hyperlink{class_t_video_manager}{TVideoManager}}* \mbox{\hyperlink{class_t_asteroid_a7ee2b96b50539c1a489419f4218de737}{m\_pVideo}};}
+\DoxyCodeLine{66         \mbox{\hyperlink{asteroids_8h_aee229b65e0c6e5538598b9abebbc0351}{enAsteroidClass}} \mbox{\hyperlink{class_t_asteroid_aa8c9d4de15ad104fbceaf235912c16ee}{m\_nClass}};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{69         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_asteroid_a4a83860899b78857529e8ab904fd914f}{Crash}}();}
+\DoxyCodeLine{70         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_t_asteroid_ad8e184cc6e9649e13b01500c21502345}{GetRoughness}}();}
+\DoxyCodeLine{71         \mbox{\hyperlink{namespacemaths_a4db407bd2fa425856450f1d918cccb0b}{TVecPoints}} \mbox{\hyperlink{class_t_asteroid_afcfd7bb872a5c2320553735e2a58d9a9}{RandShape}}(\textcolor{keywordtype}{double} Size);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{74         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_t_asteroid_a1fa8fb3c9b918a8256c383926b19f717}{m\_nDebris}}, \mbox{\hyperlink{class_t_asteroid_a8d29d1dbbb31f6a34cc1b34a99eb660b}{m\_nExplosionTicks}};}
+\DoxyCodeLine{75         \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} \mbox{\hyperlink{class_t_asteroid_a9114bb0645d3752348da8f64359b0341}{m\_Debris}}[\mbox{\hyperlink{asteroids_8h_a4c69306b65900a7454ef0cfcd3ea4508}{ASTEROID\_NDEBRIS}}];}
+\DoxyCodeLine{76         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_t_asteroid_accbf4614c1bb74a620d76e5b5d420eb3}{m\_DebrisScales}}[\mbox{\hyperlink{asteroids_8h_a4c69306b65900a7454ef0cfcd3ea4508}{ASTEROID\_NDEBRIS}}];}
+\DoxyCodeLine{77 \};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 }
+
+\end{DoxyCode}

@@ -1,0 +1,53 @@
+\hypertarget{_t_form_main_8h_source}{}\doxysection{TForm\+Main.\+h}
+\label{_t_form_main_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/TFormMain.h@{Z:/F/dev/jobs/asteroids-\/2k.bcb.vcl/asteroids-\/2k/TFormMain.h}}
+\mbox{\hyperlink{_t_form_main_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef TFormMainH}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define TFormMainH}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <System.Classes.hpp>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <Vcl.Controls.hpp>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <Vcl.StdCtrls.hpp>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <Vcl.Forms.hpp>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <Vcl.ExtCtrls.hpp>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_game}{TGame}};}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_sound_manager}{TSoundManager}};}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_video_manager}{TVideoManager}};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_t_form_main}{TFormMain}} : \textcolor{keyword}{public} TForm}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20 \_\_published:    \textcolor{comment}{// IDE-\/managed Components}}
+\DoxyCodeLine{21     TTimer *\mbox{\hyperlink{class_t_form_main_a689b6df81b4ada48d0cfb1373f54e4de}{Timer}};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \_\_fastcall \mbox{\hyperlink{class_t_form_main_af27d7ef8f92214e6209341e437fba66b}{FormCreate}}(TObject *Sender);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \_\_fastcall \mbox{\hyperlink{class_t_form_main_a2178c00872e40a88af7adb0de2b81b60}{FormPaint}}(TObject *Sender);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \_\_fastcall \mbox{\hyperlink{class_t_form_main_a8ceeb9aa1ab20040d358f22e3b3e3eef}{TimerTimer}}(TObject *Sender);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \_\_fastcall \mbox{\hyperlink{class_t_form_main_ad35e7996bb41cca2d027a3c88260210d}{FormClose}}(TObject *Sender, TCloseAction \&Action);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{private}:    \textcolor{comment}{// User declarations}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{public}:     \textcolor{comment}{// User declarations}}
+\DoxyCodeLine{30     \_\_fastcall \mbox{\hyperlink{class_t_form_main_a64172ce125adcaeec4546e50ed37fae1}{TFormMain}}(TComponent* Owner);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_t_game}{TGame}}* \mbox{\hyperlink{class_t_form_main_a12ce8319b725b689ffade7cf38450d58}{m\_pGame}};}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_t_sound_manager}{TSoundManager}} *\mbox{\hyperlink{class_t_form_main_af9f721b9652743ba4d52fe8f626ae86b}{m\_pAudio}};}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_t_video_manager}{TVideoManager}} *\mbox{\hyperlink{class_t_form_main_adb2f305367032f8e063c15d79609c260}{m\_pVideo}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_form_main_a0ac0ef9367ee054458f9d95326cfbaa1}{Setup}}();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_form_main_af29e2fed54bec559ee7404fa47c77450}{Cleanup}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_form_main_a2a1aaefe858c0dbe3d39a4ea8bd755ec}{MainLoop}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_form_main_a792d955946594b73004dbfcce6bf3af1}{KeyboardHandler}}();}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_t_form_main_a45642b6307d23211634dc43700b3e7c9}{ForceToFPS}}(\textcolor{keywordtype}{unsigned} nFPS);}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{45 \textcolor{keyword}{extern} PACKAGE \mbox{\hyperlink{class_t_form_main}{TFormMain}} *\mbox{\hyperlink{_t_form_main_8h_a24f2c47a20cd5e2a71cb1209116b88e6}{FormMain}};}
+\DoxyCodeLine{46 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

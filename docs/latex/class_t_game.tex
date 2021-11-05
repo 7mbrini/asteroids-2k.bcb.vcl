@@ -1,0 +1,941 @@
+\hypertarget{class_t_game}{}\doxysection{TGame Class Reference}
+\label{class_t_game}\index{TGame@{TGame}}
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_game_a7d0ec7879a6ce1d3e805c10c822bbb8f}{TGame}} (\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, \mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$p\+SM)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_game_aaacc32ca3b16fa655a423b22ff866622}{$\sim$\+TGame}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_ad6d1feeaa6634a3873e27f5dfd6562fb}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Run the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_a7fe386bf321362fd10b15eecb1250a03}{Is\+Pausing}} ()
+\begin{DoxyCompactList}\small\item\em Checks status for pausing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_ad09ee5cca93752a5085d2cd0d7dada4b}{Is\+Running}} ()
+\begin{DoxyCompactList}\small\item\em Checks status for running. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_a08cbb2fb84a4ba59fb69709bc66c4f4b}{Is\+Game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Checks for \char`\"{}game-\/over\char`\"{} status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a7a86f37007b91f944f71ffdad6650d53}{Restart}} ()
+\begin{DoxyCompactList}\small\item\em Set all parameters to their default values and restart the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a88b43ad9ae22cc60848a7d0ec66148b1}{Game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Terminates the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a2d5a3f15c256903ef86bdbc6b480ce99}{Run\+The\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Run the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a0396aad8dc3eb2701d3aea33b9fe72f8}{Stop\+The\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Stop the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a63a59699f08790ec2a4f282686c2c174}{Pause\+The\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Pausing the game in toggle mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a17726cf1f31552b57507859d2c093414}{Pause\+The\+Game}} (bool b\+Pause)
+\begin{DoxyCompactList}\small\item\em Pausing the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_adc3a0113e869b71aeef3dd84ed72d3f6}{End\+The\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Inhibits game status for running. \end{DoxyCompactList}\item 
+HWND \mbox{\hyperlink{class_t_game_a33c68c5ca23ba7746186e393882126e8}{Get\+Main\+Wnd}} ()
+\begin{DoxyCompactList}\small\item\em Returns the handle to the main game window. \end{DoxyCompactList}\item 
+RECT \mbox{\hyperlink{class_t_game_a0c3a0d4a2f31f0a65e97023af6cf48c6}{Get\+Client\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of the client area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_ae39e4c5bd976603fb2ce1d81c44603b7}{Get\+Client\+Area}} (unsigned \&nW, unsigned \&nH)
+\begin{DoxyCompactList}\small\item\em Gets the size of the client area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a96753454806b465f42da6289f03e50c6}{Shot\+The\+Missile}} (\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Shots the missile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$ \mbox{\hyperlink{class_t_game_a5eec703b3bbd54f484ff88bfb43891d9}{Get\+VM}} ()
+\item 
+\mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$ \mbox{\hyperlink{class_t_game_a849554e872058ee35c2f376397bee573}{Get\+SM}} ()
+\item 
+\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$ \mbox{\hyperlink{class_t_game_a227747b34b99a12d180af6850f67affd}{Get\+Ship}} (\mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}} n\+Ship\+Class)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_game_a6f5a2393074db7e3683857115dd8d8a3}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Settings up the game engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a1dd7465bd4dc7f36757aecde0326f115}{Show\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Shows game information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_af624a27c87a1be50881271a9110b2939}{Next\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Advances the game to next level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a20d4eaa48aa5d4bf31a8f52165c21527}{Split}} (\mbox{\hyperlink{class_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid, \mbox{\hyperlink{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}{TVec\+Ptr\+Asteroids}} \&Splits)
+\begin{DoxyCompactList}\small\item\em Splits an asteroid in two smaller ones. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_aaa5f786330712c0a7c64813637e260ec}{Is\+Safety\+Pos}} (\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos)
+\begin{DoxyCompactList}\small\item\em Previene di piazzare \char`\"{}a tradimento\char`\"{} l\textquotesingle{}astronave ossia nel bel mezzo di una pioggia di meteoriti! \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_a8356f1e1670277c306bc42aeeaf00946}{Load\+The\+Help}} ()
+\begin{DoxyCompactList}\small\item\em Loads the help strings information. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_a41dcf1416f0dd0c16a2be95a2821d538}{Load\+The\+Sounds}} ()
+\begin{DoxyCompactList}\small\item\em Loads the sounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a59ebfc855f4f061883adcafa3273d422}{Add\+Score}} (int n\+Score)
+\begin{DoxyCompactList}\small\item\em Increments the total game score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a7c99f578a653c2eb2c6e83c085ffc128}{Add\+Score}} (\mbox{\hyperlink{class_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid)
+\begin{DoxyCompactList}\small\item\em Increments the total game score based on the asteroid size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_ae40b5d3b57018745bc756a21f52c3484}{Is\+Best\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Checks for best score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_aa070305111b981ede8da6c3dd3c59ec7}{Register\+Best\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Shows a dialog-\/box to gets best score data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_ac4ec444565e5adca945f976cfb88b462}{Save\+Best\+Scores}} ()
+\begin{DoxyCompactList}\small\item\em Save best scores to file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_ad51af30906005a24f93194f71e2bc9a3}{Load\+The\+Best\+Scores}} (char $\ast$p\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Load the best scores from file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_afe98a927e5d81def37c66e6deb0f6401}{Build\+The\+Fonts}} ()
+\begin{DoxyCompactList}\small\item\em Builds the fonts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a6abe2b25e419b713453952c21b0e58aa}{Build\+The\+Asteroids}} (unsigned n\+Count)
+\begin{DoxyCompactList}\small\item\em Builds the asteroids. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_ad507803596c299fe3fbb44bb5e7a347f}{Build\+The\+Ships}} ()
+\begin{DoxyCompactList}\small\item\em Builds the ships. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a6ae02f46284a332c886102e15e42d610}{Force\+Inside\+Limits}} ()
+\begin{DoxyCompactList}\small\item\em Force all actors inside of the scenario boundaries. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_a96ef45a1a392e9f71e34617f40a10eaa}{Is\+Inside\+Game\+Area}} (\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos)
+\begin{DoxyCompactList}\small\item\em Checks if given position are out of the scenario boundaries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a57e8b84a32926bff7e01e86d963e0124}{Level\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles the transition to next game level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a21253025c9cca42538014ab56799959a}{Bonus\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles the \char`\"{}bonus\char`\"{} event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a22cece708cada87470ca44872fce1611}{Collision\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles collisions between all objects of the scenario. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_a34f9a011cfc83015f07fedfcb2641d74}{Collide}} (\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$p\+Ship1, \mbox{\hyperlink{class_t_ship}{TShip}} $\ast$p\+Ship2)
+\begin{DoxyCompactList}\small\item\em Checks for collision between two ships. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_game_a25081aeea151b762ab9e369f2f1328c9}{Collide}} (\mbox{\hyperlink{class_t_missile}{TMissile}} $\ast$p\+Missile, \mbox{\hyperlink{class_t_ship}{TShip}} $\ast$p\+Ship)
+\item 
+bool \mbox{\hyperlink{class_t_game_a508c9f21a0464371ce2daaf800365e8b}{Collide}} (\mbox{\hyperlink{class_t_asteroid}{TAsteroid}} $\ast$p\+Asteroid, \mbox{\hyperlink{class_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Collision detection between ships and asteroids. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a412f05bfdfda8ea8b283830ba1d190ba}{Game\+Over\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles the \char`\"{}game-\/over\char`\"{} status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_adaadb273590b7b4be64a0474ee31cddf}{Human\+Ships\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles the human ships. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a2840bb83858ffbf39ce276b0ef75ff2a}{Alien\+Ships\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles the aliens ships. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a149a2b8c26da67b9ce5cb3b5c8be76f8}{Sort}} (\mbox{\hyperlink{game_8h_a5e9675d78a76a11495100f22e13dd4f9}{TVec\+Record\+Scores}} \&Scores, bool b\+Ascending=true)
+\begin{DoxyCompactList}\small\item\em Reorder best scores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a431821988a5a92405d09d8385d1543b2}{Clear}} (\mbox{\hyperlink{ships_8h_a7a80ad7a1118c3c3fea3c0126ea055eb}{TVec\+Ptr\+Ships}} \&Ships)
+\begin{DoxyCompactList}\small\item\em Deletes a bunch of ships referenced by a vector of pointers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a53c08626a314e9df2a38926f27f96d9c}{Clear}} (\mbox{\hyperlink{weapons_8h_a70aa12c116f5b57237daf8dcddae6abd}{TVec\+Ptr\+Weapons}} \&Missiles)
+\begin{DoxyCompactList}\small\item\em Deletes a bunch of weapons referenced by a vector of pointers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_game_a154d24eeea88afc13e50b81bd458e3c8}{Clear}} (\mbox{\hyperlink{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}{TVec\+Ptr\+Asteroids}} \&Asteroids)
+\begin{DoxyCompactList}\small\item\em Deletes a bunch of asteroids referenced by a vector of pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$ \mbox{\hyperlink{class_t_game_a1b9cfb5e8ba845d3d4afa315ebd677fe}{m\+\_\+p\+Audio}}
+\item 
+\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$ \mbox{\hyperlink{class_t_game_a2eb7472c67a05c31d492e55921f33055}{m\+\_\+p\+Video}}
+\item 
+\mbox{\hyperlink{ships_8h_a7a80ad7a1118c3c3fea3c0126ea055eb}{TVec\+Ptr\+Ships}} \mbox{\hyperlink{class_t_game_a455eaad505f607fc4ffca1448b75d07a}{m\+\_\+p\+Ships}}
+\item 
+\mbox{\hyperlink{weapons_8h_a70aa12c116f5b57237daf8dcddae6abd}{TVec\+Ptr\+Weapons}} \mbox{\hyperlink{class_t_game_a0fc87f5159f7d97a82e36e8df0ddf0b5}{m\+\_\+p\+Missiles}}
+\item 
+\mbox{\hyperlink{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}{TVec\+Ptr\+Asteroids}} \mbox{\hyperlink{class_t_game_af29f4c642db023a3c5e1eb78dc52c757}{m\+\_\+p\+Asteroids}}
+\item 
+bool \mbox{\hyperlink{class_t_game_ab26419fae132e120d099790e4f160b6c}{m\+\_\+b\+Run}}
+\item 
+bool \mbox{\hyperlink{class_t_game_a885ddf8b6834ac57f86d0acaf0a1372a}{m\+\_\+b\+Pause}}
+\item 
+bool \mbox{\hyperlink{class_t_game_aee89dfb2774db3fe9082affde4bf7a98}{m\+\_\+b\+Game\+Over}}
+\item 
+int \mbox{\hyperlink{class_t_game_aa2731bd494c05c12174670f0c0a48e1c}{m\+\_\+n\+Score}}
+\item 
+int \mbox{\hyperlink{class_t_game_aa79a058dd3c199e3533e1558fac62b72}{m\+\_\+n\+Level}}
+\item 
+int \mbox{\hyperlink{class_t_game_a6b82344064aaa348c5a3d9fcfc7d08d0}{m\+\_\+n\+Difficulty}}
+\item 
+int \mbox{\hyperlink{class_t_game_a2b9b82d60b883279bbdca9d9ebb1214e}{m\+\_\+n\+Lives}}
+\item 
+int \mbox{\hyperlink{class_t_game_a1a13bf776b4baa44cb29c107001251e9}{m\+\_\+n\+Bonus\+Count}}
+\item 
+Ansi\+String \mbox{\hyperlink{class_t_game_ae8ecba15d9e3feb95bb99cb91bc98902}{m\+\_\+str\+Best\+Scores\+Name}}
+\item 
+\mbox{\hyperlink{game_8h_a5e9675d78a76a11495100f22e13dd4f9}{TVec\+Record\+Scores}} \mbox{\hyperlink{class_t_game_a2aec4b606e595dd656b249f0ce8b4eda}{m\+\_\+\+Best\+Scores}}
+\item 
+unsigned \mbox{\hyperlink{class_t_game_a9f358ac733c99f70110200803b29f655}{m\+\_\+n\+Dlg\+Ret\+Val}}
+\item 
+\mbox{\hyperlink{game_8h_a6a541cc02e8079aa7cfd07fd0587f9f6}{TVec\+Strings}} \mbox{\hyperlink{class_t_game_a529fb86fd90b25ff46800497b0874c71}{m\+\_\+str\+Help}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_game_a7d0ec7879a6ce1d3e805c10c822bbb8f}\label{class_t_game_a7d0ec7879a6ce1d3e805c10c822bbb8f}} 
+\index{TGame@{TGame}!TGame@{TGame}}
+\index{TGame@{TGame}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{TGame()}{TGame()}}
+{\footnotesize\ttfamily TGame\+::\+TGame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM,  }\item[{\mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$}]{p\+SM }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+VM} & Pointer to the Video\+Manager \\
+\hline
+{\em p\+SM} & Pointer to the Sound\+Manager \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_aaacc32ca3b16fa655a423b22ff866622}\label{class_t_game_aaacc32ca3b16fa655a423b22ff866622}} 
+\index{TGame@{TGame}!````~TGame@{$\sim$TGame}}
+\index{````~TGame@{$\sim$TGame}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{$\sim$TGame()}{~TGame()}}
+{\footnotesize\ttfamily TGame\+::$\sim$\+TGame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_game_a59ebfc855f4f061883adcafa3273d422}\label{class_t_game_a59ebfc855f4f061883adcafa3273d422}} 
+\index{TGame@{TGame}!AddScore@{AddScore}}
+\index{AddScore@{AddScore}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{AddScore()}{AddScore()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TGame\+::\+Add\+Score (\begin{DoxyParamCaption}\item[{int}]{n\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Increments the total game score. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em n\+Score} & The value for score increment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_a7c99f578a653c2eb2c6e83c085ffc128}\label{class_t_game_a7c99f578a653c2eb2c6e83c085ffc128}} 
+\index{TGame@{TGame}!AddScore@{AddScore}}
+\index{AddScore@{AddScore}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{AddScore()}{AddScore()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TGame\+::\+Add\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Increments the total game score based on the asteroid size. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_a2840bb83858ffbf39ce276b0ef75ff2a}\label{class_t_game_a2840bb83858ffbf39ce276b0ef75ff2a}} 
+\index{TGame@{TGame}!AlienShipsHandler@{AlienShipsHandler}}
+\index{AlienShipsHandler@{AlienShipsHandler}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{AlienShipsHandler()}{AlienShipsHandler()}}
+{\footnotesize\ttfamily void TGame\+::\+Alien\+Ships\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles the aliens ships. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a21253025c9cca42538014ab56799959a}\label{class_t_game_a21253025c9cca42538014ab56799959a}} 
+\index{TGame@{TGame}!BonusHandler@{BonusHandler}}
+\index{BonusHandler@{BonusHandler}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{BonusHandler()}{BonusHandler()}}
+{\footnotesize\ttfamily void TGame\+::\+Bonus\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles the \char`\"{}bonus\char`\"{} event. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a6abe2b25e419b713453952c21b0e58aa}\label{class_t_game_a6abe2b25e419b713453952c21b0e58aa}} 
+\index{TGame@{TGame}!BuildTheAsteroids@{BuildTheAsteroids}}
+\index{BuildTheAsteroids@{BuildTheAsteroids}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{BuildTheAsteroids()}{BuildTheAsteroids()}}
+{\footnotesize\ttfamily void TGame\+::\+Build\+The\+Asteroids (\begin{DoxyParamCaption}\item[{unsigned}]{n\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Builds the asteroids. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em n\+Count} & Number of asteroids to be created \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_afe98a927e5d81def37c66e6deb0f6401}\label{class_t_game_afe98a927e5d81def37c66e6deb0f6401}} 
+\index{TGame@{TGame}!BuildTheFonts@{BuildTheFonts}}
+\index{BuildTheFonts@{BuildTheFonts}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{BuildTheFonts()}{BuildTheFonts()}}
+{\footnotesize\ttfamily bool TGame\+::\+Build\+The\+Fonts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Builds the fonts. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_ad507803596c299fe3fbb44bb5e7a347f}\label{class_t_game_ad507803596c299fe3fbb44bb5e7a347f}} 
+\index{TGame@{TGame}!BuildTheShips@{BuildTheShips}}
+\index{BuildTheShips@{BuildTheShips}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{BuildTheShips()}{BuildTheShips()}}
+{\footnotesize\ttfamily bool TGame\+::\+Build\+The\+Ships (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Builds the ships. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_a154d24eeea88afc13e50b81bd458e3c8}\label{class_t_game_a154d24eeea88afc13e50b81bd458e3c8}} 
+\index{TGame@{TGame}!Clear@{Clear}}
+\index{Clear@{Clear}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void TGame\+::\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}{TVec\+Ptr\+Asteroids}} \&}]{Asteroids }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Deletes a bunch of asteroids referenced by a vector of pointers. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Asteroids} & Referernce to a list of pointers to asteroids \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_a431821988a5a92405d09d8385d1543b2}\label{class_t_game_a431821988a5a92405d09d8385d1543b2}} 
+\index{TGame@{TGame}!Clear@{Clear}}
+\index{Clear@{Clear}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void TGame\+::\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ships_8h_a7a80ad7a1118c3c3fea3c0126ea055eb}{TVec\+Ptr\+Ships}} \&}]{Ships }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Deletes a bunch of ships referenced by a vector of pointers. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Ships} & Referernce to a list of pointers to ships \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_a53c08626a314e9df2a38926f27f96d9c}\label{class_t_game_a53c08626a314e9df2a38926f27f96d9c}} 
+\index{TGame@{TGame}!Clear@{Clear}}
+\index{Clear@{Clear}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void TGame\+::\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{weapons_8h_a70aa12c116f5b57237daf8dcddae6abd}{TVec\+Ptr\+Weapons}} \&}]{Weapons }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Deletes a bunch of weapons referenced by a vector of pointers. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Missiles} & Referernce to a list of pointers to weapons \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_a508c9f21a0464371ce2daaf800365e8b}\label{class_t_game_a508c9f21a0464371ce2daaf800365e8b}} 
+\index{TGame@{TGame}!Collide@{Collide}}
+\index{Collide@{Collide}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Collide()}{Collide()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool TGame\+::\+Collide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_asteroid}{TAsteroid}} $\ast$}]{p\+Asteroid,  }\item[{\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Collision detection between ships and asteroids. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Asteroid} & Pointer to the asteroid object \\
+\hline
+{\em p\+Ship} & Pointer to the ship object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if objects collides, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_a25081aeea151b762ab9e369f2f1328c9}\label{class_t_game_a25081aeea151b762ab9e369f2f1328c9}} 
+\index{TGame@{TGame}!Collide@{Collide}}
+\index{Collide@{Collide}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Collide()}{Collide()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool TGame\+::\+Collide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_missile}{TMissile}} $\ast$}]{p\+Missile,  }\item[{\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a34f9a011cfc83015f07fedfcb2641d74}\label{class_t_game_a34f9a011cfc83015f07fedfcb2641d74}} 
+\index{TGame@{TGame}!Collide@{Collide}}
+\index{Collide@{Collide}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Collide()}{Collide()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool TGame\+::\+Collide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$}]{p\+Ship1,  }\item[{\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$}]{p\+Ship2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks for collision between two ships. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a22cece708cada87470ca44872fce1611}\label{class_t_game_a22cece708cada87470ca44872fce1611}} 
+\index{TGame@{TGame}!CollisionHandler@{CollisionHandler}}
+\index{CollisionHandler@{CollisionHandler}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{CollisionHandler()}{CollisionHandler()}}
+{\footnotesize\ttfamily void TGame\+::\+Collision\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles collisions between all objects of the scenario. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_adc3a0113e869b71aeef3dd84ed72d3f6}\label{class_t_game_adc3a0113e869b71aeef3dd84ed72d3f6}} 
+\index{TGame@{TGame}!EndTheGame@{EndTheGame}}
+\index{EndTheGame@{EndTheGame}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{EndTheGame()}{EndTheGame()}}
+{\footnotesize\ttfamily void TGame\+::\+End\+The\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inhibits game status for running. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a6ae02f46284a332c886102e15e42d610}\label{class_t_game_a6ae02f46284a332c886102e15e42d610}} 
+\index{TGame@{TGame}!ForceInsideLimits@{ForceInsideLimits}}
+\index{ForceInsideLimits@{ForceInsideLimits}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{ForceInsideLimits()}{ForceInsideLimits()}}
+{\footnotesize\ttfamily void TGame\+::\+Force\+Inside\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Force all actors inside of the scenario boundaries. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a88b43ad9ae22cc60848a7d0ec66148b1}\label{class_t_game_a88b43ad9ae22cc60848a7d0ec66148b1}} 
+\index{TGame@{TGame}!GameOver@{GameOver}}
+\index{GameOver@{GameOver}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{GameOver()}{GameOver()}}
+{\footnotesize\ttfamily void TGame\+::\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Terminates the game. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a412f05bfdfda8ea8b283830ba1d190ba}\label{class_t_game_a412f05bfdfda8ea8b283830ba1d190ba}} 
+\index{TGame@{TGame}!GameOverHandler@{GameOverHandler}}
+\index{GameOverHandler@{GameOverHandler}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{GameOverHandler()}{GameOverHandler()}}
+{\footnotesize\ttfamily void TGame\+::\+Game\+Over\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles the \char`\"{}game-\/over\char`\"{} status. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a0c3a0d4a2f31f0a65e97023af6cf48c6}\label{class_t_game_a0c3a0d4a2f31f0a65e97023af6cf48c6}} 
+\index{TGame@{TGame}!GetClientArea@{GetClientArea}}
+\index{GetClientArea@{GetClientArea}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{GetClientArea()}{GetClientArea()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily RECT TGame\+::\+Get\+Client\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the size of the client area. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+The size (RECT) of the client area 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_ae39e4c5bd976603fb2ce1d81c44603b7}\label{class_t_game_ae39e4c5bd976603fb2ce1d81c44603b7}} 
+\index{TGame@{TGame}!GetClientArea@{GetClientArea}}
+\index{GetClientArea@{GetClientArea}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{GetClientArea()}{GetClientArea()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TGame\+::\+Get\+Client\+Area (\begin{DoxyParamCaption}\item[{unsigned \&}]{nW,  }\item[{unsigned \&}]{nH }\end{DoxyParamCaption})}
+
+
+
+Gets the size of the client area. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em nW} & Width of clienr area \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em nH} & Height of clienr area \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_a33c68c5ca23ba7746186e393882126e8}\label{class_t_game_a33c68c5ca23ba7746186e393882126e8}} 
+\index{TGame@{TGame}!GetMainWnd@{GetMainWnd}}
+\index{GetMainWnd@{GetMainWnd}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{GetMainWnd()}{GetMainWnd()}}
+{\footnotesize\ttfamily HWND TGame\+::\+Get\+Main\+Wnd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the handle to the main game window. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Window handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_a227747b34b99a12d180af6850f67affd}\label{class_t_game_a227747b34b99a12d180af6850f67affd}} 
+\index{TGame@{TGame}!GetShip@{GetShip}}
+\index{GetShip@{GetShip}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{GetShip()}{GetShip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_ship}{TShip}} $\ast$ TGame\+::\+Get\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ships_8h_a95d58ec37f0b10c58e0deaa1a76b3857}{en\+Ship\+Class}}}]{n\+Ship\+Class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_t_game_a849554e872058ee35c2f376397bee573}\label{class_t_game_a849554e872058ee35c2f376397bee573}} 
+\index{TGame@{TGame}!GetSM@{GetSM}}
+\index{GetSM@{GetSM}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{GetSM()}{GetSM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}} $\ast$ TGame\+::\+Get\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_t_game_a5eec703b3bbd54f484ff88bfb43891d9}\label{class_t_game_a5eec703b3bbd54f484ff88bfb43891d9}} 
+\index{TGame@{TGame}!GetVM@{GetVM}}
+\index{GetVM@{GetVM}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{GetVM()}{GetVM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$ TGame\+::\+Get\+VM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_t_game_adaadb273590b7b4be64a0474ee31cddf}\label{class_t_game_adaadb273590b7b4be64a0474ee31cddf}} 
+\index{TGame@{TGame}!HumanShipsHandler@{HumanShipsHandler}}
+\index{HumanShipsHandler@{HumanShipsHandler}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{HumanShipsHandler()}{HumanShipsHandler()}}
+{\footnotesize\ttfamily void TGame\+::\+Human\+Ships\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles the human ships. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_ae40b5d3b57018745bc756a21f52c3484}\label{class_t_game_ae40b5d3b57018745bc756a21f52c3484}} 
+\index{TGame@{TGame}!IsBestScore@{IsBestScore}}
+\index{IsBestScore@{IsBestScore}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{IsBestScore()}{IsBestScore()}}
+{\footnotesize\ttfamily bool TGame\+::\+Is\+Best\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks for best score. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns true if the game score is in the best scores 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_a08cbb2fb84a4ba59fb69709bc66c4f4b}\label{class_t_game_a08cbb2fb84a4ba59fb69709bc66c4f4b}} 
+\index{TGame@{TGame}!IsGameOver@{IsGameOver}}
+\index{IsGameOver@{IsGameOver}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{IsGameOver()}{IsGameOver()}}
+{\footnotesize\ttfamily bool TGame\+::\+Is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks for \char`\"{}game-\/over\char`\"{} status. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+If the game is in \char`\"{}game-\/over\char`\"{} status return true, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_a96ef45a1a392e9f71e34617f40a10eaa}\label{class_t_game_a96ef45a1a392e9f71e34617f40a10eaa}} 
+\index{TGame@{TGame}!IsInsideGameArea@{IsInsideGameArea}}
+\index{IsInsideGameArea@{IsInsideGameArea}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{IsInsideGameArea()}{IsInsideGameArea()}}
+{\footnotesize\ttfamily bool TGame\+::\+Is\+Inside\+Game\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks if given position are out of the scenario boundaries. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pos} & Position to be tested to for coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if Pos is inside limits, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_a7fe386bf321362fd10b15eecb1250a03}\label{class_t_game_a7fe386bf321362fd10b15eecb1250a03}} 
+\index{TGame@{TGame}!IsPausing@{IsPausing}}
+\index{IsPausing@{IsPausing}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{IsPausing()}{IsPausing()}}
+{\footnotesize\ttfamily bool TGame\+::\+Is\+Pausing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks status for pausing. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns true if game is in \char`\"{}pause\char`\"{} mode, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_ad09ee5cca93752a5085d2cd0d7dada4b}\label{class_t_game_ad09ee5cca93752a5085d2cd0d7dada4b}} 
+\index{TGame@{TGame}!IsRunning@{IsRunning}}
+\index{IsRunning@{IsRunning}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{IsRunning()}{IsRunning()}}
+{\footnotesize\ttfamily bool TGame\+::\+Is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks status for running. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns true if game is in \char`\"{}run\char`\"{} mode, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_aaa5f786330712c0a7c64813637e260ec}\label{class_t_game_aaa5f786330712c0a7c64813637e260ec}} 
+\index{TGame@{TGame}!IsSafetyPos@{IsSafetyPos}}
+\index{IsSafetyPos@{IsSafetyPos}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{IsSafetyPos()}{IsSafetyPos()}}
+{\footnotesize\ttfamily bool TGame\+::\+Is\+Safety\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Previene di piazzare \char`\"{}a tradimento\char`\"{} l\textquotesingle{}astronave ossia nel bel mezzo di una pioggia di meteoriti! 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Pos} & Position to want to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if area around specified position is free from meteorites, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_a57e8b84a32926bff7e01e86d963e0124}\label{class_t_game_a57e8b84a32926bff7e01e86d963e0124}} 
+\index{TGame@{TGame}!LevelHandler@{LevelHandler}}
+\index{LevelHandler@{LevelHandler}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{LevelHandler()}{LevelHandler()}}
+{\footnotesize\ttfamily void TGame\+::\+Level\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles the transition to next game level. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_ad51af30906005a24f93194f71e2bc9a3}\label{class_t_game_ad51af30906005a24f93194f71e2bc9a3}} 
+\index{TGame@{TGame}!LoadTheBestScores@{LoadTheBestScores}}
+\index{LoadTheBestScores@{LoadTheBestScores}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{LoadTheBestScores()}{LoadTheBestScores()}}
+{\footnotesize\ttfamily bool TGame\+::\+Load\+The\+Best\+Scores (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Load the best scores from file. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+File\+Name} & Pointer to the filename string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_a8356f1e1670277c306bc42aeeaf00946}\label{class_t_game_a8356f1e1670277c306bc42aeeaf00946}} 
+\index{TGame@{TGame}!LoadTheHelp@{LoadTheHelp}}
+\index{LoadTheHelp@{LoadTheHelp}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{LoadTheHelp()}{LoadTheHelp()}}
+{\footnotesize\ttfamily bool TGame\+::\+Load\+The\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Loads the help strings information. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_a41dcf1416f0dd0c16a2be95a2821d538}\label{class_t_game_a41dcf1416f0dd0c16a2be95a2821d538}} 
+\index{TGame@{TGame}!LoadTheSounds@{LoadTheSounds}}
+\index{LoadTheSounds@{LoadTheSounds}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{LoadTheSounds()}{LoadTheSounds()}}
+{\footnotesize\ttfamily bool TGame\+::\+Load\+The\+Sounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Loads the sounds. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Returns true for success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_game_af624a27c87a1be50881271a9110b2939}\label{class_t_game_af624a27c87a1be50881271a9110b2939}} 
+\index{TGame@{TGame}!NextLevel@{NextLevel}}
+\index{NextLevel@{NextLevel}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{NextLevel()}{NextLevel()}}
+{\footnotesize\ttfamily void TGame\+::\+Next\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Advances the game to next level. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a63a59699f08790ec2a4f282686c2c174}\label{class_t_game_a63a59699f08790ec2a4f282686c2c174}} 
+\index{TGame@{TGame}!PauseTheGame@{PauseTheGame}}
+\index{PauseTheGame@{PauseTheGame}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{PauseTheGame()}{PauseTheGame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TGame\+::\+Pause\+The\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pausing the game in toggle mode. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a17726cf1f31552b57507859d2c093414}\label{class_t_game_a17726cf1f31552b57507859d2c093414}} 
+\index{TGame@{TGame}!PauseTheGame@{PauseTheGame}}
+\index{PauseTheGame@{PauseTheGame}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{PauseTheGame()}{PauseTheGame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TGame\+::\+Pause\+The\+Game (\begin{DoxyParamCaption}\item[{bool}]{b\+Pause }\end{DoxyParamCaption})}
+
+
+
+Pausing the game. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em b\+Pause} & True for pausing the game, false otherwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_aa070305111b981ede8da6c3dd3c59ec7}\label{class_t_game_aa070305111b981ede8da6c3dd3c59ec7}} 
+\index{TGame@{TGame}!RegisterBestScore@{RegisterBestScore}}
+\index{RegisterBestScore@{RegisterBestScore}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{RegisterBestScore()}{RegisterBestScore()}}
+{\footnotesize\ttfamily void TGame\+::\+Register\+Best\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Shows a dialog-\/box to gets best score data. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a7a86f37007b91f944f71ffdad6650d53}\label{class_t_game_a7a86f37007b91f944f71ffdad6650d53}} 
+\index{TGame@{TGame}!Restart@{Restart}}
+\index{Restart@{Restart}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Restart()}{Restart()}}
+{\footnotesize\ttfamily void TGame\+::\+Restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set all parameters to their default values and restart the game. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_ad6d1feeaa6634a3873e27f5dfd6562fb}\label{class_t_game_ad6d1feeaa6634a3873e27f5dfd6562fb}} 
+\index{TGame@{TGame}!Run@{Run}}
+\index{Run@{Run}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void TGame\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run the game. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a2d5a3f15c256903ef86bdbc6b480ce99}\label{class_t_game_a2d5a3f15c256903ef86bdbc6b480ce99}} 
+\index{TGame@{TGame}!RunTheGame@{RunTheGame}}
+\index{RunTheGame@{RunTheGame}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{RunTheGame()}{RunTheGame()}}
+{\footnotesize\ttfamily void TGame\+::\+Run\+The\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run the game. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_ac4ec444565e5adca945f976cfb88b462}\label{class_t_game_ac4ec444565e5adca945f976cfb88b462}} 
+\index{TGame@{TGame}!SaveBestScores@{SaveBestScores}}
+\index{SaveBestScores@{SaveBestScores}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{SaveBestScores()}{SaveBestScores()}}
+{\footnotesize\ttfamily void TGame\+::\+Save\+Best\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Save best scores to file. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a6f5a2393074db7e3683857115dd8d8a3}\label{class_t_game_a6f5a2393074db7e3683857115dd8d8a3}} 
+\index{TGame@{TGame}!Setup@{Setup}}
+\index{Setup@{Setup}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void TGame\+::\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Settings up the game engine. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a96753454806b465f42da6289f03e50c6}\label{class_t_game_a96753454806b465f42da6289f03e50c6}} 
+\index{TGame@{TGame}!ShotTheMissile@{ShotTheMissile}}
+\index{ShotTheMissile@{ShotTheMissile}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{ShotTheMissile()}{ShotTheMissile()}}
+{\footnotesize\ttfamily void TGame\+::\+Shot\+The\+Missile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Shots the missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & Pointer to the ship object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_a1dd7465bd4dc7f36757aecde0326f115}\label{class_t_game_a1dd7465bd4dc7f36757aecde0326f115}} 
+\index{TGame@{TGame}!ShowInfo@{ShowInfo}}
+\index{ShowInfo@{ShowInfo}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{ShowInfo()}{ShowInfo()}}
+{\footnotesize\ttfamily void TGame\+::\+Show\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Shows game information. 
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{class_t_game_a149a2b8c26da67b9ce5cb3b5c8be76f8}\label{class_t_game_a149a2b8c26da67b9ce5cb3b5c8be76f8}} 
+\index{TGame@{TGame}!Sort@{Sort}}
+\index{Sort@{Sort}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void TGame\+::\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a5e9675d78a76a11495100f22e13dd4f9}{TVec\+Record\+Scores}} \&}]{Scores,  }\item[{bool}]{b\+Ascending = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reorder best scores. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Scores} & Reference to a vector of best scores data structures \\
+\hline
+{\em b\+Ascending} & Sets the reordering mode, true for ascending order \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_a20d4eaa48aa5d4bf31a8f52165c21527}\label{class_t_game_a20d4eaa48aa5d4bf31a8f52165c21527}} 
+\index{TGame@{TGame}!Split@{Split}}
+\index{Split@{Split}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}}
+{\footnotesize\ttfamily void TGame\+::\+Split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_asteroid}{TAsteroid}} $\ast$}]{p\+Roid,  }\item[{\mbox{\hyperlink{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}{TVec\+Ptr\+Asteroids}} \&}]{Splits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Splits an asteroid in two smaller ones. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Roid} & Pointer to an asteoid object \\
+\hline
+{\em Splits} & Reference to a vector of asteroid pointers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_game_a0396aad8dc3eb2701d3aea33b9fe72f8}\label{class_t_game_a0396aad8dc3eb2701d3aea33b9fe72f8}} 
+\index{TGame@{TGame}!StopTheGame@{StopTheGame}}
+\index{StopTheGame@{StopTheGame}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{StopTheGame()}{StopTheGame()}}
+{\footnotesize\ttfamily void TGame\+::\+Stop\+The\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop the game. 
+
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_game_a2aec4b606e595dd656b249f0ce8b4eda}\label{class_t_game_a2aec4b606e595dd656b249f0ce8b4eda}} 
+\index{TGame@{TGame}!m\_BestScores@{m\_BestScores}}
+\index{m\_BestScores@{m\_BestScores}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_BestScores}{m\_BestScores}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_a5e9675d78a76a11495100f22e13dd4f9}{TVec\+Record\+Scores}} TGame\+::m\+\_\+\+Best\+Scores\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_aee89dfb2774db3fe9082affde4bf7a98}\label{class_t_game_aee89dfb2774db3fe9082affde4bf7a98}} 
+\index{TGame@{TGame}!m\_bGameOver@{m\_bGameOver}}
+\index{m\_bGameOver@{m\_bGameOver}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_bGameOver}{m\_bGameOver}}
+{\footnotesize\ttfamily bool TGame\+::m\+\_\+b\+Game\+Over\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a885ddf8b6834ac57f86d0acaf0a1372a}\label{class_t_game_a885ddf8b6834ac57f86d0acaf0a1372a}} 
+\index{TGame@{TGame}!m\_bPause@{m\_bPause}}
+\index{m\_bPause@{m\_bPause}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_bPause}{m\_bPause}}
+{\footnotesize\ttfamily bool TGame\+::m\+\_\+b\+Pause\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_ab26419fae132e120d099790e4f160b6c}\label{class_t_game_ab26419fae132e120d099790e4f160b6c}} 
+\index{TGame@{TGame}!m\_bRun@{m\_bRun}}
+\index{m\_bRun@{m\_bRun}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_bRun}{m\_bRun}}
+{\footnotesize\ttfamily bool TGame\+::m\+\_\+b\+Run\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a1a13bf776b4baa44cb29c107001251e9}\label{class_t_game_a1a13bf776b4baa44cb29c107001251e9}} 
+\index{TGame@{TGame}!m\_nBonusCount@{m\_nBonusCount}}
+\index{m\_nBonusCount@{m\_nBonusCount}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_nBonusCount}{m\_nBonusCount}}
+{\footnotesize\ttfamily int TGame\+::m\+\_\+n\+Bonus\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a6b82344064aaa348c5a3d9fcfc7d08d0}\label{class_t_game_a6b82344064aaa348c5a3d9fcfc7d08d0}} 
+\index{TGame@{TGame}!m\_nDifficulty@{m\_nDifficulty}}
+\index{m\_nDifficulty@{m\_nDifficulty}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_nDifficulty}{m\_nDifficulty}}
+{\footnotesize\ttfamily int TGame\+::m\+\_\+n\+Difficulty\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a9f358ac733c99f70110200803b29f655}\label{class_t_game_a9f358ac733c99f70110200803b29f655}} 
+\index{TGame@{TGame}!m\_nDlgRetVal@{m\_nDlgRetVal}}
+\index{m\_nDlgRetVal@{m\_nDlgRetVal}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_nDlgRetVal}{m\_nDlgRetVal}}
+{\footnotesize\ttfamily unsigned TGame\+::m\+\_\+n\+Dlg\+Ret\+Val\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_aa79a058dd3c199e3533e1558fac62b72}\label{class_t_game_aa79a058dd3c199e3533e1558fac62b72}} 
+\index{TGame@{TGame}!m\_nLevel@{m\_nLevel}}
+\index{m\_nLevel@{m\_nLevel}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_nLevel}{m\_nLevel}}
+{\footnotesize\ttfamily int TGame\+::m\+\_\+n\+Level\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a2b9b82d60b883279bbdca9d9ebb1214e}\label{class_t_game_a2b9b82d60b883279bbdca9d9ebb1214e}} 
+\index{TGame@{TGame}!m\_nLives@{m\_nLives}}
+\index{m\_nLives@{m\_nLives}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_nLives}{m\_nLives}}
+{\footnotesize\ttfamily int TGame\+::m\+\_\+n\+Lives\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_aa2731bd494c05c12174670f0c0a48e1c}\label{class_t_game_aa2731bd494c05c12174670f0c0a48e1c}} 
+\index{TGame@{TGame}!m\_nScore@{m\_nScore}}
+\index{m\_nScore@{m\_nScore}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_nScore}{m\_nScore}}
+{\footnotesize\ttfamily int TGame\+::m\+\_\+n\+Score\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_af29f4c642db023a3c5e1eb78dc52c757}\label{class_t_game_af29f4c642db023a3c5e1eb78dc52c757}} 
+\index{TGame@{TGame}!m\_pAsteroids@{m\_pAsteroids}}
+\index{m\_pAsteroids@{m\_pAsteroids}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_pAsteroids}{m\_pAsteroids}}
+{\footnotesize\ttfamily \mbox{\hyperlink{asteroids_8h_a1341df093b7b0166683f7d69b3866dcc}{TVec\+Ptr\+Asteroids}} TGame\+::m\+\_\+p\+Asteroids\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a1b9cfb5e8ba845d3d4afa315ebd677fe}\label{class_t_game_a1b9cfb5e8ba845d3d4afa315ebd677fe}} 
+\index{TGame@{TGame}!m\_pAudio@{m\_pAudio}}
+\index{m\_pAudio@{m\_pAudio}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_pAudio}{m\_pAudio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_sound_manager}{TSound\+Manager}}$\ast$ TGame\+::m\+\_\+p\+Audio\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a0fc87f5159f7d97a82e36e8df0ddf0b5}\label{class_t_game_a0fc87f5159f7d97a82e36e8df0ddf0b5}} 
+\index{TGame@{TGame}!m\_pMissiles@{m\_pMissiles}}
+\index{m\_pMissiles@{m\_pMissiles}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_pMissiles}{m\_pMissiles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{weapons_8h_a70aa12c116f5b57237daf8dcddae6abd}{TVec\+Ptr\+Weapons}} TGame\+::m\+\_\+p\+Missiles\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a455eaad505f607fc4ffca1448b75d07a}\label{class_t_game_a455eaad505f607fc4ffca1448b75d07a}} 
+\index{TGame@{TGame}!m\_pShips@{m\_pShips}}
+\index{m\_pShips@{m\_pShips}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_pShips}{m\_pShips}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ships_8h_a7a80ad7a1118c3c3fea3c0126ea055eb}{TVec\+Ptr\+Ships}} TGame\+::m\+\_\+p\+Ships\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a2eb7472c67a05c31d492e55921f33055}\label{class_t_game_a2eb7472c67a05c31d492e55921f33055}} 
+\index{TGame@{TGame}!m\_pVideo@{m\_pVideo}}
+\index{m\_pVideo@{m\_pVideo}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_pVideo}{m\_pVideo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}}$\ast$ TGame\+::m\+\_\+p\+Video\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_ae8ecba15d9e3feb95bb99cb91bc98902}\label{class_t_game_ae8ecba15d9e3feb95bb99cb91bc98902}} 
+\index{TGame@{TGame}!m\_strBestScoresName@{m\_strBestScoresName}}
+\index{m\_strBestScoresName@{m\_strBestScoresName}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_strBestScoresName}{m\_strBestScoresName}}
+{\footnotesize\ttfamily Ansi\+String TGame\+::m\+\_\+str\+Best\+Scores\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_t_game_a529fb86fd90b25ff46800497b0874c71}\label{class_t_game_a529fb86fd90b25ff46800497b0874c71}} 
+\index{TGame@{TGame}!m\_strHelp@{m\_strHelp}}
+\index{m\_strHelp@{m\_strHelp}!TGame@{TGame}}
+\doxysubsubsection{\texorpdfstring{m\_strHelp}{m\_strHelp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_a6a541cc02e8079aa7cfd07fd0587f9f6}{TVec\+Strings}} TGame\+::m\+\_\+str\+Help\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{game_8h}{game.\+h}}\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{game_8cpp}{game.\+cpp}}\end{DoxyCompactItemize}

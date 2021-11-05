@@ -1,0 +1,137 @@
+\hypertarget{class_t_missile}{}\doxysection{TMissile Class Reference}
+\label{class_t_missile}\index{TMissile@{TMissile}}
+
+
+{\ttfamily \#include $<$weapons.\+h$>$}
+
+Inheritance diagram for TMissile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_t_missile}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_missile_a42b747e94851478902492b8091d87d46}{TMissile}} (\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM)
+\begin{DoxyCompactList}\small\item\em Builds the missile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_missile_a59439b23d9e50afde7585cb7dec424dd}{TMissile}} (\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$p\+VM, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Pos, \mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}} Vel)
+\begin{DoxyCompactList}\small\item\em Builds the missile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$ \mbox{\hyperlink{class_t_missile_a59427cec15cd2c7e6a7fb101b9a4e5f0}{Get\+Ship}} ()
+\begin{DoxyCompactList}\small\item\em Gett the pointer to the ship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_missile_abd69cae7be223432ec91da95590ca98a}{Set\+Ship}} (\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$p\+Ship)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the ship. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_missile_a427e750ac56ba36265e25fcb3f0f173b}{Update}} (double Dt)
+\begin{DoxyCompactList}\small\item\em Updates by time the missile status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$ \mbox{\hyperlink{class_t_missile_a2cb62c582585f421113fb8c1a90db21c}{m\+\_\+p\+Ship}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_missile_a42b747e94851478902492b8091d87d46}\label{class_t_missile_a42b747e94851478902492b8091d87d46}} 
+\index{TMissile@{TMissile}!TMissile@{TMissile}}
+\index{TMissile@{TMissile}!TMissile@{TMissile}}
+\doxysubsubsection{\texorpdfstring{TMissile()}{TMissile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TMissile\+::\+TMissile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM }\end{DoxyParamCaption})}
+
+
+
+Builds the missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+VM} & Pointer to the video manager data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_missile_a59439b23d9e50afde7585cb7dec424dd}\label{class_t_missile_a59439b23d9e50afde7585cb7dec424dd}} 
+\index{TMissile@{TMissile}!TMissile@{TMissile}}
+\index{TMissile@{TMissile}!TMissile@{TMissile}}
+\doxysubsubsection{\texorpdfstring{TMissile()}{TMissile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TMissile\+::\+TMissile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_video_manager}{TVideo\+Manager}} $\ast$}]{p\+VM,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Pos,  }\item[{\mbox{\hyperlink{classmaths_1_1_t_vector2}{TVector2}}}]{Vel }\end{DoxyParamCaption})}
+
+
+
+Builds the missile. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+VM} & Pointer to the video manager data structure \\
+\hline
+{\em Pos} & Initial position of the missile \\
+\hline
+{\em Vel} & Initial velocity of the missile \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_missile_a59427cec15cd2c7e6a7fb101b9a4e5f0}\label{class_t_missile_a59427cec15cd2c7e6a7fb101b9a4e5f0}} 
+\index{TMissile@{TMissile}!GetShip@{GetShip}}
+\index{GetShip@{GetShip}!TMissile@{TMissile}}
+\doxysubsubsection{\texorpdfstring{GetShip()}{GetShip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_ship}{TShip}} $\ast$ TMissile\+::\+Get\+Ship (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gett the pointer to the ship. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+Return the pointer to the \mbox{\hyperlink{class_t_ship}{TShip}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_missile_abd69cae7be223432ec91da95590ca98a}\label{class_t_missile_abd69cae7be223432ec91da95590ca98a}} 
+\index{TMissile@{TMissile}!SetShip@{SetShip}}
+\index{SetShip@{SetShip}!TMissile@{TMissile}}
+\doxysubsubsection{\texorpdfstring{SetShip()}{SetShip()}}
+{\footnotesize\ttfamily void TMissile\+::\+Set\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_ship}{TShip}} $\ast$}]{p\+Ship }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to the ship. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ship} & The pointer to the \mbox{\hyperlink{class_t_ship}{TShip}} object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_missile_a427e750ac56ba36265e25fcb3f0f173b}\label{class_t_missile_a427e750ac56ba36265e25fcb3f0f173b}} 
+\index{TMissile@{TMissile}!Update@{Update}}
+\index{Update@{Update}!TMissile@{TMissile}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void TMissile\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{Dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates by time the missile status. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em Dt} & The value for the delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_t_weapon_af49d86585ca860881d806834ef0995e4}{TWeapon}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_missile_a2cb62c582585f421113fb8c1a90db21c}\label{class_t_missile_a2cb62c582585f421113fb8c1a90db21c}} 
+\index{TMissile@{TMissile}!m\_pShip@{m\_pShip}}
+\index{m\_pShip@{m\_pShip}!TMissile@{TMissile}}
+\doxysubsubsection{\texorpdfstring{m\_pShip}{m\_pShip}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_ship}{TShip}}$\ast$ TMissile\+::m\+\_\+p\+Ship\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{weapons_8h}{weapons.\+h}}\item 
+Z\+:/\+F/dev/jobs/asteroids-\/2k.\+bcb.\+vcl/asteroids-\/2k/\mbox{\hyperlink{weapons_8cpp}{weapons.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+/******************************************************************************
+	author:	Francesco Settembrini
+	last update: 23/6/2021
+	e-mail:	mailto:francesco.settembrini@poliba.it
+******************************************************************************/
+
+#ifndef _ASTEROIDS_H_
+#define _ASTEROIDS_H_
+
+#include <windows.h>
+#include <map>
+#include <string>
+#include <vector>
+#include <stdio.h>
+
+#include "audio.h"
+#include "video.h"
+#include "vectors.h"
+
+
+enum enAsteroidClass { acBig, acMedium, acSmall };
+
+class TAsteroid;
+typedef std::vector<TAsteroid> TVecAsteroids;
+typedef std::vector<TAsteroid*> TVecPtrAsteroids;
+
+class TAsteroid
+{
+	public:
+        TAsteroid( TVideoManager* pVM,
+        	TSoundManager* pSM,
+        	enAsteroidClass nClass, TVector2 Pos,
+            TVector2 Vel, double Radius );
+
+        void Update(double DT);
+        enAsteroidClass GetClass();
+
+void Explode();
+
+        double GetSize();
+        TVector2 GetPos();
+        TVector2 GetVel();
+
+        bool Collide(TVector2 Pt);
+        void SetPos(TVector2 Pos);
+
+        bool IsAlive();
+        void SetAlive(bool bAlive);
+
+	protected:
+        bool m_bAlive;
+        COLORREF m_Color;
+        double m_Radius, m_Rot, m_DRot;
+        TVecPoints m_Shape;
+        TVector2 m_Pos, m_Vel, m_Acc;
+		TSoundManager* m_pAudio;
+        TVideoManager* m_pVideo;
+        enAsteroidClass m_nClass;
+
+        void Crash();
+
+		TVecPoints RandShape(double Size);
+        double GetRoughness();
+};
+
+#endif
+
+
