@@ -449,8 +449,8 @@ void TShip::DoExplosion()
                                             // di moto che possiede l'astronave
                                             // al momento dell'esplosione.
                                             // ( moltiplica per un fattore
-                                            // limitativo, ad esempio 0.25 )
-		double LimitingFactor = 0.25;
+                                            // limitativo, ad esempio 0.5 )
+		double LimitingFactor = 0.5;
         m_DebrisStartPos.X += m_Vel.X * DT * LimitingFactor;
         m_DebrisStartPos.Y += m_Vel.Y * DT * LimitingFactor;
         Translate(Shape, m_Pos + m_DebrisStartPos);

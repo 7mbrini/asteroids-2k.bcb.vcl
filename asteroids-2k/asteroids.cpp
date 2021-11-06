@@ -214,6 +214,8 @@ void TAsteroid::Explode()
 
 	m_nExplosionTicks = ASTEROID_EXPLOSIONTICKS;
 
+	m_DebrisStartPos = m_Pos;
+
 												// builds the debris
 	{
         m_nDebris = ASTEROID_NDEBRIS/2.0 + maths::AbsRand(ASTEROID_NDEBRIS)/2.0;
@@ -247,16 +249,32 @@ void TAsteroid::DoExplosion()
 
 	int nCurTick = ASTEROID_EXPLOSIONTICKS - m_nExplosionTicks;
 
+
+											// si!: tien conto della quantita'
+                                            // di moto che possiede l'astronave
+                                            // al momento dell'esplosione.
+                                            // ( moltiplica per un fattore
+                                            // limitativo, ad esempio 0.25 )
+    //double LimitingFactor = 10.0;
+    //m_DebrisStartPos.X += m_Vel.X * DT * LimitingFactor;
+    //m_DebrisStartPos.Y += m_Vel.Y * DT * LimitingFactor;
+    //Translate(Shape, m_Pos + m_DebrisStartPos);
+    m_DebrisStartPos.X += m_Vel.X * DT;
+    m_DebrisStartPos.Y += m_Vel.Y * DT;
+
+
 	if( m_nExplosionTicks > 0 )
 	{
 		BYTE Brightness = 255.0/ double(ASTEROID_EXPLOSIONTICKS) * m_nExplosionTicks;
 
 		for(int i=0; i<m_nDebris; i++)
 		{
-			double X = m_Pos.X + (m_Debris[i].X - m_Pos.X)
-            	* (Scale + m_DebrisScales[i]) / 100.0 * nCurTick;
-			double Y = m_Pos.Y + (m_Debris[i].Y - m_Pos.Y)
-            	* (Scale + m_DebrisScales[i]) / 100.0 * nCurTick;
+			double X = m_DebrisStartPos.X
+            	+ (m_Debris[i].X - m_Pos.X)
+                * (Scale + m_DebrisScales[i]) / 100.0 * nCurTick ;
+			double Y = m_DebrisStartPos.Y
+            	+ (m_Debris[i].Y - m_Pos.Y)
+            	* (Scale + m_DebrisScales[i]) / 100.0 * nCurTick ;
 
 			TVector2 Pos( X, Y );
 			m_pVideo->DrawPoint(Pos, RGB(Brightness, Brightness, Brightness) );

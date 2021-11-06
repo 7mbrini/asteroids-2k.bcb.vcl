@@ -71,6 +71,8 @@ class TAsteroid
 		TVecPoints RandShape(double Size);
 
     protected:
+										// debris
+		TVector2 m_DebrisStartPos;
         int m_nDebris, m_nExplosionTicks;
         TVector2 m_Debris[ASTEROID_NDEBRIS];
         double m_DebrisScales[ASTEROID_NDEBRIS];
