@@ -250,7 +250,7 @@ void TAsteroid::DoExplosion()
 	int nCurTick = ASTEROID_EXPLOSIONTICKS - m_nExplosionTicks;
 
 											// Tien conto della quantita'
-                                            // che possiede l'asteroide
+                                            // di moto che ha l'asteroide
                                             // al momento dell'esplosione.
     m_DebrisStartPos.X += m_Vel.X * DT;
     m_DebrisStartPos.Y += m_Vel.Y * DT;
