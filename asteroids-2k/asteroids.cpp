@@ -249,19 +249,11 @@ void TAsteroid::DoExplosion()
 
 	int nCurTick = ASTEROID_EXPLOSIONTICKS - m_nExplosionTicks;
 
-
-											// si!: tien conto della quantita'
-                                            // di moto che possiede l'astronave
+											// Tien conto della quantita'
+                                            // che possiede l'asteroide
                                             // al momento dell'esplosione.
-                                            // ( moltiplica per un fattore
-                                            // limitativo, ad esempio 0.25 )
-    //double LimitingFactor = 10.0;
-    //m_DebrisStartPos.X += m_Vel.X * DT * LimitingFactor;
-    //m_DebrisStartPos.Y += m_Vel.Y * DT * LimitingFactor;
-    //Translate(Shape, m_Pos + m_DebrisStartPos);
     m_DebrisStartPos.X += m_Vel.X * DT;
     m_DebrisStartPos.Y += m_Vel.Y * DT;
-
 
 	if( m_nExplosionTicks > 0 )
 	{
